@@ -11,12 +11,15 @@ import numpy as np
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from matplotlib import font_manager
 from matplotlib.patches import Polygon, Circle
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "assets/work"
 INK, TEAL, PURPLE, GOLD, PAPER = "#24283e", "#197776", "#7960af", "#99602f", "#f4f5f8"
-plt.rcParams.update({"font.family": "DejaVu Sans", "svg.fonttype": "path",
+for font in (ROOT / "tools/fonts").glob("*.ttf"):
+    font_manager.fontManager.addfont(font)
+plt.rcParams.update({"font.family": "IBM Plex Sans", "font.weight": "medium", "svg.fonttype": "path",
                      "svg.hashsalt": "martins-research-art", "text.color": INK})
 
 
@@ -144,41 +147,79 @@ def vortex_rings():
     save(fig, "vortex-particle-ring")
 
 
+def actuator_camera():
+    """Orthonormal camera basis, viewed from upstream, 30° off the rotor normal."""
+    azimuth, elevation = np.deg2rad([30, 12])
+    right = np.array([np.sin(azimuth), -np.cos(azimuth), 0.])
+    up = np.array([np.sin(elevation)*np.cos(azimuth),
+                   np.sin(elevation)*np.sin(azimuth), np.cos(elevation)])
+    return np.stack([right, up])
+
+
+def actuator_surfaces():
+    """Rotor in y–z; horizontal lift strips in x–y cross it at two heights."""
+    rotor = np.array([[0, -1.5, -1.5], [0, 1.5, -1.5],
+                      [0, 1.5, 1.5], [0, -1.5, 1.5]])
+    strips = [np.array([[-.24, -1.5, z], [.24, -1.5, z],
+                        [.24, 1.5, z], [-.24, 1.5, z]]) for z in [-.6, .6]]
+    return rotor, strips
+
+
+def actuator_project(points):
+    return np.asarray(points) @ actuator_camera().T + [3.0, 2.2]
+
+
+def actuator_wake_centre(z, x):
+    return z + .02*x + .009*x*x
+
+
+def actuator_wake(z, tip, sign):
+    """Conceptual helical path: increasing radius, downstream distance and centre height."""
+    x = np.linspace(0, 7, 900)
+    radius = .060*x
+    phase = sign*2*np.pi*x/1.15
+    y = tip + radius*np.sin(phase)
+    height = actuator_wake_centre(z, x) + radius*np.cos(phase)
+    return np.column_stack([x, y, height])
+
+
 def actuator():
     fig, ax = canvas()
     ax.set(xlim=(0, 10), ylim=(0, 6.1))
+    rotor, strips = actuator_surfaces()
+    # The same orthographic projection is applied to geometry AND vectors.
+    # Forces shown are forces on the fluid: thrust is -x, strip force is +z.
+    def vector(origin, direction, length, color, **kwargs):
+        origin, direction = np.asarray(origin), np.asarray(direction)
+        arrow(ax, actuator_project(origin),
+              actuator_project(origin + length*direction), color, **kwargs)
 
-    def project(x, y, z):
-        # x = downstream, y = span, z = vertical. The rotor is a square in y–z.
-        return np.array([2.2 + 1.38*x + .72*y, .75 + z + .18*y])
+    # Downstream curves are behind the translucent computational rotor surface.
+    for strip in strips:
+        z = strip[0, 2]
+        for tip, sign in [(-1.5, 1), (1.5, -1)]:
+            wake = actuator_project(actuator_wake(z, tip, sign))
+            ax.plot(wake[:, 0], wake[:, 1], color=TEAL if tip < 0 else "#67a79e",
+                    lw=2.1, zorder=2)
+    ax.add_patch(Polygon(actuator_project(rotor), facecolor="#e2deed",
+                         edgecolor=PURPLE, lw=1.7, alpha=.78, zorder=3))
+    for strip in strips:
+        z = strip[0, 2]
+        ax.add_patch(Polygon(actuator_project(strip), facecolor=TEAL,
+                             edgecolor="#126460", lw=1, zorder=5))
+        for y in [-1.05, 0, 1.05]:
+            vector([0, y, z], [0, 0, 1], .68, TEAL)
+        for y in [-1.5, 1.5]:
+            ax.scatter(*actuator_project([0, y, z]), s=20, color=TEAL, zorder=7)
 
-    square = np.array([project(0, 0, 0), project(0, 3, 0),
-                       project(0, 3, 3), project(0, 0, 3)])
-    ax.add_patch(Polygon(square, facecolor="#e2deed", edgecolor=PURPLE, lw=2, zorder=2))
-    for z in [.75, 1.9]:
-        band = np.array([project(0, 0, z-.09), project(0, 3, z-.09),
-                         project(0, 3, z+.09), project(0, 0, z+.09)])
-        # Force bands are INSIDE the square, not wings behind or beside it.
-        ax.add_patch(Polygon(band, facecolor=TEAL, edgecolor=TEAL, lw=1, zorder=5))
-        for y in [.45, 1.5, 2.55]:
-            arrow(ax, project(0, y, z+.06), project(0, y, z+.65), TEAL)
-        for tip, sign in [(0, 1), (3, -1)]:
-            s = np.linspace(0, 3.6, 650)
-            radius = .145*s
-            phase = sign*2*np.pi*s/.62
-            # Expanding helical paths start exactly at each band end and rise.
-            # This is a conceptual wake sketch, not a solved velocity field.
-            y = tip + radius*np.sin(phase)
-            height = z + .22*s + .085*s*s + radius*(np.cos(phase)-1)
-            wake = project(s, y, height)
-            ax.plot(*wake, color=TEAL if tip == 0 else "#67a79e", lw=2.1,
-                    alpha=.95, zorder=4 if tip == 0 else 3)
-            ax.scatter(*project(0, tip, z), s=30, color=TEAL, zorder=7)
-    arrow(ax, project(0, .3, 2.65), project(-.95, .3, 2.65), PURPLE, lw=3)
-    ax.text(.45, 4.05, "Thrust", color=PURPLE, size=26)
-    ax.text(2.25, .12, "Vertical force", color=TEAL, size=26)
-    arrow(ax, (7.0, 4.25), (8.3, 5.4), TEAL, lw=3, scale=28)
-    ax.text(6.0, 5.62, "Wake lift", color=TEAL, size=26)
+    vector([0, 1.1, 1.15], [-1, 0, 0], 1.8, PURPLE, lw=3)
+    ax.text(.22, 3.8, "Thrust", color=PURPLE, size=26)
+    ax.text(1.9, .18, "Vertical force", color=TEAL, size=26)
+    # Rise is a vertical displacement, not an arbitrary diagonal decoration.
+    vector([6, 0, actuator_wake_centre(.6, 6)], [0, 0, 1], .85, TEAL, lw=2.7, scale=25)
+    ax.text(6.3, 5.35, "Wake rise", color=TEAL, size=26)
+    vector([6, -1.5, -2.6], [1, 0, 0], 2.0, INK, lw=2)
+    ax.text(6.8, .05, "Downstream", color=INK, size=23)
     save(fig, "openfoam-actuator-surface")
 
 
