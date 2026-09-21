@@ -33,7 +33,7 @@ The same headers are stored in each software repository under `docs/assets/heade
 
 ## Protected content
 
-Run `python tools/check_openonda_protected.py` to verify the original OpenONDA image, caption and copy, project feature, related hybrid-flow post and associated raster assets. Only the requested tab-to-card wrappers are allowed to differ.
+Run `python tools/check_openonda_protected.py` to verify the original OpenONDA image, caption, body copy and links, project feature, related hybrid-flow post and associated raster assets. The requested tab-to-card wrappers and question-style headings are the only allowed differences.
 
 Run `python tools/test_art_geometry.py` to check camera orthogonality, surface normals, projected directions and wake origins.
 
@@ -48,6 +48,17 @@ Run `python tools/generate_findings_art.py` for six additional original vector h
 - `truss-sizing.svg`: fixed nodes and loads, with widths informed by an illustrative linear-truss solve. Not a reproduction of a published optimum.
 - `sparse-lagrangian-tracks.svg`: qualitative coherent particle motion at two sampling densities. Neither experimental tracks nor output of the CSC algorithm.
 
-The Research findings grid replaces the former tabbed section and Additional studies. OpenONDA's image, caption, text and links remain unchanged; only its container becomes a standard card. The related hybrid-flow artwork also remains protected. Original paper images are retained on disk.
+The Research findings grid replaces the former tabbed section and Additional studies. OpenONDA's image, caption, body text and links remain unchanged; its container becomes a standard card and its heading follows the question-led style. The related hybrid-flow artwork also remains protected. Original paper images are retained on disk.
 
 The decorative `assets/environmental-flow.svg` is a terrain-following flow motif, not climate data. A mist/teal/mineral palette and a single section divider evoke atmospheric transport without repeated page-wide patterns, climate icons, animation or new research claims.
+
+## Consolidation and question-led titles
+
+The grid now has 13 cards rather than 15. Bibliographic titles in the Publications page remain the original titles.
+
+- The CSC journal article (10.1007/s00348-021-03135-5) and Voronoi preprint (2103.09884) are **different studies**, now discussed in a shared flow-diagnostics card with distinct summaries and paper links. The Python link belongs to the Voronoi method. The computed coloured Voronoi artwork replaces the generic sparse-track drawing; short integrated trails remain, but header arrow annotations are disabled in the companion generator.
+- The actuator-surface repository is merged into the regenerative-wake publication card (10.5194/wes-10-41-2025). Its more informative forcing/wake illustration is retained, with both paper and code links.
+- The numerical-validation and farm-scale momentum papers remain separate publications, as do the sizing and node-shift truss studies. OpenONDA and the hybrid particle–grid paper are separate publication records, not duplicate repository/paper cards.
+- Existing `#voronoi-coherence` and `#openfoam-actuator-surface` bookmarks point into the merged cards.
+
+`python tools/test_findings.py` checks question headings, paper/code consolidation, preserved references and the restored figure. Superseded artwork remains on disk for reversibility.

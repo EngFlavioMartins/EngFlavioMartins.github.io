@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#19383c" />
     <title>Flavio A. C. Martins · Computational Fluid Dynamics</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23102a43'/%3E%3Cpath d='M13 43c10-4 13-24 25-24 6 0 9 5 13 5' fill='none' stroke='%232dd4bf' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M13 32c9 0 13 13 23 13 7 0 10-6 15-6' fill='none' stroke='%23fff' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="/assets/styles.css?v=20260921-findings" />
+    <link rel="stylesheet" href="/assets/styles.css?v=20260921-consolidated" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -67,7 +67,7 @@
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Scientific software · 2026</p>
-              <h3>OpenONDA</h3>
+              <h3>How does OpenONDA control OpenFOAM from Python?</h3>
               <p>OpenONDA exposes OpenFOAM’s finite-volume solver and a GPU-enabled vortex-particle method through Python. The framework supports in-line solver control and coupled Eulerian–Lagrangian external-flow simulations.</p>
               <a href="https://github.com/EngFlavioMartins/OpenONDA" rel="noreferrer">Repository and paper record <span aria-hidden="true">↗</span></a>
             </div>
@@ -80,7 +80,7 @@
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Fluid–structure interaction · 2019</p>
-              <h3>Reynolds number, damping and vortex-induced vibration</h3>
+              <h3>How are cylinder motion and vortex shedding connected?</h3>
               <p>Two- and three-dimensional CFD calculations resolve how Reynolds number and structural damping reshape the response branches of an elastically mounted cylinder. The analysis connects vibration amplitudes with three-dimensional wake topology across transitional flow regimes.</p>
               <a href="https://doi.org/10.1016/j.ijmecsci.2019.03.024" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
             </div>
@@ -93,34 +93,38 @@
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Structures &amp; optimisation · 2019</p>
-              <h3>Linear sizing optimisation of trussed structures</h3>
+              <h3>How can member sizing make trusses lighter?</h3>
               <p>A linear scaling method turns sizing optimisation of statically determinate trusses into an iterative deterministic procedure. Benchmarks from 10 to 1,240 members compare mass reduction and constraint satisfaction with established optimisation methods.</p>
               <a href="https://doi.org/10.1007/s13296-018-0194-8" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
             </div>
           </article>
 
           <article id="work-csc" class="research-story">
+            <span id="voronoi-coherence" class="study-anchor" aria-hidden="true"></span>
             <figure>
-              <img src="/assets/work/sparse-lagrangian-tracks.svg" width="960" height="600" loading="lazy" alt="Sparse and denser particle trails revealing two counter-rotating groups of motion" />
-              <figcaption>Sampling density and coherent motion. Conceptual particle tracks, not experimental data.</figcaption>
+              <img src="/assets/work/voronoi-neighbours.svg?v=20260921-consolidated" width="960" height="600" loading="lazy" alt="Coloured Voronoi cells revealing coherent double-gyre motion, with curved particle trails and no overlaid arrows" />
+              <figcaption>Voronoi neighbour-persistence colouring of 784 computed double-gyre tracers.</figcaption>
             </figure>
             <div class="research-story-copy">
-              <p class="work-meta">Experimental fluid mechanics · 2021</p>
-              <h3>Coherent structures in sparse Lagrangian data</h3>
-              <p>Coherent-Structure Colouring is evaluated on sparse particle tracks from an Ahmed-body wake and a swirling jet. Detection improves with denser seeding; in the tested cases, results become largely insensitive to track length when mean inter-particle spacing remains below 15% of the characteristic flow scale.</p>
-              <a href="https://doi.org/10.1007/s00348-021-03135-5" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
+              <p class="work-meta">Flow diagnostics · Two studies · 2021</p>
+              <h3>How can sparse particle tracks reveal coherent flow?</h3>
+              <p>The CSC study tests coherent-structure colouring on an Ahmed-body wake and a swirling jet. Detection improves with denser seeding; in the tested cases, mean inter-particle spacing below 15% of the characteristic flow scale matters more than track length.</p>
+              <p>The separate Voronoi study identifies tracers that remain neighbours and converts their shared-edge history into a spectral colour field. Tests on double-gyre flow and three-dimensional bluff-body measurements reveal coherent motion even at sparse seeding. The Python companion implements the Voronoi method on a double-gyre example.</p>
+              <div class="study-links"><a href="https://doi.org/10.1007/s00348-021-03135-5" rel="noreferrer">CSC paper ↗</a><a href="https://arxiv.org/abs/2103.09884" rel="noreferrer">Voronoi paper ↗</a><a href="https://github.com/EngFlavioMartins/voronoi-coherent-structures">Python examples ↗</a></div>
             </div>
           </article>
           <article class="research-story" id="regenerative-wakes">
+            <span id="openfoam-actuator-surface" class="study-anchor" aria-hidden="true"></span>
             <figure>
-              <img src="/assets/work/regenerative-wakes.svg" width="960" height="600" loading="lazy" alt="One-, two- and four-wing configurations with paired tip vortices and upward wake transport" />
-              <figcaption>Wing configurations and tip-vortex-driven wake lifting. Conceptual front view.</figcaption>
+              <img src="/assets/work/openfoam-actuator-surface.svg?v=20260921-fonts" width="960" height="600" loading="lazy" alt="Front-oblique square rotor crossed by horizontal force strips, with normal thrust, upward forces and rising tip-vortex paths" />
+              <figcaption>Actuator forcing and upward wake deflection. Conceptual illustration, not simulation output.</figcaption>
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Wind energy · 2025</p>
-              <h3>Regenerative multirotor wakes</h3>
+              <h3>How can passive actuators accelerate wind-power recovery?</h3>
               <p>Steady CFD and wind-tunnel data probe one-, two- and four-wing devices behind a multirotor. Wing-tip vortices lift low-momentum wake flow and increase exchange with the faster air above, producing faster wake recovery in the modelled cases.</p>
-              <a href="https://doi.org/10.5194/wes-10-41-2025" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
+              <p>The accompanying OpenFOAM cases represent rotor thrust and wing loading with cell selections and coded momentum sources. Rotor-only and one-, two- and four-wing layouts allow wake deflection and vertical momentum exchange to be studied without resolving the blade surfaces.</p>
+              <div class="study-links"><a href="https://doi.org/10.5194/wes-10-41-2025" rel="noreferrer">Publication ↗</a><a href="https://github.com/EngFlavioMartins/openfoam-actuator-surface">OpenFOAM cases ↗</a></div>
             </div>
           </article>
           <article class="research-story" id="wake-validation">
@@ -130,7 +134,7 @@
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Wind energy · 2024</p>
-              <h3>Numerical validation of wake control</h3>
+              <h3>Can CFD reproduce wind-tunnel wake control?</h3>
               <p>An actuator-surface model in OpenFOAM is compared with wind-tunnel velocity fields around a two-wing multirotor. The numerical study then traces tip-vortex formation and wake response for one-, two- and four-wing layouts.</p>
               <a href="https://doi.org/10.1088/1742-6596/2767/7/072006" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
             </div>
@@ -142,7 +146,7 @@
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Wind-farm physics · 2024</p>
-              <h3>Vertical momentum entrainment at farm scale</h3>
+              <h3>Can momentum from above improve wind-farm efficiency?</h3>
               <p>A wind-farm-scale model examines how active control of vertical momentum entrainment could affect array performance. Its comparison curves predict smaller efficiency losses for controlled farms as installed power density increases.</p>
               <a href="https://doi.org/10.1088/1742-6596/2767/9/092107" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
             </div>
@@ -154,33 +158,21 @@
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Numerical methods · 2026</p>
-              <h3>Hybrid vortex particle–grid flow simulation</h3>
+              <h3>Can grids and vortex particles share a flow simulation?</h3>
               <p>A near-body finite-volume solver resolves walls while vortex particles carry the wake downstream. This three-dimensional proof of concept tests two-way coupling against fully meshed reference calculations for a cube and a NACA4412 airfoil.</p>
               <a href="https://doi.org/10.1088/1742-6596/3224/4/042069" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
             </div>
           </article>
           <article class="research-story" id="celestial-dynamics">
             <figure>
-              <img src="/assets/work/three-body-schematic.svg?v=20260921-findings" width="960" height="600" loading="lazy" alt="Computed rotating-frame orbits, zero-velocity boundary, Lagrange points and a Poincaré section" />
+              <img src="/assets/work/three-body-schematic.svg?v=20260921-consolidated" width="960" height="600" loading="lazy" alt="Computed rotating-frame orbits, zero-velocity boundary, Lagrange points and a Poincaré section" />
               <figcaption>Computed restricted-three-body trajectories and upward-crossing Poincaré section.</figcaption>
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Dynamical systems · 2018</p>
-              <h3>Celestial mechanics through dynamical systems</h3>
+              <h3>What separates regular and chaotic orbital motion?</h3>
               <p>This review introduces the circular restricted three-body problem through orbital resonances, Poincaré sections and KAM theory. Phase-space geometry connects the Lagrange equilibria with regular and more complex orbital motion. An accompanying Python example computes trajectories, section crossings and Jacobi-conservation diagnostics.</p>
               <div class="study-links"><a href="https://doi.org/10.1590/1806-9126-rbef-2017-0174" rel="noreferrer">Publication ↗</a><a href="https://github.com/EngFlavioMartins/celestial-dynamics">Python examples ↗</a></div>
-            </div>
-          </article>
-          <article class="research-story" id="voronoi-coherence">
-            <figure>
-              <img src="/assets/work/voronoi-neighbours.svg?v=20260921-fonts" width="960" height="600" loading="lazy" alt="784 advected double-gyre tracers, with Voronoi cells coloured by spectral coherence and curved particle trails" />
-              <figcaption>Neighbour-persistence colouring of 784 computed double-gyre tracers, with integrated particle trails.</figcaption>
-            </figure>
-            <div class="research-story-copy">
-              <p class="work-meta">Flow diagnostics · 2021</p>
-              <h3>Coherence from sparse particle tracks</h3>
-              <p>Voronoi cells identify moving tracers that remain neighbours. Their shared-edge history defines a spectral colour field, tested on double-gyre flow and three-dimensional bluff-body measurements. Coherent motion remains identifiable at sparse seeding levels where local velocity-gradient estimates become difficult.</p>
-              <div class="study-links"><a href="https://arxiv.org/abs/2103.09884" rel="noreferrer">Preprint ↗</a><a href="https://github.com/EngFlavioMartins/voronoi-coherent-structures">Python examples ↗</a></div>
             </div>
           </article>
           <article class="research-story">
@@ -190,7 +182,7 @@
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Structures &amp; optimisation · 2017</p>
-              <h3>Truss topology through node shifts</h3>
+              <h3>Can moving the nodes reduce a truss’s mass?</h3>
               <p>The two-dimensional truss study combines member sizing with node repositioning under stress and buckling constraints. Node shifts reduce the reported example from 15.26 to 11.60 kg, approximately 24% relative to the sized layout. Compression-member buckling governs much of the remaining design margin.</p>
               <a href="https://doi.org/10.20906/cps/cilamce2017-0035" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
             </div>
@@ -202,7 +194,7 @@
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Meshless CFD · 2026</p>
-              <h3>Large-eddy simulation with vortex particles</h3>
+              <h3>How can vortex particles model turbulent flow?</h3>
               <p>A Lagrangian dynamic subgrid model and core-spreading diffusion are assessed using vortex rings and leapfrogging rings. The preprint reports accurate ring kinematics with sparse particles, while post-instability behaviour remains sensitive to particle regularisation.</p>
               <a href="https://arxiv.org/abs/2601.06942" rel="noreferrer">Original preprint <span aria-hidden="true">↗</span></a>
             </div>
@@ -214,7 +206,7 @@
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Scientific software · Incompressible flow</p>
-              <h3>Wall-driven recirculation</h3>
+              <h3>How does a moving wall drive recirculation?</h3>
               <p>A moving lid drives circulation inside a closed square cavity. This Python implementation advances velocity on a staggered grid and applies a pressure projection using a discrete cosine transform. The example shows the primary recirculation and corner motion produced by the wall boundary conditions.</p>
               <a href="https://github.com/EngFlavioMartins/cavity-flow">Code and examples ↗</a>
             </div>
@@ -226,21 +218,9 @@
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Scientific software · Flow analysis</p>
-              <h3>From OpenFOAM cells to Python arrays</h3>
+              <h3>How can OpenFOAM fields become Python arrays?</h3>
               <p>OpenFOAM velocity and pressure fields are read through fluidfoam and resampled using local radial-basis interpolation. Regular NumPy arrays support velocity profiles and planar sections. The repository includes a direct plotting example and the original notebook-based workflow.</p>
               <a href="https://github.com/EngFlavioMartins/openfoam-postprocessing">Code and examples ↗</a>
-            </div>
-          </article>
-          <article class="research-story" id="openfoam-actuator-surface">
-            <figure>
-              <img src="/assets/work/openfoam-actuator-surface.svg?v=20260921-fonts" width="960" height="600" loading="lazy" alt="Front-oblique square rotor crossed by two horizontal source strips: thrust is normal to the rotor, green forces are normal to the strips, and tip-vortex paths rise downstream" />
-              <figcaption>Forces on the fluid: thrust normal to the rotor and upward loading normal to the green strips. Rising tip-vortex paths are conceptual, not simulation output.</figcaption>
-            </figure>
-            <div class="research-story-copy">
-              <p class="work-meta">Scientific software · Wind energy</p>
-              <h3>Actuator surfaces for wake control</h3>
-              <p>Cell selections and coded momentum sources represent rotor thrust and wing loading within OpenFOAM. The supplied cases explore rotor-only and one-, two- and four-wing layouts. This provides a configurable route to studying wake deflection and vertical momentum exchange without resolving blade surfaces.</p>
-              <a href="https://github.com/EngFlavioMartins/openfoam-actuator-surface">Code and cases ↗</a>
             </div>
           </article>
         </div>

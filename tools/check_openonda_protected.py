@@ -17,8 +17,8 @@ def block(text, pattern):
     return match.group(0)
 
 
-# The user requested a unified card grid, so only the article/figure/div wrappers
-# change. The actual image, caption, copy and links must still match the baseline.
+# The requested grid migration and question-led titles may change wrappers and
+# headings. Artwork, captions, body copy and links remain protected.
 before_home = original("index.html").decode()
 after_home = (ROOT / "index.html").read_text()
 before_card = block(before_home, r'<article id="work-openonda".*?</article>')
@@ -27,6 +27,8 @@ def card_content(card):
     card = re.sub(r'<article[^>]*>', '<article>', card)
     card = re.sub(r'<figure[^>]*>', '<figure>', card)
     return re.sub(r'<div class="(?:work-copy|research-story-copy)">', '<div>', card)
+assert '<h3>How does OpenONDA control OpenFOAM from Python?</h3>' in after_card
+after_card = after_card.replace('How does OpenONDA control OpenFOAM from Python?', 'OpenONDA')
 assert card_content(before_card) == card_content(after_card), 'Changed OpenONDA content'
 
 for file, patterns in {
@@ -36,10 +38,14 @@ for file, patterns in {
     "projects/index.html": [r'<section class="featured-project shell".*?</section>'],
 }.items():
     before, after = original(file).decode(), (ROOT / file).read_text()
+    if file == 'index.html':
+        assert '<h3>Can grids and vortex particles share a flow simulation?</h3>' in after
+        after = after.replace('Can grids and vortex particles share a flow simulation?',
+                              'Hybrid vortex particle–grid flow simulation')
     for pattern in patterns:
         assert block(before, pattern) == block(after, pattern), f"Changed OpenONDA block in {file}"
 
 for file in ["assets/work/openonda-hybrid.png", "assets/work/hybrid-particle-grid.png"]:
     assert original(file) == (ROOT / file).read_bytes(), f"Changed protected asset: {file}"
 
-print("OpenONDA content/art, project feature and related hybrid post unchanged; grid migration allowed.")
+print("OpenONDA artwork, body copy, captions and links unchanged; requested question titles allowed.")
