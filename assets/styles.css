@@ -495,6 +495,8 @@ h3 { font-size: clamp(1.55rem, 2.6vw, 2.45rem); }
 .research-story-copy h3 { max-width: 28ch; font-size: clamp(1.5rem, 2.3vw, 2rem); }
 .research-story-copy > p:not(.work-meta) { margin: 1rem 0 1.5rem; color: var(--muted); }
 .research-story-copy > a { align-self: flex-start; margin-top: auto; font-weight: 760; text-decoration: none; border-bottom: 2px solid var(--cyan); }
+.research-story .study-links { display: flex; flex-wrap: wrap; gap: 0.6rem 1.2rem; margin-top: auto; }
+.research-story .study-links a { font-weight: 760; text-decoration: none; border-bottom: 2px solid var(--cyan); }
 
 .site-footer { color: #c8c8df; background: var(--night); }
 .footer-inner { min-height: 130px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }

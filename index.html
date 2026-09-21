@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#17172a" />
     <title>Flavio A. C. Martins · Computational Fluid Dynamics</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23102a43'/%3E%3Cpath d='M13 43c10-4 13-24 25-24 6 0 9 5 13 5' fill='none' stroke='%232dd4bf' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M13 32c9 0 13 13 23 13 7 0 10-6 15-6' fill='none' stroke='%23fff' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="/assets/styles.css?v=20260921" />
+    <link rel="stylesheet" href="/assets/styles.css?v=20260921-art" />
     <script src="/assets/featured-work.js" defer></script>
   </head>
   <body>
@@ -114,7 +114,7 @@
             <div class="work-copy">
               <p class="work-meta">Experimental fluid mechanics · 2021</p>
               <h3>Coherent structures in sparse Lagrangian data</h3>
-              <p>Coherent-Structure Colouring is evaluated on sparse Lagrangian particle tracks from an Ahmed-body wake and a swirling jet. The study quantifies how inter-particle distance and track length affect vortex identification.</p>
+              <p>Coherent-Structure Colouring is evaluated on sparse particle tracks from an Ahmed-body wake and a swirling jet. Detection improves with denser seeding; in the tested cases, results become largely insensitive to track length when mean inter-particle spacing remains below 15% of the characteristic flow scale.</p>
               <a href="https://doi.org/10.1007/s00348-021-03135-5" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
             </div>
           </article>
@@ -172,52 +172,88 @@
               <a href="https://doi.org/10.1088/1742-6596/3224/4/042069" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
             </div>
           </article>
-          <article class="research-story">
+          <article class="research-story" id="celestial-dynamics">
             <figure>
-              <img src="/assets/work/three-body-schematic.svg" width="960" height="600" loading="lazy" alt="Schematic with two orbiting primary bodies and all five Lagrange points marked in a rotating frame" />
-              <figcaption>The five Lagrange points in the circular restricted three-body problem. Original schematic; not to scale.</figcaption>
+              <img src="/assets/work/three-body-schematic.svg?v=20260921-art" width="960" height="600" loading="lazy" alt="Computed rotating-frame orbits, zero-velocity boundary, Lagrange points and a Poincaré section" />
+              <figcaption>Computed restricted-three-body trajectories and upward-crossing Poincaré section.</figcaption>
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Dynamical systems · 2018</p>
               <h3>Celestial mechanics through dynamical systems</h3>
-              <p>This review introduces the circular restricted three-body problem through phase-space methods. It connects orbital resonances, Poincaré sections and KAM theory with the geometry of the Lagrange points.</p>
-              <a href="https://doi.org/10.1590/1806-9126-rbef-2017-0174" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
+              <p>This review introduces the circular restricted three-body problem through orbital resonances, Poincaré sections and KAM theory. Phase-space geometry connects the Lagrange equilibria with regular and more complex orbital motion. An accompanying Python example computes trajectories, section crossings and Jacobi-conservation diagnostics.</p>
+              <div class="study-links"><a href="https://doi.org/10.1590/1806-9126-rbef-2017-0174" rel="noreferrer">Publication ↗</a><a href="https://github.com/EngFlavioMartins/celestial-dynamics">Python examples ↗</a></div>
             </div>
           </article>
-          <article class="research-story">
+          <article class="research-story" id="voronoi-coherence">
             <figure>
-              <img src="/assets/work/voronoi-neighbours.svg" width="960" height="600" loading="lazy" alt="Voronoi cells constructed around sparse tracer points and coloured into two coherent groups" />
-              <figcaption>Voronoi neighbourhood construction for sparse tracers. Original schematic; not experimental data.</figcaption>
+              <img src="/assets/work/voronoi-neighbours.svg?v=20260921-art" width="960" height="600" loading="lazy" alt="784 advected double-gyre tracers, with Voronoi cells coloured by spectral coherence and curved particle trails" />
+              <figcaption>Neighbour-persistence colouring of 784 computed double-gyre tracers, with integrated particle trails.</figcaption>
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Flow diagnostics · 2021</p>
               <h3>Coherence from sparse particle tracks</h3>
-              <p>Voronoi cells identify which moving tracers remain neighbours over time. Shared-edge duration becomes a graph distance for grouping coherent trajectories, tested on double-gyre flow and three-dimensional bluff-body measurements.</p>
-              <a href="https://arxiv.org/abs/2103.09884" rel="noreferrer">Original preprint <span aria-hidden="true">↗</span></a>
+              <p>Voronoi cells identify moving tracers that remain neighbours. Their shared-edge history defines a spectral colour field, tested on double-gyre flow and three-dimensional bluff-body measurements. Coherent motion remains identifiable at sparse seeding levels where local velocity-gradient estimates become difficult.</p>
+              <div class="study-links"><a href="https://arxiv.org/abs/2103.09884" rel="noreferrer">Preprint ↗</a><a href="https://github.com/EngFlavioMartins/voronoi-coherent-structures">Python examples ↗</a></div>
             </div>
           </article>
           <article class="research-story">
             <figure>
-              <img src="/assets/work/truss-topology-mass.svg" width="960" height="600" loading="lazy" alt="Bar chart showing a truss mass decrease from 15.26 kilograms after member sizing to 11.60 kilograms after node shifts" />
-              <figcaption>Mass in the reported truss example, before and after node shifts. Original chart from Martins et al. (2017).</figcaption>
+              <img src="/assets/work/truss-topology-mass.svg?v=20260921-art" width="960" height="600" loading="lazy" alt="Tapered truss under upward nodal loads, with tension and compression members and dashed original node positions" />
+              <figcaption>Loading and node repositioning; member colours show axial-force sign in an illustrative linear-truss calculation.</figcaption>
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Structures &amp; optimisation · 2017</p>
               <h3>Truss topology through node shifts</h3>
-              <p>The two-dimensional truss study combines member sizing with node repositioning. In the reported example, node shifts reduce mass from 15.26 to 11.60 kg, approximately 24% relative to the sized layout.</p>
+              <p>The two-dimensional truss study combines member sizing with node repositioning under stress and buckling constraints. Node shifts reduce the reported example from 15.26 to 11.60 kg, approximately 24% relative to the sized layout. Compression-member buckling governs much of the remaining design margin.</p>
               <a href="https://doi.org/10.20906/cps/cilamce2017-0035" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
             </div>
           </article>
           <article class="research-story">
-            <figure class="dark-figure">
-              <img src="/assets/work/vortex-particle-ring.svg" width="960" height="600" loading="lazy" alt="Lagrangian particles arranged as a translating vortex ring, with one particle core highlighted" />
-              <figcaption>Vortex-ring particle representation. Original method schematic; not simulation output.</figcaption>
+            <figure>
+              <img src="/assets/work/vortex-particle-ring.svg?v=20260921-art" width="960" height="600" loading="lazy" alt="Three stages of coaxial vortex rings contracting, passing through each other and exchanging positions" />
+              <figcaption>Leapfrogging vortex rings: particle cores, contraction and expansion. Conceptual method illustration.</figcaption>
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Meshless CFD · 2026</p>
               <h3>Large-eddy simulation with vortex particles</h3>
               <p>A Lagrangian dynamic subgrid model and core-spreading diffusion are assessed using vortex rings and leapfrogging rings. The preprint reports accurate ring kinematics with sparse particles, while post-instability behaviour remains sensitive to particle regularisation.</p>
               <a href="https://arxiv.org/abs/2601.06942" rel="noreferrer">Original preprint <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article class="research-story" id="cavity-flow">
+            <figure>
+              <img src="/assets/work/cavity-flow.svg" width="960" height="600" loading="lazy" alt="Computed recirculating streamlines in a square lid-driven cavity at Reynolds number 100" />
+              <figcaption>Re = 100 cavity flow computed with the repository’s projection solver on a 56 × 56 grid.</figcaption>
+            </figure>
+            <div class="research-story-copy">
+              <p class="work-meta">Scientific software · Incompressible flow</p>
+              <h3>Wall-driven recirculation</h3>
+              <p>A moving lid drives circulation inside a closed square cavity. This Python implementation advances velocity on a staggered grid and applies a pressure projection using a discrete cosine transform. The example shows the primary recirculation and corner motion produced by the wall boundary conditions.</p>
+              <a href="https://github.com/EngFlavioMartins/cavity-flow">Code and examples ↗</a>
+            </div>
+          </article>
+          <article class="research-story" id="openfoam-postprocessing">
+            <figure>
+              <img src="/assets/work/openfoam-postprocessing.svg" width="960" height="600" loading="lazy" alt="Unstructured mesh samples mapped to regular gridded velocity slices" />
+              <figcaption>Cell-centred samples, local interpolation and structured flow sections. Conceptual workflow illustration.</figcaption>
+            </figure>
+            <div class="research-story-copy">
+              <p class="work-meta">Scientific software · Flow analysis</p>
+              <h3>From OpenFOAM cells to Python arrays</h3>
+              <p>OpenFOAM velocity and pressure fields are read through fluidfoam and resampled using local radial-basis interpolation. Regular NumPy arrays support velocity profiles and planar sections. The repository includes a direct plotting example and the original notebook-based workflow.</p>
+              <a href="https://github.com/EngFlavioMartins/openfoam-postprocessing">Code and examples ↗</a>
+            </div>
+          </article>
+          <article class="research-story" id="openfoam-actuator-surface">
+            <figure>
+              <img src="/assets/work/openfoam-actuator-surface.svg" width="960" height="600" loading="lazy" alt="Rotor and four wing actuator surfaces with thrust, lift and schematic swirling wake paths" />
+              <figcaption>Rotor loading and lift-producing surfaces, with schematic tracer paths around wing-tip vortices.</figcaption>
+            </figure>
+            <div class="research-story-copy">
+              <p class="work-meta">Scientific software · Wind energy</p>
+              <h3>Actuator surfaces for wake control</h3>
+              <p>Cell selections and coded momentum sources represent rotor thrust and wing loading within OpenFOAM. The supplied cases explore rotor-only and one-, two- and four-wing layouts. This provides a configurable route to studying wake deflection and vertical momentum exchange without resolving blade surfaces.</p>
+              <a href="https://github.com/EngFlavioMartins/openfoam-actuator-surface">Code and cases ↗</a>
             </div>
           </article>
         </div>
