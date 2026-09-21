@@ -1,4 +1,4 @@
-"""Ensure the protected OpenONDA presentation is unchanged from the prior release."""
+"""Protect OpenONDA content/art while allowing the requested tab-to-card migration."""
 import re
 import subprocess
 from pathlib import Path
@@ -17,10 +17,20 @@ def block(text, pattern):
     return match.group(0)
 
 
+# The user requested a unified card grid, so only the article/figure/div wrappers
+# change. The actual image, caption, copy and links must still match the baseline.
+before_home = original("index.html").decode()
+after_home = (ROOT / "index.html").read_text()
+before_card = block(before_home, r'<article id="work-openonda".*?</article>')
+after_card = block(after_home, r'<article id="work-openonda".*?</article>')
+def card_content(card):
+    card = re.sub(r'<article[^>]*>', '<article>', card)
+    card = re.sub(r'<figure[^>]*>', '<figure>', card)
+    return re.sub(r'<div class="(?:work-copy|research-story-copy)">', '<div>', card)
+assert card_content(before_card) == card_content(after_card), 'Changed OpenONDA content'
+
 for file, patterns in {
     "index.html": [
-        r'<button id="work-tab-openonda".*?</button>',
-        r'<article id="work-openonda".*?</article>',
         r'<article class="research-story">\s*<figure class="dark-figure panoramic-figure">.*?</article>',
     ],
     "projects/index.html": [r'<section class="featured-project shell".*?</section>'],
@@ -32,4 +42,4 @@ for file, patterns in {
 for file in ["assets/work/openonda-hybrid.png", "assets/work/hybrid-particle-grid.png"]:
     assert original(file) == (ROOT / file).read_bytes(), f"Changed protected asset: {file}"
 
-print("OpenONDA post, project feature, related hybrid post and assets: unchanged.")
+print("OpenONDA content/art, project feature and related hybrid post unchanged; grid migration allowed.")

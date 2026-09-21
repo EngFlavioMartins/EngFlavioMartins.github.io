@@ -1,17 +1,17 @@
 :root {
   color-scheme: light;
-  --ink: #17172a;
-  --ink-soft: #30314f;
-  --muted: #62647a;
-  --paper: #f7f7fb;
+  --ink: #182e32;
+  --ink-soft: #29464a;
+  --muted: #526568;
+  --paper: #f8f9f5;
   --surface: #ffffff;
-  --surface-tint: #f0effa;
-  --line: #dcddea;
-  --violet: #5b47d7;
-  --violet-deep: #3b2b9f;
-  --cyan: #009da9;
+  --surface-tint: #edf3ef;
+  --line: #d4dfd9;
+  --violet: #256d66;
+  --violet-deep: #20544f;
+  --cyan: #378b83;
   --magenta: #bf489f;
-  --night: #111226;
+  --night: #19383c;
   --focus: #e68a35;
   --shadow: 0 24px 70px rgba(32, 29, 77, 0.12);
   --shadow-small: 0 10px 30px rgba(32, 29, 77, 0.08);
@@ -34,7 +34,7 @@ body {
   overflow-x: clip;
   margin: 0;
   color: var(--ink);
-  background: #fafaf9;
+  background: var(--paper);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 1rem;
   line-height: 1.62;
@@ -173,7 +173,7 @@ h3 { font-size: clamp(1.55rem, 2.6vw, 2.45rem); }
 
 .accent-text {
   display: block;
-  color: #4c527d;
+  color: #376c67;
   /* Solid text paints below the line box: gradient clipping cut off descenders. */
   padding-bottom: 0.08em;
 }
@@ -300,6 +300,16 @@ h3 { font-size: clamp(1.55rem, 2.6vw, 2.45rem); }
 
 .section-pad { padding-block: clamp(5rem, 10vw, 9rem); }
 .section-pad-small { padding-block: clamp(2.8rem, 6vw, 5rem) clamp(5rem, 9vw, 8rem); }
+
+/* A single boundary-layer motif marks the transition, never behind readable text.
+   Atmospheric greens and mineral neutrals imply environmental flows without
+   turning the site into climate iconography or presenting decorative data. */
+.flow-divider {
+  height: clamp(54px, 8vw, 110px);
+  background: url('/assets/environmental-flow.svg') center bottom / 100% 100% no-repeat;
+  opacity: .8;
+}
+.research-findings { padding-top: clamp(3rem, 6vw, 5rem); }
 
 .section-heading { margin-bottom: clamp(1.8rem, 4vw, 3.7rem); }
 .compact-heading {
@@ -471,6 +481,13 @@ h3 { font-size: clamp(1.55rem, 2.6vw, 2.45rem); }
 .research-story:not(:has(.dark-figure)) .study-links a,
 .research-story:not(:has(.dark-figure)) .research-story-copy > a { padding-block: 0.4rem; }
 .research-stories { gap: 1.8rem; }
+
+/* All findings are ordinary, visible articles; no tab-only or hidden content. */
+.research-findings .research-story { border-radius: .65rem; box-shadow: none; }
+.research-findings .research-story h3 { line-height: 1.16; letter-spacing: -.025em; }
+.research-findings .research-story figcaption { font-size: .875rem; line-height: 1.5; }
+.research-findings .research-story-copy > a { padding-block: .4rem; }
+.research-findings #work-openonda img { object-fit: contain; background: #000; }
 
 .site-footer { color: #c8c8df; background: var(--night); }
 .footer-inner { min-height: 130px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }

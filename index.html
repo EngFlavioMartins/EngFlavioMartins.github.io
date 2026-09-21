@@ -4,11 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Flavio A. C. Martins — computational fluid dynamics, fluid–structure interaction, wind energy and scientific software." />
-    <meta name="theme-color" content="#17172a" />
+    <meta name="theme-color" content="#19383c" />
     <title>Flavio A. C. Martins · Computational Fluid Dynamics</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23102a43'/%3E%3Cpath d='M13 43c10-4 13-24 25-24 6 0 9 5 13 5' fill='none' stroke='%232dd4bf' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M13 32c9 0 13 13 23 13 7 0 10-6 15-6' fill='none' stroke='%23fff' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="/assets/styles.css?v=20260921-polish" />
-    <script src="/assets/featured-work.js" defer></script>
+    <link rel="stylesheet" href="/assets/styles.css?v=20260921-findings" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -53,26 +52,20 @@
         </aside>
       </section>
 
-      <section class="featured-work shell section-pad" aria-labelledby="work-heading">
+      <div class="flow-divider shell" aria-hidden="true"></div>
+      <section class="research-findings shell section-pad" aria-labelledby="work-heading">
         <header class="section-heading compact-heading">
-          <h2 id="work-heading">Research summaries</h2>
+          <h2 id="work-heading">Research findings</h2>
           <a href="/publications/">All publications <span aria-hidden="true">→</span></a>
         </header>
 
-        <div class="work-tabs" role="tablist" aria-label="Research summaries">
-          <button id="work-tab-openonda" type="button" role="tab" aria-selected="true" aria-controls="work-openonda" data-work-tab="openonda">OpenONDA</button>
-          <button id="work-tab-viv" type="button" role="tab" aria-selected="false" aria-controls="work-viv" data-work-tab="viv" tabindex="-1">Cylinder wake</button>
-          <button id="work-tab-truss" type="button" role="tab" aria-selected="false" aria-controls="work-truss" data-work-tab="truss" tabindex="-1">Truss optimisation</button>
-          <button id="work-tab-csc" type="button" role="tab" aria-selected="false" aria-controls="work-csc" data-work-tab="csc" tabindex="-1">Sparse-flow diagnostics</button>
-        </div>
-
-        <div class="work-panels">
-          <article id="work-openonda" class="work-panel" role="tabpanel" aria-labelledby="work-tab-openonda" data-work-panel="openonda">
-            <figure class="work-figure work-figure-dark">
+        <div class="research-stories" aria-labelledby="work-heading">
+          <article id="work-openonda" class="research-story">
+            <figure class="dark-figure">
               <img src="/assets/work/openonda-hybrid.png" width="1280" height="720" alt="Hybrid finite-volume and vortex-particle wake simulation around a cube" />
               <figcaption>Coupled finite-volume and vortex-particle wake simulation.</figcaption>
             </figure>
-            <div class="work-copy">
+            <div class="research-story-copy">
               <p class="work-meta">Scientific software · 2026</p>
               <h3>OpenONDA</h3>
               <p>OpenONDA exposes OpenFOAM’s finite-volume solver and a GPU-enabled vortex-particle method through Python. The framework supports in-line solver control and coupled Eulerian–Lagrangian external-flow simulations.</p>
@@ -80,12 +73,12 @@
             </div>
           </article>
 
-          <article id="work-viv" class="work-panel" role="tabpanel" aria-labelledby="work-tab-viv" data-work-panel="viv" hidden>
-            <figure class="work-figure">
-              <img src="/assets/work/vortex-induced-vibration.jpg" width="1842" height="940" loading="lazy" alt="Three-dimensional vortex structures behind an elastically mounted circular cylinder" />
-              <figcaption>Q-criterion iso-surfaces for two cylinder-response states.</figcaption>
+          <article id="work-viv" class="research-story">
+            <figure>
+              <img src="/assets/work/cylinder-wake.svg" width="960" height="600" loading="lazy" alt="A transversely moving cylinder coupled to an alternating vortex wake" />
+              <figcaption>Transverse cylinder motion and alternating vortex shedding. Conceptual illustration.</figcaption>
             </figure>
-            <div class="work-copy">
+            <div class="research-story-copy">
               <p class="work-meta">Fluid–structure interaction · 2019</p>
               <h3>Reynolds number, damping and vortex-induced vibration</h3>
               <p>Two- and three-dimensional CFD calculations resolve how Reynolds number and structural damping reshape the response branches of an elastically mounted cylinder. The analysis connects vibration amplitudes with three-dimensional wake topology across transitional flow regimes.</p>
@@ -93,12 +86,12 @@
             </div>
           </article>
 
-          <article id="work-truss" class="work-panel" role="tabpanel" aria-labelledby="work-tab-truss" data-work-panel="truss" hidden>
-            <figure class="work-figure">
-              <img src="/assets/work/truss-optimisation.jpg" width="1772" height="615" loading="lazy" alt="Comparison of three sizing-optimisation results for a dense truss benchmark" />
-              <figcaption>Optimised 1,240-member truss benchmark using three methods.</figcaption>
+          <article id="work-truss" class="research-story">
+            <figure>
+              <img src="/assets/work/truss-sizing.svg" width="960" height="600" loading="lazy" alt="Identical loaded trusses with uniform and force-scaled member thicknesses; node positions remain fixed" />
+              <figcaption>Member sizing under fixed loading and geometry. Illustrative truss, not a published optimum.</figcaption>
             </figure>
-            <div class="work-copy">
+            <div class="research-story-copy">
               <p class="work-meta">Structures &amp; optimisation · 2019</p>
               <h3>Linear sizing optimisation of trussed structures</h3>
               <p>A linear scaling method turns sizing optimisation of statically determinate trusses into an iterative deterministic procedure. Benchmarks from 10 to 1,240 members compare mass reduction and constraint satisfaction with established optimisation methods.</p>
@@ -106,28 +99,22 @@
             </div>
           </article>
 
-          <article id="work-csc" class="work-panel" role="tabpanel" aria-labelledby="work-tab-csc" data-work-panel="csc" hidden>
-            <figure class="work-figure">
-              <img src="/assets/work/coherent-structures.jpg" width="1595" height="1685" loading="lazy" alt="Particle tracks coloured by coherent-structure membership at several sampling densities" />
-              <figcaption>CSC-coloured particle tracks for an Ahmed-body wake.</figcaption>
+          <article id="work-csc" class="research-story">
+            <figure>
+              <img src="/assets/work/sparse-lagrangian-tracks.svg" width="960" height="600" loading="lazy" alt="Sparse and denser particle trails revealing two counter-rotating groups of motion" />
+              <figcaption>Sampling density and coherent motion. Conceptual particle tracks, not experimental data.</figcaption>
             </figure>
-            <div class="work-copy">
+            <div class="research-story-copy">
               <p class="work-meta">Experimental fluid mechanics · 2021</p>
               <h3>Coherent structures in sparse Lagrangian data</h3>
               <p>Coherent-Structure Colouring is evaluated on sparse particle tracks from an Ahmed-body wake and a swirling jet. Detection improves with denser seeding; in the tested cases, results become largely insensitive to track length when mean inter-particle spacing remains below 15% of the characteristic flow scale.</p>
               <a href="https://doi.org/10.1007/s00348-021-03135-5" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
             </div>
           </article>
-        </div>
-
-        <div class="section-heading compact-heading story-heading">
-          <h2 id="additional-studies-heading">Additional studies</h2>
-        </div>
-        <div class="research-stories" aria-labelledby="additional-studies-heading">
-          <article class="research-story">
-            <figure class="panoramic-figure">
-              <img src="/assets/work/regenerative-wind-farm-vertical-flow.png" width="1747" height="594" loading="lazy" alt="Vertical velocity fields for one-, two-, and four-wing multirotor wake-control configurations" />
-              <figcaption>Vertical flow for one-, two- and four-wing configurations. Figure 9, Martins et al. (2025), <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</figcaption>
+          <article class="research-story" id="regenerative-wakes">
+            <figure>
+              <img src="/assets/work/regenerative-wakes.svg" width="960" height="600" loading="lazy" alt="One-, two- and four-wing configurations with paired tip vortices and upward wake transport" />
+              <figcaption>Wing configurations and tip-vortex-driven wake lifting. Conceptual front view.</figcaption>
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Wind energy · 2025</p>
@@ -136,10 +123,10 @@
               <a href="https://doi.org/10.5194/wes-10-41-2025" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
             </div>
           </article>
-          <article class="research-story">
+          <article class="research-story" id="wake-validation">
             <figure>
-              <img src="/assets/work/abl-control-validation.png" width="1500" height="1100" loading="lazy" alt="Side-by-side simulated and measured streamwise-velocity contours behind a multirotor with two wake-control wings" />
-              <figcaption>Simulated and measured velocity at one rotor diameter downstream. Cropped from Figure 3, Martins et al., J. Phys.: Conf. Ser. 2767 (2024) 072006, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</figcaption>
+              <img src="/assets/work/wake-validation.svg" width="960" height="600" loading="lazy" alt="A gridded CFD wake section beside point-sampled wind-tunnel flow, with two control-wing positions" />
+              <figcaption>CFD fields compared with wind-tunnel samples. Schematic comparison, not validation data.</figcaption>
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Wind energy · 2024</p>
@@ -148,10 +135,10 @@
               <a href="https://doi.org/10.1088/1742-6596/2767/7/072006" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
             </div>
           </article>
-          <article class="research-story">
+          <article class="research-story" id="vertical-momentum">
             <figure>
-              <img src="/assets/work/wind-farm-efficiency.png" width="950" height="600" loading="lazy" alt="Modelled wind-farm efficiency as density increases, comparing a conventional array with an atmospheric-boundary-layer-controlled array" />
-              <figcaption>Modelled efficiency versus farm density. Cropped from Figure 12, Ferreira et al., J. Phys.: Conf. Ser. 2767 (2024) 092107, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</figcaption>
+              <img src="/assets/work/vertical-momentum.svg" width="960" height="600" loading="lazy" alt="Horizontal flow above a wind farm transfers momentum downward into the turbine layer" />
+              <figcaption>Vertical momentum exchange between the flow above and the wind-farm layer. Conceptual side view.</figcaption>
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Wind-farm physics · 2024</p>
@@ -174,7 +161,7 @@
           </article>
           <article class="research-story" id="celestial-dynamics">
             <figure>
-              <img src="/assets/work/three-body-schematic.svg?v=20260921-fonts" width="960" height="600" loading="lazy" alt="Computed rotating-frame orbits, zero-velocity boundary, Lagrange points and a Poincaré section" />
+              <img src="/assets/work/three-body-schematic.svg?v=20260921-findings" width="960" height="600" loading="lazy" alt="Computed rotating-frame orbits, zero-velocity boundary, Lagrange points and a Poincaré section" />
               <figcaption>Computed restricted-three-body trajectories and upward-crossing Poincaré section.</figcaption>
             </figure>
             <div class="research-story-copy">

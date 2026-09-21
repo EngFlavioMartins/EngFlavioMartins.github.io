@@ -33,6 +33,21 @@ The same headers are stored in each software repository under `docs/assets/heade
 
 ## Protected content
 
-Run `python tools/check_openonda_protected.py` to verify that the original OpenONDA tab, project feature, related hybrid-flow post and associated raster assets remain byte-for-byte unchanged from the previous release.
+Run `python tools/check_openonda_protected.py` to verify the original OpenONDA image, caption and copy, project feature, related hybrid-flow post and associated raster assets. Only the requested tab-to-card wrappers are allowed to differ.
 
 Run `python tools/test_art_geometry.py` to check camera orthogonality, surface normals, projected directions and wake origins.
+
+## Unified research findings
+
+Run `python tools/generate_findings_art.py` for six additional original vector headers:
+
+- `regenerative-wakes.svg`: one-, two- and four-wing arrangements, paired tip-vortex circulation and upward wake transport. Qualitative interpretation of [Martins et al. (2025)](https://wes.copernicus.org/articles/10/41/2025/), not extracted velocity data.
+- `wake-validation.svg`: a smooth gridded wake section alongside point samples. Both use an analytical illustrative field; the comparison arrow does not imply exact simulation/experiment agreement. [Study](https://doi.org/10.1088/1742-6596/2767/7/072006).
+- `vertical-momentum.svg`: momentum transfer from the flow above the array into the turbine layer; no performance curve or numerical efficiency claim. [Study](https://doi.org/10.1088/1742-6596/2767/9/092107).
+- `cylinder-wake.svg`: transverse motion and staggered, counter-rotating wake vortices. Not a reproduction of the three-dimensional CFD result.
+- `truss-sizing.svg`: fixed nodes and loads, with widths informed by an illustrative linear-truss solve. Not a reproduction of a published optimum.
+- `sparse-lagrangian-tracks.svg`: qualitative coherent particle motion at two sampling densities. Neither experimental tracks nor output of the CSC algorithm.
+
+The Research findings grid replaces the former tabbed section and Additional studies. OpenONDA's image, caption, text and links remain unchanged; only its container becomes a standard card. The related hybrid-flow artwork also remains protected. Original paper images are retained on disk.
+
+The decorative `assets/environmental-flow.svg` is a terrain-following flow motif, not climate data. A mist/teal/mineral palette and a single section divider evoke atmospheric transport without repeated page-wide patterns, climate icons, animation or new research claims.
