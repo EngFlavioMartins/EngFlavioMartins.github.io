@@ -37,14 +37,14 @@ def validation():
         ax.add_patch(Rectangle((offset-1.65, .6), 3.3, 3.3, facecolor='#e9efed', edgecolor='#bdcecb', lw=1))
         if not sampled:
             ax.contourf(offset+y, .7+z, deficit, levels=[.15,.4,.7,1.1], colors=['#d4e2df','#a4c7c1','#5b9d94'])
-            for t in np.linspace(-1.35, 1.35, 10):
-                ax.plot([offset+t]*2, [.7,3.65], color=PAPER, alpha=.55, lw=.7)
-            for t in np.linspace(.7,3.65,10):
-                ax.plot([offset-1.35,offset+1.35], [t]*2, color=PAPER, alpha=.55, lw=.7)
+            for t in np.linspace(-1.35, 1.35, 7):
+                ax.plot([offset+t]*2, [.7,3.65], color=INK, alpha=.7, lw=1.1)
+            for t in np.linspace(.7,3.65,7):
+                ax.plot([offset-1.35,offset+1.35], [t]*2, color=INK, alpha=.7, lw=1.1)
         else:
-            yy, zz = np.meshgrid(np.linspace(-1.3,1.3,13),np.linspace(.1,2.85,14))
+            yy, zz = np.meshgrid(np.linspace(-1.3,1.3,9),np.linspace(.1,2.85,10))
             q = np.exp(-(yy/.77)**4-((zz-1.3)/1.1)**4)
-            ax.scatter(offset+yy,.7+zz,s=19,c=q,cmap='PuBuGn',vmin=0,vmax=1,linewidths=0)
+            ax.scatter(offset+yy,.7+zz,s=40,c=q,cmap='PuBuGn',vmin=0,vmax=1,edgecolors=INK,linewidths=.5)
         for height in [1.2,2.35]:
             ax.plot([offset-.85, offset+.85], [height]*2, color=PURPLE, lw=3)
         ax.text(offset, .12, 'Wind tunnel' if sampled else 'CFD', size=25,ha='center')
@@ -53,19 +53,41 @@ def validation():
     save(fig, 'wake-validation')
 
 
+def ribbon_arrow(ax, points, widths, colour, head_width=.23):
+    """A tapered, curved arrow; thickness is qualitative, not measured flux."""
+    points = np.asarray(points)
+    tangent = np.gradient(points, axis=0)
+    tangent /= np.linalg.norm(tangent, axis=1)[:, None]
+    normal = np.column_stack([-tangent[:, 1], tangent[:, 0]])
+    widths = np.asarray(widths)
+    shoulder = len(points)-7
+    left = points[:shoulder]+normal[:shoulder]*widths[:shoulder, None]/2
+    right = points[:shoulder]-normal[:shoulder]*widths[:shoulder, None]/2
+    head = [points[shoulder]+normal[shoulder]*head_width,
+            points[-1], points[shoulder]-normal[shoulder]*head_width]
+    ax.add_patch(Polygon(np.vstack([left, head, right[::-1]]),
+                         facecolor=colour, edgecolor='none', zorder=4))
+
+
 def momentum():
     fig, ax = canvas()
-    ax.add_patch(Rectangle((.35,.55),9.3,1.7,facecolor='#e2ebe6',edgecolor='none'))
-    ax.plot([.35,9.65],[.55]*2,color='#8d9f91',lw=2)
-    for x in [1.5,3.7,5.9,8.1]:
-        ax.plot([x,x],[.55,1.8],color=INK,lw=2.4)
-        ax.plot([x,x],[1.1,2.1],color=PURPLE,lw=4)
-        ax.fill([x,x+1.5,x+1.5,x],[1.1,.95,2.25,2.1],color=PURPLE,alpha=.10)
-    for z in [3.1,3.55]:
-        arrow(ax,(.5,z),(9.5,z),TEAL,scale=22)
-    for x in [2.4,4.6,6.8]:
-        ax.annotate('',xy=(x+.45,1.75),xytext=(x-.45,3.15),
-                    arrowprops=dict(arrowstyle='-|>',connectionstyle='arc3,rad=-.3',color=TEAL,lw=2.7,mutation_scale=24))
+    ax.plot([.35,9.65],[.55]*2,color=INK,lw=1.6,alpha=.8)
+    turbines = [1.2, 3.5, 5.8, 8.1]
+    # Wakes reach the next rotor; no coloured blanket obscures the array.
+    for x, end in zip(turbines, turbines[1:]+[9.65]):
+        ax.fill([x,end,end,x],[1.15,1.03,2.12,2.0],color=PURPLE,alpha=.28,zorder=1)
+        ax.plot([x,end],[2.0,2.12],color=PURPLE,lw=1.4,alpha=.8)
+        ax.plot([x,x],[.55,1.7],color=INK,lw=3,zorder=5)
+        ax.plot([x,x],[1.15,2.0],color=PURPLE,lw=5,zorder=6)
+    t = np.linspace(0,1,90)
+    main = np.column_stack([.45+9.1*t, np.full_like(t,3.35)])
+    ribbon_arrow(ax, main, .22-.12*t, TEAL)
+    for x in [1.45,3.75,6.05]:
+        control = np.array([[x,3.35],[x+.95,3.35],[x+.60,2.45],[x+1.3,1.65]])
+        curve = ((1-t[:,None])**3*control[0]+3*(1-t[:,None])**2*t[:,None]*control[1]
+                 +3*(1-t[:,None])*t[:,None]**2*control[2]+t[:,None]**3*control[3])
+        ribbon_arrow(ax, curve, .08+.08*t, TEAL, head_width=.19)
+    ax.text(8.85,2.38,'Wake',ha='center',size=24,color=PURPLE)
     ax.text(5,4.05,'Momentum from above',ha='center',size=25,color=TEAL)
     ax.text(5,.0,'Wind-farm layer',ha='center',size=24)
     save(fig,'vertical-momentum')

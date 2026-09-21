@@ -5,7 +5,7 @@ Original SVG artwork uses three coordinated, saturated palettes and restrained t
 ## Current palette build
 
 Run `python tools/apply_art_palettes.py` and `python tools/test_art_palettes.py`.
-The palette pass reads the immutable pre-colour SVG snapshot at commit `270a2c61d23e85715a83b267b8c855f43efd1b2d`, then changes colour styling and strengthens the fine particle-ring marks' opacity. Paths, plotted points, text outlines and scientific geometry remain byte-for-byte identical after normalising those style changes. An explicit root fill keeps inherited math glyphs readable on dark panels. This is idempotent and does not rerun numerical solvers or edit companion repositories. Foreground label colours meet 4.5:1 contrast against their backgrounds; colour fields receive a monotonic contrast expansion. Future geometry changes should update the source snapshot before applying this pass.
+The palette pass reads revised geometry from `tools/art-sources/`, falling back to the immutable pre-colour SVG snapshot at commit `270a2c61d23e85715a83b267b8c855f43efd1b2d` for other assets. It changes colour styling and strengthens the fine particle-ring marks' opacity. Geometry remains identical to the selected source after normalising those style changes. An explicit root fill keeps inherited math glyphs readable on dark panels. This is idempotent and does not rerun numerical solvers or edit companion repositories. Foreground label colours meet 4.5:1 contrast against their backgrounds; colour fields receive a monotonic contrast expansion. The generators save revised sources before the palette pass so subsequent colour builds preserve the latest geometry.
 
 The geometry generators below reproduce the original source artwork. Run the palette pass for the current published colour edition; do not publish an unstyled geometry rebuild over it.
 
@@ -63,7 +63,7 @@ The divider is full-bleed and repeats horizontally with matched positions and ta
 
 ## Hybrid method art and palette previews
 
-`python tools/generate_hybrid_art.py` produces `hybrid-vortex-grid.svg`: an obstacle-centred Eulerian mesh, an overlap region, two-way exchange and a Lagrangian particle wake. It is a conceptual plan view, not a computed velocity field or reconstruction of the paper's results. This replaces the separate hybrid-method paper figure only, **not** OpenONDA's image or repository.
+`python tools/generate_hybrid_art.py` produces `hybrid-vortex-grid.svg`: an obstacle-centred Eulerian mesh, two-way exchange and six staggered, alternating particle vortices of increasing radius. The dashed overlap box has been removed. Larger, fewer particle marks make the smaller vortex groups readable on phones. It is a conceptual plan view, not a computed velocity field or reconstruction of the paper's results. This replaces the separate hybrid-method paper figure only, **not** OpenONDA's image or repository.
 
 `tools/preview_art_palettes.py --data PATH_TO_DENSE_OUTPUT --output PREVIEW_DIRECTORY` reproduces the original three candidate comparisons using identical Voronoi data and hybrid geometry. The user selected a mixture of all three accent palettes, then requested a uniform dark background for all figures. The current implementation is `apply_art_palettes.py`.
 
@@ -77,3 +77,13 @@ The grid now has 13 cards rather than 15. Bibliographic titles in the Publicatio
 - Existing `#voronoi-coherence` and `#openfoam-actuator-surface` bookmarks point into the merged cards.
 
 `python tools/test_findings.py` checks question headings, paper/code consolidation, preserved references and the restored figure. Superseded artwork remains on disk for reversibility.
+
+## Final editorial and mobile refinements
+
+- Questions are optional: the cavity and OpenFOAM postprocessing cards use descriptive statement titles. The sparse-track title follows the user's wording; the hybrid title asks how the methods can be combined.
+- The validation title, “Why does wing arrangement change wake recovery?”, follows the fixed-total-lift comparison and vortex/entrainment conclusions in [the full paper, sections 3.2–4](https://pure.tudelft.nl/ws/portalfiles/portal/212165357/Martins_2024_J._Phys._Conf._Ser._2767_072006.pdf).
+- Postprocessing uses 36 larger samples, two coarse array planes and light mesh lines. Validation likewise uses fewer, larger samples and light grid lines. These are conceptual diagrams, not reduced experimental datasets.
+- Momentum artwork has no green layer blanket. Yellow wakes reach the next rotor; smoothly tangent branches join the horizontal transport arrow. Width variation is qualitative only, explicitly stated in the caption.
+- The actuator label is “Multirotor system”. The cavity illustration omits the Re=100 label and uses fewer, stronger streamlines; the computed Reynolds number remains documented in the solver settings above.
+
+Run `python tools/test_final_polish.py` with Matplotlib/SciPy available for the mobile sample budget, six-vortex layout, connected wakes and label regressions.

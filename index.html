@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#19383c" />
     <title>Flavio A. C. Martins · Computational Fluid Dynamics</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23102a43'/%3E%3Cpath d='M13 43c10-4 13-24 25-24 6 0 9 5 13 5' fill='none' stroke='%232dd4bf' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M13 32c9 0 13 13 23 13 7 0 10-6 15-6' fill='none' stroke='%23fff' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="/assets/styles.css?v=20260921-dark" />
+    <link rel="stylesheet" href="/assets/styles.css?v=20260921-refined" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -75,7 +75,7 @@
 
           <article id="work-viv" class="research-story">
             <figure data-art-tone="copper">
-              <img src="/assets/work/cylinder-wake.svg?v=20260921-dark" width="960" height="600" loading="lazy" alt="A transversely moving cylinder coupled to an alternating vortex wake" />
+              <img src="/assets/work/cylinder-wake.svg?v=20260921-refined" width="960" height="600" loading="lazy" alt="A transversely moving cylinder coupled to an alternating vortex wake" />
               <figcaption>Transverse cylinder motion and alternating vortex shedding. Conceptual illustration.</figcaption>
             </figure>
             <div class="research-story-copy">
@@ -88,7 +88,7 @@
 
           <article id="work-truss" class="research-story">
             <figure data-art-tone="copper">
-              <img src="/assets/work/truss-sizing.svg?v=20260921-dark" width="960" height="600" loading="lazy" alt="Identical loaded trusses with uniform and force-scaled member thicknesses; node positions remain fixed" />
+              <img src="/assets/work/truss-sizing.svg?v=20260921-refined" width="960" height="600" loading="lazy" alt="Identical loaded trusses with uniform and force-scaled member thicknesses; node positions remain fixed" />
               <figcaption>Member sizing under fixed loading and geometry. Illustrative truss, not a published optimum.</figcaption>
             </figure>
             <div class="research-story-copy">
@@ -102,12 +102,12 @@
           <article id="work-csc" class="research-story">
             <span id="voronoi-coherence" class="study-anchor" aria-hidden="true"></span>
             <figure data-art-tone="copper">
-              <img src="/assets/work/voronoi-neighbours.svg?v=20260921-dark" width="960" height="600" loading="lazy" alt="Coloured Voronoi cells revealing coherent double-gyre motion, with curved particle trails and no overlaid arrows" />
+              <img src="/assets/work/voronoi-neighbours.svg?v=20260921-refined" width="960" height="600" loading="lazy" alt="Coloured Voronoi cells revealing coherent double-gyre motion, with curved particle trails and no overlaid arrows" />
               <figcaption>Voronoi neighbour-persistence colouring of 784 computed double-gyre tracers.</figcaption>
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Flow diagnostics · Two studies · 2021</p>
-              <h3>How can sparse particle tracks reveal coherent flow?</h3>
+              <h3>Can we retrieve information from sparse tracks?</h3>
               <p>The CSC study tests coherent-structure colouring on an Ahmed-body wake and a swirling jet. Detection improves with denser seeding; in the tested cases, mean inter-particle spacing below 15% of the characteristic flow scale matters more than track length.</p>
               <p>The separate Voronoi study identifies tracers that remain neighbours and converts their shared-edge history into a spectral colour field. Tests on double-gyre flow and three-dimensional bluff-body measurements reveal coherent motion even at sparse seeding. The Python companion implements the Voronoi method on a double-gyre example.</p>
               <div class="study-links"><a href="https://doi.org/10.1007/s00348-021-03135-5" rel="noreferrer">CSC paper ↗</a><a href="https://arxiv.org/abs/2103.09884" rel="noreferrer">Voronoi paper ↗</a><a href="https://github.com/EngFlavioMartins/voronoi-coherent-structures">Python examples ↗</a></div>
@@ -116,7 +116,7 @@
           <article class="research-story" id="regenerative-wakes">
             <span id="openfoam-actuator-surface" class="study-anchor" aria-hidden="true"></span>
             <figure data-art-tone="ochre">
-              <img src="/assets/work/openfoam-actuator-surface.svg?v=20260921-dark" width="960" height="600" loading="lazy" alt="Front-oblique square rotor crossed by horizontal force strips, with normal thrust, upward forces and rising tip-vortex paths" />
+              <img src="/assets/work/openfoam-actuator-surface.svg?v=20260921-refined" width="960" height="600" loading="lazy" alt="Front-oblique square rotor crossed by horizontal force strips, with normal thrust, upward forces and rising tip-vortex paths" />
               <figcaption>Actuator forcing and upward wake deflection. Conceptual illustration, not simulation output.</figcaption>
             </figure>
             <div class="research-story-copy">
@@ -129,20 +129,20 @@
           </article>
           <article class="research-story" id="wake-validation">
             <figure data-art-tone="blue">
-              <img src="/assets/work/wake-validation.svg?v=20260921-dark" width="960" height="600" loading="lazy" alt="A gridded CFD wake section beside point-sampled wind-tunnel flow, with two control-wing positions" />
+              <img src="/assets/work/wake-validation.svg?v=20260921-refined" width="960" height="600" loading="lazy" alt="A gridded CFD wake section beside point-sampled wind-tunnel flow, with two control-wing positions" />
               <figcaption>CFD fields compared with wind-tunnel samples. Schematic comparison, not validation data.</figcaption>
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Wind energy · 2024</p>
-              <h3>Can CFD reproduce wind-tunnel wake control?</h3>
-              <p>An actuator-surface model in OpenFOAM is compared with wind-tunnel velocity fields around a two-wing multirotor. The numerical study then traces tip-vortex formation and wake response for one-, two- and four-wing layouts.</p>
+              <h3>Why does wing arrangement change wake recovery?</h3>
+              <p>An actuator-surface model is checked against wind-tunnel measurements, then used to compare one-, two- and four-wing layouts at the same total lift. Distributing the lift across more wings reshapes the tip vortices and strengthens vertical momentum exchange. In the simulated cases, the two- and four-wing layouts recover wake total pressure faster than the single-wing layout.</p>
               <a href="https://doi.org/10.1088/1742-6596/2767/7/072006" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
             </div>
           </article>
           <article class="research-story" id="vertical-momentum">
             <figure data-art-tone="ochre">
-              <img src="/assets/work/vertical-momentum.svg?v=20260921-dark" width="960" height="600" loading="lazy" alt="Horizontal flow above a wind farm transfers momentum downward into the turbine layer" />
-              <figcaption>Vertical momentum exchange between the flow above and the wind-farm layer. Conceptual side view.</figcaption>
+              <img src="/assets/work/vertical-momentum.svg?v=20260921-refined" width="960" height="600" loading="lazy" alt="Horizontal flow above a wind farm transfers momentum downward into the turbine layer" />
+              <figcaption>Momentum transfer into turbine wakes. Arrow widths indicate qualitative transport, not measured flux.</figcaption>
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Wind-farm physics · 2024</p>
@@ -153,19 +153,19 @@
           </article>
           <article class="research-story" id="hybrid-vortex-grid">
             <figure data-art-tone="blue">
-              <img src="/assets/work/hybrid-vortex-grid.svg?v=20260921-dark" width="960" height="600" loading="lazy" alt="A near-body mesh around an obstacle exchanges information with a downstream wake represented by vortex particles" />
+              <img src="/assets/work/hybrid-vortex-grid.svg?v=20260921-refined" width="960" height="600" loading="lazy" alt="A near-body mesh around an obstacle exchanges information with a downstream wake represented by vortex particles" />
               <figcaption>Near-body grid, particle wake and two-way exchange. Conceptual method illustration.</figcaption>
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Numerical methods · 2026</p>
-              <h3>Can grids and vortex particles share a flow simulation?</h3>
+              <h3>How to combine grids and vortex particles in one flow solver?</h3>
               <p>A near-body finite-volume solver resolves walls while vortex particles carry the wake downstream. This three-dimensional proof of concept tests two-way coupling against fully meshed reference calculations for a cube and a NACA4412 airfoil.</p>
               <a href="https://doi.org/10.1088/1742-6596/3224/4/042069" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
             </div>
           </article>
           <article class="research-story" id="celestial-dynamics">
             <figure data-art-tone="blue">
-              <img src="/assets/work/three-body-schematic.svg?v=20260921-dark" width="960" height="600" loading="lazy" alt="Computed rotating-frame orbits, zero-velocity boundary, Lagrange points and a Poincaré section" />
+              <img src="/assets/work/three-body-schematic.svg?v=20260921-refined" width="960" height="600" loading="lazy" alt="Computed rotating-frame orbits, zero-velocity boundary, Lagrange points and a Poincaré section" />
               <figcaption>Computed restricted-three-body trajectories and upward-crossing Poincaré section.</figcaption>
             </figure>
             <div class="research-story-copy">
@@ -177,7 +177,7 @@
           </article>
           <article class="research-story">
             <figure data-art-tone="copper">
-              <img src="/assets/work/truss-topology-mass.svg?v=20260921-dark" width="960" height="600" loading="lazy" alt="Tapered truss under upward nodal loads, with tension and compression members and dashed original node positions" />
+              <img src="/assets/work/truss-topology-mass.svg?v=20260921-refined" width="960" height="600" loading="lazy" alt="Tapered truss under upward nodal loads, with tension and compression members and dashed original node positions" />
               <figcaption>Loading and node repositioning; member colours show axial-force sign in an illustrative linear-truss calculation.</figcaption>
             </figure>
             <div class="research-story-copy">
@@ -189,7 +189,7 @@
           </article>
           <article class="research-story">
             <figure data-art-tone="copper">
-              <img src="/assets/work/vortex-particle-ring.svg?v=20260921-dark" width="960" height="600" loading="lazy" alt="Three stages of coaxial vortex rings contracting, passing through each other and exchanging positions" />
+              <img src="/assets/work/vortex-particle-ring.svg?v=20260921-refined" width="960" height="600" loading="lazy" alt="Three stages of coaxial vortex rings contracting, passing through each other and exchanging positions" />
               <figcaption>Leapfrogging vortex rings: particle cores, contraction and expansion. Conceptual method illustration.</figcaption>
             </figure>
             <div class="research-story-copy">
@@ -201,24 +201,24 @@
           </article>
           <article class="research-story" id="cavity-flow">
             <figure data-art-tone="blue">
-              <img src="/assets/work/cavity-flow.svg?v=20260921-dark" width="960" height="600" loading="lazy" alt="Computed recirculating streamlines in a square lid-driven cavity at Reynolds number 100" />
-              <figcaption>Re = 100 cavity flow computed with the repository’s projection solver on a 56 × 56 grid.</figcaption>
+              <img src="/assets/work/cavity-flow.svg?v=20260921-refined" width="960" height="600" loading="lazy" alt="Computed recirculating streamlines in a square lid-driven cavity at Reynolds number 100" />
+              <figcaption>Cavity flow computed with the repository’s projection solver.</figcaption>
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Scientific software · Incompressible flow</p>
-              <h3>How does a moving wall drive recirculation?</h3>
+              <h3>Lid-driven cavity flow</h3>
               <p>A moving lid drives circulation inside a closed square cavity. This Python implementation advances velocity on a staggered grid and applies a pressure projection using a discrete cosine transform. The example shows the primary recirculation and corner motion produced by the wall boundary conditions.</p>
               <a href="https://github.com/EngFlavioMartins/cavity-flow">Code and examples ↗</a>
             </div>
           </article>
           <article class="research-story" id="openfoam-postprocessing">
             <figure data-art-tone="blue">
-              <img src="/assets/work/openfoam-postprocessing.svg?v=20260921-dark" width="960" height="600" loading="lazy" alt="Unstructured mesh samples mapped to regular gridded velocity slices" />
+              <img src="/assets/work/openfoam-postprocessing.svg?v=20260921-refined" width="960" height="600" loading="lazy" alt="Unstructured mesh samples mapped to regular gridded velocity slices" />
               <figcaption>Cell-centred samples, local interpolation and structured flow sections. Conceptual workflow illustration.</figcaption>
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Scientific software · Flow analysis</p>
-              <h3>How can OpenFOAM fields become Python arrays?</h3>
+              <h3>From OpenFOAM fields to Python arrays</h3>
               <p>OpenFOAM velocity and pressure fields are read through fluidfoam and resampled using local radial-basis interpolation. Regular NumPy arrays support velocity profiles and planar sections. The repository includes a direct plotting example and the original notebook-based workflow.</p>
               <a href="https://github.com/EngFlavioMartins/openfoam-postprocessing">Code and examples ↗</a>
             </div>

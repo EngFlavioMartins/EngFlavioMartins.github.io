@@ -96,6 +96,9 @@ def recolour(source, name, dark, strengthen_particles=False):
 
 
 def original(name):
+    revised = ROOT / 'tools/art-sources' / f'{name}.svg'
+    if revised.exists():
+        return revised.read_text()
     return subprocess.check_output(
         ['git', 'show', f'{SOURCE}:assets/work/{name}.svg'], cwd=ROOT).decode()
 

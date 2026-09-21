@@ -52,6 +52,12 @@ def save(fig, name):
     fig.savefig(OUT / f"{name}.svg", facecolor=PAPER, metadata={"Date": None})
     svg = OUT / f"{name}.svg"
     svg.write_text("\n".join(line.rstrip() for line in svg.read_text(encoding="utf-8").splitlines()) + "\n", encoding="utf-8")
+    # Revised geometries are versioned independently of the colour edition.
+    if name in {'openfoam-postprocessing', 'cavity-flow', 'vertical-momentum',
+                'hybrid-vortex-grid', 'openfoam-actuator-surface', 'wake-validation'}:
+        source_dir = ROOT / 'tools/art-sources'
+        source_dir.mkdir(exist_ok=True)
+        (source_dir / f'{name}.svg').write_text(svg.read_text())
     # Local raster previews are generated outside the published assets.
     preview = Path("/private/tmp/martins-art-preview")
     preview.mkdir(exist_ok=True)
@@ -213,7 +219,7 @@ def actuator():
             ax.scatter(*actuator_project([0, y, z]), s=20, color=TEAL, zorder=7)
 
     vector([0, 1.1, 1.15], [-1, 0, 0], 1.8, PURPLE, lw=3)
-    ax.text(.22, 3.8, "Thrust", color=PURPLE, size=26)
+    ax.text(.22, 4.65, "Multirotor\nsystem", color=PURPLE, size=24, linespacing=1.1)
     ax.text(1.9, .18, "Vertical force", color=TEAL, size=26)
     # Rise is a vertical displacement, not an arbitrary diagonal decoration.
     vector([6, 0, actuator_wake_centre(.6, 6)], [0, 0, 1], .85, TEAL, lw=2.7, scale=25)
@@ -226,25 +232,27 @@ def actuator():
 def postprocessing():
     fig, ax = canvas()
     rng = np.random.default_rng(18)
-    points = rng.uniform([.25, .65], [3.15, 3.8], (80, 2))
+    xx, yy = np.meshgrid(np.linspace(.4, 3, 6), np.linspace(.8, 3.6, 6))
+    points = np.column_stack([xx.ravel(), yy.ravel()]) + rng.uniform(-.12, .12, (36, 2))
     from scipy.spatial import Delaunay
     triangles = Delaunay(points)
-    ax.triplot(points[:, 0], points[:, 1], triangles.simplices, color="#b7bacb", lw=.55)
+    ax.triplot(points[:, 0], points[:, 1], triangles.simplices, color=INK, lw=1.2, alpha=.8)
     scalar = np.exp(-((points[:, 1]-2.25-.18*np.sin(points[:, 0]*2))/.57)**2)
-    ax.scatter(points[:, 0], points[:, 1], c=scalar, cmap="PuBuGn", s=12, edgecolors=PAPER, linewidths=.5, zorder=4)
+    ax.scatter(points[:, 0], points[:, 1], c=np.where(scalar > .35, TEAL, PURPLE),
+               s=62, edgecolors=INK, linewidths=.8, zorder=4)
     arrow(ax, (3.4, 2.2), (4.25, 2.2), INK)
-    for offset in [2, 1, 0]:
-        xx, yy = np.meshgrid(np.linspace(4.65, 7.4, 19), np.linspace(.55, 3.55, 20))
+    for offset in [1, 0]:
+        xx, yy = np.meshgrid(np.linspace(4.65, 7.9, 7), np.linspace(.65, 3.55, 7))
         xx = xx+.69*offset
         yy = yy+.22*offset
         z = np.exp(-((yy-2.1-.18*np.sin(xx*1.6))/.53)**2)
         ax.contourf(xx, yy, z, levels=[0, .15, .35, .55, .75, 1.01], colors=["#e7e9ee", "#d1d9e4", "#afb4d3", "#769fae", "#288f91"], alpha=.94)
-        for i in range(0, xx.shape[0], 2):
-            ax.plot(xx[i], yy[i], color=PAPER, alpha=.55, lw=.45)
-        for i in range(0, xx.shape[1], 2):
-            ax.plot(xx[:, i], yy[:, i], color=PAPER, alpha=.55, lw=.45)
+        for i in range(xx.shape[0]):
+            ax.plot(xx[i], yy[i], color=INK, alpha=.8, lw=1.2)
+        for i in range(xx.shape[1]):
+            ax.plot(xx[:, i], yy[:, i], color=INK, alpha=.8, lw=1.2)
         ax.add_patch(Polygon([[xx.min(), yy.min()], [xx.max(), yy.min()], [xx.max(), yy.max()], [xx.min(), yy.max()]],
-                             fill=False, edgecolor="#919aaf", lw=.8))
+                             fill=False, edgecolor=INK, lw=1.5))
     ax.text(1.7, .12, "Cell samples", ha="center", size=26, color=INK)
     ax.text(6.75, .12, "Regular arrays", ha="center", size=26, color=INK)
     save(fig, "openfoam-postprocessing")
@@ -266,18 +274,17 @@ def cavity(repo):
     divergence = (u[1:, 1:-1]-u[:-1, 1:-1])/dx+(v[1:-1, 1:]-v[1:-1, :-1])/dx
     assert np.max(np.abs(divergence)) < 1e-9
     fig = plt.figure(figsize=(9.6, 6), facecolor=PAPER)
-    ax = fig.add_axes([.08, .07, .72, .82])
+    ax = fig.add_axes([.14, .07, .72, .82])
     ax.set_aspect("equal")
     x = (np.arange(n)+.5)/n
     speed = np.hypot(uc, vc)
     ax.contourf(x, x, speed, levels=np.linspace(0, 1, 13), cmap="PuBuGn", alpha=.24)
-    ax.streamplot(x, x, uc, vc, density=1.15, color=TEAL, linewidth=1.15, arrowsize=1.6)
+    ax.streamplot(x, x, uc, vc, density=.85, color=TEAL, linewidth=1.5, arrowsize=1.8)
     ax.plot([0, 0, 1, 1], [1, 0, 0, 1], color=INK, lw=2)
     arrow(ax, (0, 1.04), (1, 1.04), PURPLE, lw=2)
     ax.text(.5, 1.10, "Moving lid", ha="center", color=PURPLE, size=26)
     ax.set(xlim=(-.04, 1.04), ylim=(-.04, 1.16))
     ax.axis("off")
-    fig.text(.76, .43, "Re\n100", ha="center", color=INK, size=26, linespacing=1.5)
     save(fig, "cavity-flow")
 
 

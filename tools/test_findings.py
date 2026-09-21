@@ -21,7 +21,11 @@ class FindingsTests(unittest.TestCase):
         html = (ROOT / 'index.html').read_text()
         headings = re.findall(r'<h3>(.*?)</h3>', html)
         self.assertEqual(len(headings), 13)
-        self.assertTrue(all(title.endswith('?') for title in headings))
+        statements = {'Lid-driven cavity flow', 'From OpenFOAM fields to Python arrays'}
+        self.assertTrue(all(title.endswith('?') or title in statements for title in headings))
+        self.assertTrue(statements.issubset(headings))
+        self.assertIn('Can we retrieve information from sparse tracks?', headings)
+        self.assertIn('Why does wing arrangement change wake recovery?', headings)
         cards = re.findall(r'<article\b.*?</article>', html, re.S)
         for repository, paper in [
             ('openfoam-actuator-surface', '10.5194/wes-10-41-2025'),

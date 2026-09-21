@@ -35,8 +35,8 @@ assert card_content(before_card) == card_content(after_card), 'Changed OpenONDA 
 # Keep its text/link protected while allowing that figure and caption replacement.
 before_hybrid = block(before_home, r'<article class="research-story">\s*<figure class="dark-figure panoramic-figure">.*?</article>')
 after_hybrid = block(after_home, r'<article class="research-story" id="hybrid-vortex-grid">.*?</article>')
-assert '<h3>Can grids and vortex particles share a flow simulation?</h3>' in after_hybrid
-after_hybrid = after_hybrid.replace('Can grids and vortex particles share a flow simulation?',
+assert '<h3>How to combine grids and vortex particles in one flow solver?</h3>' in after_hybrid
+after_hybrid = after_hybrid.replace('How to combine grids and vortex particles in one flow solver?',
                                     'Hybrid vortex particle–grid flow simulation')
 assert block(before_hybrid, r'<div class="research-story-copy">.*?</div>') == block(after_hybrid, r'<div class="research-story-copy">.*?</div>')
 

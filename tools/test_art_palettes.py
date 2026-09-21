@@ -47,7 +47,7 @@ class PaletteTests(unittest.TestCase):
             if not asset:
                 continue  # OpenONDA keeps its original raster and styling.
             family, dark = ART[asset[1]]
-            self.assertIn('.svg?v=20260921-dark', figure)
+            self.assertIn('.svg?v=20260921-refined', figure)
             if dark:
                 self.assertIn(f'data-art-tone="{family}"', figure)
             else:
