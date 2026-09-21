@@ -31,21 +31,23 @@ assert '<h3>How does OpenONDA control OpenFOAM from Python?</h3>' in after_card
 after_card = after_card.replace('How does OpenONDA control OpenFOAM from Python?', 'OpenONDA')
 assert card_content(before_card) == card_content(after_card), 'Changed OpenONDA content'
 
+# The user explicitly requested new art for the separate hybrid-method paper.
+# Keep its text/link protected while allowing that figure and caption replacement.
+before_hybrid = block(before_home, r'<article class="research-story">\s*<figure class="dark-figure panoramic-figure">.*?</article>')
+after_hybrid = block(after_home, r'<article class="research-story" id="hybrid-vortex-grid">.*?</article>')
+assert '<h3>Can grids and vortex particles share a flow simulation?</h3>' in after_hybrid
+after_hybrid = after_hybrid.replace('Can grids and vortex particles share a flow simulation?',
+                                    'Hybrid vortex particle–grid flow simulation')
+assert block(before_hybrid, r'<div class="research-story-copy">.*?</div>') == block(after_hybrid, r'<div class="research-story-copy">.*?</div>')
+
 for file, patterns in {
-    "index.html": [
-        r'<article class="research-story">\s*<figure class="dark-figure panoramic-figure">.*?</article>',
-    ],
     "projects/index.html": [r'<section class="featured-project shell".*?</section>'],
 }.items():
     before, after = original(file).decode(), (ROOT / file).read_text()
-    if file == 'index.html':
-        assert '<h3>Can grids and vortex particles share a flow simulation?</h3>' in after
-        after = after.replace('Can grids and vortex particles share a flow simulation?',
-                              'Hybrid vortex particle–grid flow simulation')
     for pattern in patterns:
         assert block(before, pattern) == block(after, pattern), f"Changed OpenONDA block in {file}"
 
 for file in ["assets/work/openonda-hybrid.png", "assets/work/hybrid-particle-grid.png"]:
     assert original(file) == (ROOT / file).read_bytes(), f"Changed protected asset: {file}"
 
-print("OpenONDA artwork, body copy, captions and links unchanged; requested question titles allowed.")
+print("OpenONDA artwork/copy protected; separate hybrid-paper figure replacement allowed.")

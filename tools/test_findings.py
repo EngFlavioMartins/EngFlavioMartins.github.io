@@ -49,10 +49,26 @@ class FindingsTests(unittest.TestCase):
 
     def test_new_art_is_vector(self):
         for name in ['regenerative-wakes', 'wake-validation', 'vertical-momentum',
-                     'cylinder-wake', 'truss-sizing', 'sparse-lagrangian-tracks']:
+                     'cylinder-wake', 'truss-sizing', 'sparse-lagrangian-tracks', 'hybrid-vortex-grid']:
             root = ET.parse(ROOT / 'assets/work' / f'{name}.svg').getroot()
             self.assertTrue(root.tag.endswith('svg'))
             self.assertFalse(root.findall('.//{http://www.w3.org/2000/svg}image'))
+
+    def test_full_bleed_periodic_divider(self):
+        html = (ROOT / 'index.html').read_text()
+        self.assertIn('class="flow-divider"', html)
+        self.assertNotIn('class="flow-divider shell"', html)
+        css = (ROOT / 'assets/styles.css').read_text()
+        self.assertIn('1200px 100px repeat-x', css)
+        root = ET.parse(ROOT / 'assets/environmental-flow.svg').getroot()
+        self.assertEqual(root.attrib['preserveAspectRatio'], 'none')
+        for path in root.findall('.//{http://www.w3.org/2000/svg}path'):
+            d = path.attrib['d']
+            start = re.search(r'^M0 (\d+)C150 (\d+)', d)
+            end = re.search(r'1050 (\d+) 1200 (\d+)', d)
+            self.assertIsNotNone(start)
+            self.assertIsNotNone(end)
+            self.assertEqual(len(set(start.groups()+end.groups())), 1)
 
     def test_main_palette_contrast(self):
         def luminance(colour):

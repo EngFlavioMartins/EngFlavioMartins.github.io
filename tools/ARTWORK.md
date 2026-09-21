@@ -33,7 +33,7 @@ The same headers are stored in each software repository under `docs/assets/heade
 
 ## Protected content
 
-Run `python tools/check_openonda_protected.py` to verify the original OpenONDA image, caption, body copy and links, project feature, related hybrid-flow post and associated raster assets. The requested tab-to-card wrappers and question-style headings are the only allowed differences.
+Run `python tools/check_openonda_protected.py` to verify the original OpenONDA image, caption, body copy and links and project feature. Requested wrapper/question-title changes are allowed. The separate hybrid-paper card may now use its requested new vector artwork, while its body and publication link stay protected. The original raster assets remain on disk unchanged.
 
 Run `python tools/test_art_geometry.py` to check camera orthogonality, surface normals, projected directions and wake origins.
 
@@ -48,9 +48,17 @@ Run `python tools/generate_findings_art.py` for six additional original vector h
 - `truss-sizing.svg`: fixed nodes and loads, with widths informed by an illustrative linear-truss solve. Not a reproduction of a published optimum.
 - `sparse-lagrangian-tracks.svg`: qualitative coherent particle motion at two sampling densities. Neither experimental tracks nor output of the CSC algorithm.
 
-The Research findings grid replaces the former tabbed section and Additional studies. OpenONDA's image, caption, body text and links remain unchanged; its container becomes a standard card and its heading follows the question-led style. The related hybrid-flow artwork also remains protected. Original paper images are retained on disk.
+The Research findings grid replaces the former tabbed section and Additional studies. OpenONDA's image, caption, body text and links remain unchanged; its container becomes a standard card and its heading follows the question-led style. Original paper images are retained on disk.
 
 The decorative `assets/environmental-flow.svg` is a terrain-following flow motif, not climate data. A mist/teal/mineral palette and a single section divider evoke atmospheric transport without repeated page-wide patterns, climate icons, animation or new research claims.
+
+The divider is full-bleed and repeats horizontally with matched positions and tangents at tile boundaries. It has no maximum width; `preserveAspectRatio="none"` prevents letterboxing gaps when its height changes.
+
+## Hybrid method art and pending palette choice
+
+`python tools/generate_hybrid_art.py` produces `hybrid-vortex-grid.svg`: an obstacle-centred Eulerian mesh, an overlap region, two-way exchange and a Lagrangian particle wake. It is a conceptual plan view, not a computed velocity field or reconstruction of the paper's results. This replaces the separate hybrid-method paper figure only, **not** OpenONDA's image or repository.
+
+`tools/preview_art_palettes.py --data PATH_TO_DENSE_OUTPUT --output PREVIEW_DIRECTORY` compares three candidate palettes using identical Voronoi data and identical hybrid geometry. It writes only preview assets. The site-wide art recolouring is pending user selection; no palette has been applied globally.
 
 ## Consolidation and question-led titles
 

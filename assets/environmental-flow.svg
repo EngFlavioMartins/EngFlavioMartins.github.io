@@ -1,12 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" fill="none">
-  <!-- Decorative terrain-following flow: no quantitative climate-data claim. -->
-  <path d="M0 111C210 111 278 104 369 92S504 91 585 99 775 107 876 98 1073 94 1200 103V120H0Z" fill="#e3e9df"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" fill="none">
+  <!-- Periodic terrain-following motif: matching positions AND horizontal
+       tangents at both ends make repeat-x seamless at every viewport width. -->
+  <path d="M0 107C150 107 150 88 300 88S450 107 600 107 750 116 900 116 1050 107 1200 107V120H0Z" fill="#e3e9df"/>
   <g stroke="#47877f" stroke-width="1.2" opacity=".55">
-    <path d="M0 101C211 101 278 94 369 82S504 81 585 89 775 97 876 88 1073 84 1200 93"/>
-    <path d="M0 85C211 85 282 78 373 68S506 68 587 74 775 81 876 73 1073 70 1200 77"/>
-    <path d="M0 65C211 65 283 60 377 53S508 53 591 58 775 63 880 57 1073 55 1200 60"/>
-    <path d="M0 42C211 42 286 39 381 35S513 35 593 38 780 42 881 39 1073 38 1200 41"/>
-    <path d="M0 17C211 17 288 16 382 15S513 15 595 16 780 18 883 17 1073 16 1200 17"/>
+    <path d="M0 96C150 96 150 78 300 78S450 96 600 96 750 105 900 105 1050 96 1200 96"/>
+    <path d="M0 80C150 80 150 65 300 65S450 80 600 80 750 87 900 87 1050 80 1200 80"/>
+    <path d="M0 60C150 60 150 49 300 49S450 60 600 60 750 65 900 65 1050 60 1200 60"/>
+    <path d="M0 38C150 38 150 32 300 32S450 38 600 38 750 41 900 41 1050 38 1200 38"/>
+    <path d="M0 16C150 16 150 14 300 14S450 16 600 16 750 17 900 17 1050 16 1200 16"/>
   </g>
-  <path d="M0 111C210 111 278 104 369 92S504 91 585 99 775 107 876 98 1073 94 1200 103" stroke="#a48e71" stroke-width="1.5" opacity=".65"/>
+  <path d="M0 107C150 107 150 88 300 88S450 107 600 107 750 116 900 116 1050 107 1200 107" stroke="#a48e71" stroke-width="1.5" opacity=".65"/>
 </svg>
