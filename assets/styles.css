@@ -489,6 +489,12 @@ h3 { font-size: clamp(1.55rem, 2.6vw, 2.45rem); }
 .research-findings .research-story { border-radius: .65rem; box-shadow: none; }
 .research-findings .research-story h3 { line-height: 1.16; letter-spacing: -.025em; }
 .research-findings .research-story figcaption { font-size: .875rem; line-height: 1.5; }
+.research-findings .research-story figure:not(.dark-figure) { background: #fff; }
+.research-findings .research-story figure:not(.dark-figure) figcaption { color: #40565a; }
+.research-findings .research-story figure[data-art-tone="blue"] { background: #102b43; }
+.research-findings .research-story figure[data-art-tone="ochre"] { background: #0b302f; }
+.research-findings .research-story figure[data-art-tone="copper"] { background: #172d32; }
+.research-findings .research-story figure[data-art-tone] figcaption { color: #e0ecea; }
 .research-findings .research-story-copy > a { padding-block: .4rem; }
 .research-findings #work-openonda img { object-fit: contain; background: #000; }
 

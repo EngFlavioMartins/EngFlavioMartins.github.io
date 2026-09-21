@@ -1,6 +1,13 @@
 # Research artwork
 
-Original SVG artwork uses a shared teal/purple palette, light background and restrained typography. Conceptual diagrams are labelled separately from computed results. OpenONDA and its related hybrid post are excluded from this refresh.
+Original SVG artwork uses three coordinated, saturated palettes and restrained typography. Teal–copper covers structures and vortex motion; forest–blue covers numerical methods and orbital dynamics; green–ochre covers wind-energy studies. Most panels use clean white rather than pastel backgrounds. Four panels (vertical momentum, hybrid coupling, celestial dynamics and vortex rings) use deep backgrounds with luminous foregrounds. Conceptual diagrams are labelled separately from computed results. OpenONDA is excluded from this refresh; the separate hybrid paper uses its explicitly requested vector art.
+
+## Current palette build
+
+Run `python tools/apply_art_palettes.py` and `python tools/test_art_palettes.py`.
+The palette pass reads the immutable pre-colour SVG snapshot at commit `270a2c61d23e85715a83b267b8c855f43efd1b2d`, then changes colour styling and strengthens the fine particle-ring marks' opacity. Paths, plotted points, text outlines and scientific geometry remain byte-for-byte identical after normalising those style changes. An explicit root fill keeps inherited math glyphs readable on dark panels. This is idempotent and does not rerun numerical solvers or edit companion repositories. Foreground label colours meet 4.5:1 contrast against their backgrounds; colour fields receive a monotonic contrast expansion. Future geometry changes should update the source snapshot before applying this pass.
+
+The geometry generators below reproduce the original source artwork. Run the palette pass for the current published colour edition; do not publish an unstyled geometry rebuild over it.
 
 Labels use IBM Plex Sans: Medium for diagram labels and Regular for scientific axes. Project-local fonts and their OFL licence live in `tools/fonts/`; SVG text is exported as outlines to avoid browser font substitutions.
 
@@ -54,11 +61,11 @@ The decorative `assets/environmental-flow.svg` is a terrain-following flow motif
 
 The divider is full-bleed and repeats horizontally with matched positions and tangents at tile boundaries. It has no maximum width; `preserveAspectRatio="none"` prevents letterboxing gaps when its height changes.
 
-## Hybrid method art and pending palette choice
+## Hybrid method art and palette previews
 
 `python tools/generate_hybrid_art.py` produces `hybrid-vortex-grid.svg`: an obstacle-centred Eulerian mesh, an overlap region, two-way exchange and a Lagrangian particle wake. It is a conceptual plan view, not a computed velocity field or reconstruction of the paper's results. This replaces the separate hybrid-method paper figure only, **not** OpenONDA's image or repository.
 
-`tools/preview_art_palettes.py --data PATH_TO_DENSE_OUTPUT --output PREVIEW_DIRECTORY` compares three candidate palettes using identical Voronoi data and identical hybrid geometry. It writes only preview assets. The site-wide art recolouring is pending user selection; no palette has been applied globally.
+`tools/preview_art_palettes.py --data PATH_TO_DENSE_OUTPUT --output PREVIEW_DIRECTORY` reproduces the original three candidate comparisons using identical Voronoi data and hybrid geometry. The user selected a mixture of all three, with stronger colours and non-pastel backgrounds; the current implementation is `apply_art_palettes.py`.
 
 ## Consolidation and question-led titles
 
