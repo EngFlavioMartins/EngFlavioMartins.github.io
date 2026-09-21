@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Flavio A. C. Martins — computational fluid dynamics, fluid–structure interaction, wind energy and scientific software." />
+    <meta name="theme-color" content="#17172a" />
+    <title>Flavio A. C. Martins · Computational Fluid Dynamics</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23102a43'/%3E%3Cpath d='M13 43c10-4 13-24 25-24 6 0 9 5 13 5' fill='none' stroke='%232dd4bf' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M13 32c9 0 13 13 23 13 7 0 10-6 15-6' fill='none' stroke='%23fff' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="/assets/styles.css?v=20260921" />
+    <script src="/assets/featured-work.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href="/" aria-label="Flavio Martins, home">
+        <span class="wordmark-mark" aria-hidden="true">FM</span>
+        <span>Flavio Martins</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="/cv/">CV</a>
+        <a href="/publications/">Publications</a>
+        <a href="/projects/">Projects</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero shell">
+        <div class="hero-copy">
+          <p class="eyebrow">Aerospace engineering · Computational fluid dynamics · Scientific computing</p>
+          <h1>Computational fluid dynamics <span class="accent-text">&amp; scientific computing</span></h1>
+          <p class="hero-lede">Numerical methods, experimental validation and open-source software for unsteady aerodynamics, fluid–structure interaction and wind-energy systems.</p>
+          <div class="hero-actions" aria-label="Primary links">
+            <a class="button button-primary" href="/cv/">View CV <span aria-hidden="true">→</span></a>
+            <a class="button button-secondary" href="mailto:flavio.martins@outlook.com">Contact</a>
+          </div>
+          <ul class="social-links" aria-label="External profiles">
+            <li><a href="https://github.com/EngFlavioMartins" rel="me noreferrer">GitHub <span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://www.linkedin.com/in/flavio-martins-8bb89772" rel="me noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://scholar.google.com/citations?user=WZXamCcAAAAJ&amp;hl=en" rel="me noreferrer">Google Scholar <span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://orcid.org/0000-0002-1374-5760" rel="me noreferrer">ORCID <span aria-hidden="true">↗</span></a></li>
+          </ul>
+        </div>
+
+        <aside class="profile-panel" aria-label="Profile summary">
+          <div class="portrait-frame">
+            <img src="/assets/flavio-martins.jpg" width="886" height="886" alt="Portrait of Flavio Martins" />
+          </div>
+          <div class="profile-meta">
+            <p><span>Current role</span>PhD candidate, TU Delft</p>
+            <p><span>Focus</span>CFD · FSI · Wind energy</p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="featured-work shell section-pad" aria-labelledby="work-heading">
+        <header class="section-heading compact-heading">
+          <h2 id="work-heading">Research summaries</h2>
+          <a href="/publications/">All publications <span aria-hidden="true">→</span></a>
+        </header>
+
+        <div class="work-tabs" role="tablist" aria-label="Research summaries">
+          <button id="work-tab-openonda" type="button" role="tab" aria-selected="true" aria-controls="work-openonda" data-work-tab="openonda">OpenONDA</button>
+          <button id="work-tab-viv" type="button" role="tab" aria-selected="false" aria-controls="work-viv" data-work-tab="viv" tabindex="-1">Cylinder wake</button>
+          <button id="work-tab-truss" type="button" role="tab" aria-selected="false" aria-controls="work-truss" data-work-tab="truss" tabindex="-1">Truss optimisation</button>
+          <button id="work-tab-csc" type="button" role="tab" aria-selected="false" aria-controls="work-csc" data-work-tab="csc" tabindex="-1">Sparse-flow diagnostics</button>
+        </div>
+
+        <div class="work-panels">
+          <article id="work-openonda" class="work-panel" role="tabpanel" aria-labelledby="work-tab-openonda" data-work-panel="openonda">
+            <figure class="work-figure work-figure-dark">
+              <img src="/assets/work/openonda-hybrid.png" width="1280" height="720" alt="Hybrid finite-volume and vortex-particle wake simulation around a cube" />
+              <figcaption>Coupled finite-volume and vortex-particle wake simulation.</figcaption>
+            </figure>
+            <div class="work-copy">
+              <p class="work-meta">Scientific software · 2026</p>
+              <h3>OpenONDA</h3>
+              <p>OpenONDA exposes OpenFOAM’s finite-volume solver and a GPU-enabled vortex-particle method through Python. The framework supports in-line solver control and coupled Eulerian–Lagrangian external-flow simulations.</p>
+              <a href="https://github.com/EngFlavioMartins/OpenONDA" rel="noreferrer">Repository and paper record <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article id="work-viv" class="work-panel" role="tabpanel" aria-labelledby="work-tab-viv" data-work-panel="viv" hidden>
+            <figure class="work-figure">
+              <img src="/assets/work/vortex-induced-vibration.jpg" width="1842" height="940" loading="lazy" alt="Three-dimensional vortex structures behind an elastically mounted circular cylinder" />
+              <figcaption>Q-criterion iso-surfaces for two cylinder-response states.</figcaption>
+            </figure>
+            <div class="work-copy">
+              <p class="work-meta">Fluid–structure interaction · 2019</p>
+              <h3>Reynolds number, damping and vortex-induced vibration</h3>
+              <p>Two- and three-dimensional CFD calculations resolve how Reynolds number and structural damping reshape the response branches of an elastically mounted cylinder. The analysis connects vibration amplitudes with three-dimensional wake topology across transitional flow regimes.</p>
+              <a href="https://doi.org/10.1016/j.ijmecsci.2019.03.024" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article id="work-truss" class="work-panel" role="tabpanel" aria-labelledby="work-tab-truss" data-work-panel="truss" hidden>
+            <figure class="work-figure">
+              <img src="/assets/work/truss-optimisation.jpg" width="1772" height="615" loading="lazy" alt="Comparison of three sizing-optimisation results for a dense truss benchmark" />
+              <figcaption>Optimised 1,240-member truss benchmark using three methods.</figcaption>
+            </figure>
+            <div class="work-copy">
+              <p class="work-meta">Structures &amp; optimisation · 2019</p>
+              <h3>Linear sizing optimisation of trussed structures</h3>
+              <p>A linear scaling method turns sizing optimisation of statically determinate trusses into an iterative deterministic procedure. Benchmarks from 10 to 1,240 members compare mass reduction and constraint satisfaction with established optimisation methods.</p>
+              <a href="https://doi.org/10.1007/s13296-018-0194-8" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article id="work-csc" class="work-panel" role="tabpanel" aria-labelledby="work-tab-csc" data-work-panel="csc" hidden>
+            <figure class="work-figure">
+              <img src="/assets/work/coherent-structures.jpg" width="1595" height="1685" loading="lazy" alt="Particle tracks coloured by coherent-structure membership at several sampling densities" />
+              <figcaption>CSC-coloured particle tracks for an Ahmed-body wake.</figcaption>
+            </figure>
+            <div class="work-copy">
+              <p class="work-meta">Experimental fluid mechanics · 2021</p>
+              <h3>Coherent structures in sparse Lagrangian data</h3>
+              <p>Coherent-Structure Colouring is evaluated on sparse Lagrangian particle tracks from an Ahmed-body wake and a swirling jet. The study quantifies how inter-particle distance and track length affect vortex identification.</p>
+              <a href="https://doi.org/10.1007/s00348-021-03135-5" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="section-heading compact-heading story-heading">
+          <h2 id="additional-studies-heading">Additional studies</h2>
+        </div>
+        <div class="research-stories" aria-labelledby="additional-studies-heading">
+          <article class="research-story">
+            <figure class="panoramic-figure">
+              <img src="/assets/work/regenerative-wind-farm-vertical-flow.png" width="1747" height="594" loading="lazy" alt="Vertical velocity fields for one-, two-, and four-wing multirotor wake-control configurations" />
+              <figcaption>Vertical flow for one-, two- and four-wing configurations. Figure 9, Martins et al. (2025), <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</figcaption>
+            </figure>
+            <div class="research-story-copy">
+              <p class="work-meta">Wind energy · 2025</p>
+              <h3>Regenerative multirotor wakes</h3>
+              <p>Steady CFD and wind-tunnel data probe one-, two- and four-wing devices behind a multirotor. Wing-tip vortices lift low-momentum wake flow and increase exchange with the faster air above, producing faster wake recovery in the modelled cases.</p>
+              <a href="https://doi.org/10.5194/wes-10-41-2025" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article class="research-story">
+            <figure>
+              <img src="/assets/work/abl-control-validation.png" width="1500" height="1100" loading="lazy" alt="Side-by-side simulated and measured streamwise-velocity contours behind a multirotor with two wake-control wings" />
+              <figcaption>Simulated and measured velocity at one rotor diameter downstream. Cropped from Figure 3, Martins et al., J. Phys.: Conf. Ser. 2767 (2024) 072006, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</figcaption>
+            </figure>
+            <div class="research-story-copy">
+              <p class="work-meta">Wind energy · 2024</p>
+              <h3>Numerical validation of wake control</h3>
+              <p>An actuator-surface model in OpenFOAM is compared with wind-tunnel velocity fields around a two-wing multirotor. The numerical study then traces tip-vortex formation and wake response for one-, two- and four-wing layouts.</p>
+              <a href="https://doi.org/10.1088/1742-6596/2767/7/072006" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article class="research-story">
+            <figure>
+              <img src="/assets/work/wind-farm-efficiency.png" width="950" height="600" loading="lazy" alt="Modelled wind-farm efficiency as density increases, comparing a conventional array with an atmospheric-boundary-layer-controlled array" />
+              <figcaption>Modelled efficiency versus farm density. Cropped from Figure 12, Ferreira et al., J. Phys.: Conf. Ser. 2767 (2024) 092107, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</figcaption>
+            </figure>
+            <div class="research-story-copy">
+              <p class="work-meta">Wind-farm physics · 2024</p>
+              <h3>Vertical momentum entrainment at farm scale</h3>
+              <p>A wind-farm-scale model examines how active control of vertical momentum entrainment could affect array performance. Its comparison curves predict smaller efficiency losses for controlled farms as installed power density increases.</p>
+              <a href="https://doi.org/10.1088/1742-6596/2767/9/092107" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article class="research-story">
+            <figure class="dark-figure panoramic-figure">
+              <img src="/assets/work/hybrid-particle-grid.png" width="850" height="292" loading="lazy" alt="Side-by-side velocity and streamline comparison for hybrid particle-grid and reference finite-volume simulations of flow past a cube" />
+              <figcaption>Hybrid and reference solutions for flow past a cube. Figure 1, Martins et al. (2026), <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</figcaption>
+            </figure>
+            <div class="research-story-copy">
+              <p class="work-meta">Numerical methods · 2026</p>
+              <h3>Hybrid vortex particle–grid flow simulation</h3>
+              <p>A near-body finite-volume solver resolves walls while vortex particles carry the wake downstream. This three-dimensional proof of concept tests two-way coupling against fully meshed reference calculations for a cube and a NACA4412 airfoil.</p>
+              <a href="https://doi.org/10.1088/1742-6596/3224/4/042069" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article class="research-story">
+            <figure>
+              <img src="/assets/work/three-body-schematic.svg" width="960" height="600" loading="lazy" alt="Schematic with two orbiting primary bodies and all five Lagrange points marked in a rotating frame" />
+              <figcaption>The five Lagrange points in the circular restricted three-body problem. Original schematic; not to scale.</figcaption>
+            </figure>
+            <div class="research-story-copy">
+              <p class="work-meta">Dynamical systems · 2018</p>
+              <h3>Celestial mechanics through dynamical systems</h3>
+              <p>This review introduces the circular restricted three-body problem through phase-space methods. It connects orbital resonances, Poincaré sections and KAM theory with the geometry of the Lagrange points.</p>
+              <a href="https://doi.org/10.1590/1806-9126-rbef-2017-0174" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article class="research-story">
+            <figure>
+              <img src="/assets/work/voronoi-neighbours.svg" width="960" height="600" loading="lazy" alt="Voronoi cells constructed around sparse tracer points and coloured into two coherent groups" />
+              <figcaption>Voronoi neighbourhood construction for sparse tracers. Original schematic; not experimental data.</figcaption>
+            </figure>
+            <div class="research-story-copy">
+              <p class="work-meta">Flow diagnostics · 2021</p>
+              <h3>Coherence from sparse particle tracks</h3>
+              <p>Voronoi cells identify which moving tracers remain neighbours over time. Shared-edge duration becomes a graph distance for grouping coherent trajectories, tested on double-gyre flow and three-dimensional bluff-body measurements.</p>
+              <a href="https://arxiv.org/abs/2103.09884" rel="noreferrer">Original preprint <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article class="research-story">
+            <figure>
+              <img src="/assets/work/truss-topology-mass.svg" width="960" height="600" loading="lazy" alt="Bar chart showing a truss mass decrease from 15.26 kilograms after member sizing to 11.60 kilograms after node shifts" />
+              <figcaption>Mass in the reported truss example, before and after node shifts. Original chart from Martins et al. (2017).</figcaption>
+            </figure>
+            <div class="research-story-copy">
+              <p class="work-meta">Structures &amp; optimisation · 2017</p>
+              <h3>Truss topology through node shifts</h3>
+              <p>The two-dimensional truss study combines member sizing with node repositioning. In the reported example, node shifts reduce mass from 15.26 to 11.60 kg, approximately 24% relative to the sized layout.</p>
+              <a href="https://doi.org/10.20906/cps/cilamce2017-0035" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article class="research-story">
+            <figure class="dark-figure">
+              <img src="/assets/work/vortex-particle-ring.svg" width="960" height="600" loading="lazy" alt="Lagrangian particles arranged as a translating vortex ring, with one particle core highlighted" />
+              <figcaption>Vortex-ring particle representation. Original method schematic; not simulation output.</figcaption>
+            </figure>
+            <div class="research-story-copy">
+              <p class="work-meta">Meshless CFD · 2026</p>
+              <h3>Large-eddy simulation with vortex particles</h3>
+              <p>A Lagrangian dynamic subgrid model and core-spreading diffusion are assessed using vortex rings and leapfrogging rings. The preprint reports accurate ring kinematics with sparse particles, while post-instability behaviour remains sensitive to particle regularisation.</p>
+              <a href="https://arxiv.org/abs/2601.06942" rel="noreferrer">Original preprint <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <p>Flavio A. C. Martins</p>
+        <a href="mailto:flavio.martins@outlook.com">flavio.martins@outlook.com</a>
+      </div>
+    </footer>
+  </body>
+</html>

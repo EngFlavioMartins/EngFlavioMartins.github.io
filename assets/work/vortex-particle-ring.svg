@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title description">
+  <title id="title">Vortex-particle ring schematic</title>
+  <desc id="description">An elliptical projection of a vortex ring represented by individual Lagrangian particles, with a highlighted particle core and arrow showing the ring's self-induced translation.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10Z" fill="#f0a66b"/>
+    </marker>
+  </defs>
+  <rect width="960" height="600" fill="#17172a"/>
+  <g stroke="#45506b" stroke-width="1" opacity=".45">
+    <path d="M60 130H900M60 230H900M60 330H900M60 430H900M60 530H900"/>
+    <path d="M120 65V540M260 65V540M400 65V540M540 65V540M680 65V540M820 65V540"/>
+  </g>
+  <ellipse cx="400" cy="310" rx="250" ry="120" fill="none" stroke="#6d78ad" stroke-width="2" stroke-dasharray="7 10"/>
+  <g fill="#477a9c" stroke="#b9e2e5" stroke-width="2">
+    <circle cx="650" cy="310" r="12"/><circle cx="630" cy="264" r="12"/>
+    <circle cx="577" cy="225" r="12"/><circle cx="496" cy="199" r="12"/>
+    <circle cx="400" cy="190" r="12"/><circle cx="304" cy="199" r="12"/>
+    <circle cx="223" cy="225" r="12"/><circle cx="170" cy="264" r="12"/>
+  </g>
+  <g fill="#7addd6" stroke="#e3fbef" stroke-width="2">
+    <circle cx="150" cy="310" r="14"/><circle cx="170" cy="356" r="14"/>
+    <circle cx="223" cy="395" r="14"/><circle cx="304" cy="421" r="14"/>
+    <circle cx="400" cy="430" r="14"/><circle cx="496" cy="421" r="14"/>
+    <circle cx="577" cy="395" r="14"/><circle cx="630" cy="356" r="14"/>
+  </g>
+  <circle cx="577" cy="395" r="33" fill="#f0a66b" fill-opacity=".14" stroke="#f0a66b" stroke-opacity=".75" stroke-width="2"/>
+  <circle cx="577" cy="395" r="13" fill="#f0a66b" stroke="#fff2db" stroke-width="2"/>
+  <path d="M605 417 666 470" stroke="#f0a66b" stroke-width="2"/>
+  <text x="678" y="480" fill="#f6c8a8" font-family="Arial, sans-serif" font-size="22">particle core σ</text>
+  <path d="M700 310H865" stroke="#f0a66b" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <text x="713" y="284" fill="#f6c8a8" font-family="Arial, sans-serif" font-size="22">self-induced motion</text>
+  <text x="66" y="86" fill="#d5d9ec" font-family="Arial, sans-serif" font-size="22">Lagrangian vorticity carriers</text>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 520" fill="none">
+  <defs>
+    <linearGradient id="mesh" x1="20" y1="70" x2="598" y2="430" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A8A2FF" stop-opacity=".4"/>
+      <stop offset=".55" stop-color="#65D6DA" stop-opacity=".62"/>
+      <stop offset="1" stop-color="#F0A06F" stop-opacity=".38"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#65D6DA" fill-opacity=".7"/>
+    </marker>
+  </defs>
+
+  <g stroke="url(#mesh)" stroke-width="1">
+    <path d="M28 72C102 81 176 85 272 80"/>
+    <path d="M28 126C102 135 180 138 272 129"/>
+    <path d="M28 180C104 188 182 191 272 180"/>
+    <path d="M28 234C106 242 184 244 272 234"/>
+    <path d="M28 288C106 296 184 298 272 288"/>
+    <path d="M28 342C104 350 182 354 272 342"/>
+    <path d="M28 396C102 405 180 409 272 392"/>
+    <path d="M28 448C102 457 176 462 272 442"/>
+
+    <path d="M48 68L48 451" opacity=".65"/>
+    <path d="M90 73L91 456" opacity=".7"/>
+    <path d="M134 77L136 459" opacity=".76"/>
+    <path d="M180 80L183 457" opacity=".82"/>
+    <path d="M226 81L230 451" opacity=".9"/>
+    <path d="M272 80L272 442" stroke-width="1.8"/>
+  </g>
+
+  <g stroke="url(#mesh)" stroke-width="1.35" stroke-linecap="round">
+    <path d="M272 96C344 75 394 85 439 115C482 144 526 143 600 112"/>
+    <path d="M272 151C338 132 386 140 428 168C469 196 516 194 600 157" marker-end="url(#arrow)"/>
+    <path d="M272 207C332 191 376 198 416 221C456 244 507 242 600 207"/>
+    <path d="M272 260C328 249 367 253 406 267C448 283 501 284 600 260" marker-end="url(#arrow)"/>
+    <path d="M272 313C328 318 367 311 406 296C448 280 501 280 600 309"/>
+    <path d="M272 367C332 381 376 375 416 351C456 327 507 329 600 367" marker-end="url(#arrow)"/>
+    <path d="M272 421C338 439 386 431 428 403C469 375 516 379 600 419"/>
+  </g>
+
+  <path d="M272 80V442" stroke="#F0A06F" stroke-opacity=".72" stroke-width="2" stroke-dasharray="5 8"/>
+</svg>

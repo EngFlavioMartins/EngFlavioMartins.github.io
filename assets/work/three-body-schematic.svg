@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title description">
+  <title id="title">Restricted three-body problem schematic</title>
+  <desc id="description">Two primaries on the horizontal axis, with the five Lagrange points marked in a rotating frame.</desc>
+  <rect width="960" height="600" fill="#f0f3f8"/>
+  <g stroke="#b7c2d2" stroke-width="2">
+    <path d="M90 300H870"/>
+    <path d="M480 38V562"/>
+  </g>
+  <g fill="#65738b" font-family="Arial, sans-serif" font-size="21">
+    <text x="872" y="291">x</text>
+    <text x="489" y="42">y</text>
+  </g>
+  <path d="M340 300 480 58 620 300 480 542Z" fill="none" stroke="#a3b2c7" stroke-width="2" stroke-dasharray="9 10"/>
+  <circle cx="340" cy="300" r="49" fill="#5143ac"/>
+  <circle cx="620" cy="300" r="31" fill="#138c9c"/>
+  <g fill="white" font-family="Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle">
+    <text x="340" y="307">M₁</text>
+    <text x="620" y="307">M₂</text>
+  </g>
+  <g fill="#b75b35" stroke="white" stroke-width="5">
+    <circle cx="552" cy="300" r="12"/>
+    <circle cx="770" cy="300" r="12"/>
+    <circle cx="160" cy="300" r="12"/>
+    <circle cx="480" cy="58" r="12"/>
+    <circle cx="480" cy="542" r="12"/>
+  </g>
+  <g fill="#263047" font-family="Arial, sans-serif" font-size="23" font-weight="700">
+    <text x="528" y="260">L₁</text>
+    <text x="752" y="263">L₂</text>
+    <text x="140" y="264">L₃</text>
+    <text x="502" y="67">L₄</text>
+    <text x="502" y="551">L₅</text>
+  </g>
+  <text x="40" y="568" fill="#64718a" font-family="Arial, sans-serif" font-size="16">Rotating-frame geometry · schematic, not to scale</text>
+</svg>

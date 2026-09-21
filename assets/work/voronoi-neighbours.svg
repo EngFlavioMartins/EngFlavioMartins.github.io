@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title description">
+<title id="title">Voronoi neighbourhoods of sparse tracers</title>
+<desc id="description">Original schematic of sparse tracer points and their mathematically constructed Voronoi cells, coloured as two coherent groups and a transition region.</desc>
+<rect width="960" height="600" fill="#f0f3f8"/>
+<polygon points="0.00,204.62 0.00,0.00 141.32,0.00 164.53,147.04" fill="#b7b2ef" fill-opacity=".78" stroke="#f0f3f8" stroke-width="4"/>
+<polygon points="243.07,155.78 213.27,172.47 164.53,147.04 141.32,0.00 295.00,0.00" fill="#b7b2ef" fill-opacity=".78" stroke="#f0f3f8" stroke-width="4"/>
+<polygon points="394.24,167.90 358.59,200.70 243.07,155.78 295.00,0.00 333.80,0.00" fill="#b7b2ef" fill-opacity=".78" stroke="#f0f3f8" stroke-width="4"/>
+<polygon points="152.09,281.45 0.00,215.33 0.00,204.62 164.53,147.04 213.27,172.47 207.00,254.00" fill="#b7b2ef" fill-opacity=".78" stroke="#f0f3f8" stroke-width="4"/>
+<polygon points="343.07,267.22 278.50,299.50 207.00,254.00 213.27,172.47 243.07,155.78 358.59,200.70" fill="#b7b2ef" fill-opacity=".78" stroke="#f0f3f8" stroke-width="4"/>
+<polygon points="0.00,529.52 0.00,215.33 152.09,281.45 146.18,411.63" fill="#b7b2ef" fill-opacity=".78" stroke="#f0f3f8" stroke-width="4"/>
+<polygon points="146.18,411.63 152.09,281.45 207.00,254.00 278.50,299.50 263.63,399.89" fill="#b7b2ef" fill-opacity=".78" stroke="#f0f3f8" stroke-width="4"/>
+<polygon points="435.28,349.72 355.71,429.29 302.66,435.92 263.63,399.89 278.50,299.50 343.07,267.22" fill="#b7b2ef" fill-opacity=".78" stroke="#f0f3f8" stroke-width="4"/>
+<polygon points="0.00,529.52 146.18,411.63 263.63,399.89 302.66,435.92 267.50,600.00 0.00,600.00" fill="#b7b2ef" fill-opacity=".78" stroke="#f0f3f8" stroke-width="4"/>
+<polygon points="302.66,435.92 355.71,429.29 464.87,555.23 461.74,600.00 267.50,600.00" fill="#b7b2ef" fill-opacity=".78" stroke="#f0f3f8" stroke-width="4"/>
+<polygon points="608.33,158.33 489.03,176.69 484.91,173.23 506.56,0.00 640.00,0.00" fill="#99e2de" fill-opacity=".78" stroke="#f0f3f8" stroke-width="4"/>
+<polygon points="753.38,167.31 658.89,208.89 608.33,158.33 640.00,0.00 741.43,0.00" fill="#99e2de" fill-opacity=".78" stroke="#f0f3f8" stroke-width="4"/>
+<polygon points="830.25,215.71 753.38,167.31 741.43,0.00 960.00,0.00 960.00,196.25" fill="#99e2de" fill-opacity=".78" stroke="#f0f3f8" stroke-width="4"/>
+<polygon points="646.08,311.32 630.66,321.18 509.19,297.67 489.03,176.69 608.33,158.33 658.89,208.89" fill="#99e2de" fill-opacity=".78" stroke="#f0f3f8" stroke-width="4"/>
+<polygon points="758.36,342.90 646.08,311.32 658.89,208.89 753.38,167.31 830.25,215.71" fill="#99e2de" fill-opacity=".78" stroke="#f0f3f8" stroke-width="4"/>
+<polygon points="787.37,391.75 758.36,342.90 830.25,215.71 960.00,196.25 960.00,441.07" fill="#99e2de" fill-opacity=".78" stroke="#f0f3f8" stroke-width="4"/>
+<polygon points="516.86,464.24 453.86,348.74 509.19,297.67 630.66,321.18 609.41,444.41" fill="#99e2de" fill-opacity=".78" stroke="#f0f3f8" stroke-width="4"/>
+<polygon points="609.41,444.41 630.66,321.18 646.08,311.32 758.36,342.90 787.37,391.75 690.26,525.26" fill="#99e2de" fill-opacity=".78" stroke="#f0f3f8" stroke-width="4"/>
+<polygon points="690.26,525.26 787.37,391.75 960.00,441.07 960.00,600.00 701.89,600.00" fill="#99e2de" fill-opacity=".78" stroke="#f0f3f8" stroke-width="4"/>
+<polygon points="464.87,555.23 516.86,464.24 609.41,444.41 690.26,525.26 701.89,600.00 461.74,600.00" fill="#99e2de" fill-opacity=".78" stroke="#f0f3f8" stroke-width="4"/>
+<polygon points="484.91,173.23 394.24,167.90 333.80,0.00 506.56,0.00" fill="#d9e2eb" fill-opacity=".78" stroke="#f0f3f8" stroke-width="4"/>
+<polygon points="484.91,173.23 489.03,176.69 509.19,297.67 453.86,348.74 435.28,349.72 343.07,267.22 358.59,200.70 394.24,167.90" fill="#d9e2eb" fill-opacity=".78" stroke="#f0f3f8" stroke-width="4"/>
+<polygon points="464.87,555.23 355.71,429.29 435.28,349.72 453.86,348.74 516.86,464.24" fill="#d9e2eb" fill-opacity=".78" stroke="#f0f3f8" stroke-width="4"/>
+<circle cx="110" cy="110" r="8" fill="#5547ab" stroke="white" stroke-width="3"/>
+<circle cx="205" cy="95" r="8" fill="#5547ab" stroke="white" stroke-width="3"/>
+<circle cx="310" cy="130" r="8" fill="#5547ab" stroke="white" stroke-width="3"/>
+<circle cx="145" cy="210" r="8" fill="#5547ab" stroke="white" stroke-width="3"/>
+<circle cx="275" cy="220" r="8" fill="#5547ab" stroke="white" stroke-width="3"/>
+<circle cx="95" cy="325" r="8" fill="#5547ab" stroke="white" stroke-width="3"/>
+<circle cx="205" cy="330" r="8" fill="#5547ab" stroke="white" stroke-width="3"/>
+<circle cx="340" cy="350" r="8" fill="#5547ab" stroke="white" stroke-width="3"/>
+<circle cx="220" cy="480" r="8" fill="#5547ab" stroke="white" stroke-width="3"/>
+<circle cx="360" cy="510" r="8" fill="#5547ab" stroke="white" stroke-width="3"/>
+<circle cx="555" cy="100" r="8" fill="#087e8e" stroke="white" stroke-width="3"/>
+<circle cx="680" cy="125" r="8" fill="#087e8e" stroke="white" stroke-width="3"/>
+<circle cx="820" cy="115" r="8" fill="#087e8e" stroke="white" stroke-width="3"/>
+<circle cx="575" cy="230" r="8" fill="#087e8e" stroke="white" stroke-width="3"/>
+<circle cx="735" cy="250" r="8" fill="#087e8e" stroke="white" stroke-width="3"/>
+<circle cx="850" cy="315" r="8" fill="#087e8e" stroke="white" stroke-width="3"/>
+<circle cx="545" cy="385" r="8" fill="#087e8e" stroke="white" stroke-width="3"/>
+<circle cx="690" cy="410" r="8" fill="#087e8e" stroke="white" stroke-width="3"/>
+<circle cx="800" cy="490" r="8" fill="#087e8e" stroke="white" stroke-width="3"/>
+<circle cx="575" cy="525" r="8" fill="#087e8e" stroke="white" stroke-width="3"/>
+<circle cx="435" cy="85" r="8" fill="#62718a" stroke="white" stroke-width="3"/>
+<circle cx="425" cy="255" r="8" fill="#62718a" stroke="white" stroke-width="3"/>
+<circle cx="435" cy="445" r="8" fill="#62718a" stroke="white" stroke-width="3"/>
+</svg>

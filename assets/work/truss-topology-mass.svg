@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title description">
+  <title id="title">Mass reduction in a two-dimensional truss example</title>
+  <desc id="description">Original chart of values reported by Martins and coauthors: mass falls from 15.26 kilograms after member sizing to 11.60 kilograms after node shifts.</desc>
+  <rect width="960" height="600" fill="#f0f3f8"/>
+  <g stroke="#ccd5e0" stroke-width="2">
+    <path d="M170 480H850"/>
+    <path d="M170 360H850"/>
+    <path d="M170 240H850"/>
+    <path d="M170 120H850"/>
+  </g>
+  <g fill="#65738b" font-family="Arial, sans-serif" font-size="20" text-anchor="end">
+    <text x="155" y="487">0</text>
+    <text x="155" y="367">5</text>
+    <text x="155" y="247">10</text>
+    <text x="155" y="127">15</text>
+  </g>
+  <text x="38" y="67" fill="#27314a" font-family="Arial, sans-serif" font-size="24" font-weight="700">Truss mass (kg)</text>
+  <rect x="260" y="114" width="190" height="366" rx="12" fill="#5848af"/>
+  <rect x="565" y="202" width="190" height="278" rx="12" fill="#0a8998"/>
+  <g fill="#253047" font-family="Arial, sans-serif" font-size="33" font-weight="700" text-anchor="middle">
+    <text x="355" y="95">15.26 kg</text>
+    <text x="660" y="183">11.60 kg</text>
+  </g>
+  <g fill="#3c4960" font-family="Arial, sans-serif" font-size="22" text-anchor="middle">
+    <text x="355" y="524">After member sizing</text>
+    <text x="660" y="524">After node shifts</text>
+  </g>
+  <path d="M472 106H552" stroke="#b45a38" stroke-width="4" stroke-linecap="round"/>
+  <path d="m541 95 13 11-13 11" fill="none" stroke="#b45a38" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

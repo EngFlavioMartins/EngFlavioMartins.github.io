@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" fill="none">
+  <defs>
+    <linearGradient id="flow" x1="90" y1="180" x2="1360" y2="430" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5B47D7" stop-opacity=".18"/>
+      <stop offset=".52" stop-color="#2C7DA0" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#009DA9" stop-opacity=".22"/>
+    </linearGradient>
+    <linearGradient id="terrain" x1="140" y1="820" x2="1290" y2="680" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5B47D7" stop-opacity=".12"/>
+      <stop offset=".58" stop-color="#009DA9" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#C97742" stop-opacity=".22"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2C7DA0" fill-opacity=".42"/>
+    </marker>
+  </defs>
+
+  <g stroke="url(#flow)" stroke-width="1.25" stroke-linecap="round">
+    <path d="M-40 118C238 72 374 148 594 126C822 103 957 12 1494 63"/>
+    <path d="M-46 178C240 133 388 209 608 184C843 157 990 68 1490 118"/>
+    <path d="M-54 242C219 198 388 266 618 242C866 216 1022 125 1496 170"/>
+    <path d="M-60 311C196 265 391 332 634 307C884 281 1049 186 1500 226" marker-end="url(#arrow)"/>
+    <path d="M-70 382C180 337 390 398 647 376C899 354 1074 253 1504 286"/>
+    <path d="M-76 457C163 414 386 466 655 452C916 439 1092 328 1508 352"/>
+    <path d="M-81 534C145 496 379 536 661 532C937 529 1110 407 1512 424" marker-end="url(#arrow)"/>
+    <path d="M-88 612C129 584 374 604 666 616C958 628 1137 493 1515 502"/>
+  </g>
+
+  <g stroke="#2C7DA0" stroke-opacity=".16" stroke-width="1">
+    <path d="M888 72C889 205 897 342 915 560"/>
+    <path d="M968 49C971 190 984 334 1007 532"/>
+    <path d="M1050 29C1052 171 1073 319 1099 503"/>
+    <path d="M1134 14C1136 151 1160 299 1192 477"/>
+    <path d="M1218 3C1220 133 1248 282 1282 457"/>
+    <path d="M1302-4C1304 117 1334 270 1370 442"/>
+  </g>
+
+  <g stroke="url(#terrain)" stroke-linecap="round">
+    <path d="M-20 778C210 781 314 752 453 735C606 716 713 776 849 766C1000 755 1094 662 1239 677C1325 686 1381 722 1460 717" stroke-width="1.8"/>
+    <path d="M-18 804C212 807 326 778 459 763C608 746 718 803 856 792C1006 780 1099 690 1242 704C1329 713 1384 748 1460 743" stroke-width="1.1" opacity=".72"/>
+    <path d="M-16 832C214 835 335 806 467 791C612 775 725 832 863 820C1012 807 1105 718 1247 732C1333 740 1388 775 1460 770" stroke-width=".9" opacity=".5"/>
+  </g>
+</svg>

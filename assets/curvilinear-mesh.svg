@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 680" fill="none">
+  <defs>
+    <linearGradient id="mesh" x1="35" y1="55" x2="488" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5B47D7" stop-opacity=".36"/>
+      <stop offset=".55" stop-color="#2C7DA0" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#009DA9" stop-opacity=".26"/>
+    </linearGradient>
+  </defs>
+  <g stroke="url(#mesh)" stroke-linecap="round">
+    <path d="M18 86C130 46 269 57 501 106"/>
+    <path d="M14 150C134 108 278 119 505 168"/>
+    <path d="M10 217C138 174 286 185 509 233"/>
+    <path d="M8 286C144 244 296 252 512 299"/>
+    <path d="M7 357C151 318 305 321 513 366"/>
+    <path d="M8 428C160 394 315 392 512 435"/>
+    <path d="M11 500C168 473 324 464 509 505"/>
+    <path d="M17 571C177 552 334 538 503 575"/>
+    <path d="M26 640C188 630 343 612 494 645"/>
+
+    <path d="M72 66C54 178 51 329 80 655" opacity=".72"/>
+    <path d="M132 54C119 171 119 327 143 648" opacity=".78"/>
+    <path d="M197 51C189 168 192 324 207 641" opacity=".84"/>
+    <path d="M267 57C264 171 269 321 272 634" opacity=".9"/>
+    <path d="M337 67C342 178 348 322 338 628" opacity=".8"/>
+    <path d="M404 79C416 188 425 325 405 626" opacity=".72"/>
+    <path d="M465 94C487 200 495 333 466 633" opacity=".62"/>
+  </g>
+</svg>
