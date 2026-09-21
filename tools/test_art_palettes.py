@@ -18,11 +18,11 @@ class PaletteTests(unittest.TestCase):
             with self.subTest(art=name):
                 ET.fromstring(output)
                 normalised = output.replace(f'<svg fill="{palette(family, dark)[4]}" ', '<svg ', 1)
-                if family == 'copper' and dark:
+                if name == 'vortex-particle-ring' and dark:
                     normalised = normalised.replace('fill-opacity: 1', 'fill-opacity: 0.6')
                     normalised = normalised.replace('stroke-opacity: 0.8', 'stroke-opacity: 0.27')
                 self.assertEqual(HEX.sub('COLOUR', source), HEX.sub('COLOUR', normalised))
-                self.assertEqual(output, recolour(source, family, dark))
+                self.assertEqual(output, recolour(source, family, dark, name == 'vortex-particle-ring'))
                 self.assertNotIn('#7960af', output)
                 self.assertNotIn('#f4f5f8', output)
 
@@ -36,7 +36,8 @@ class PaletteTests(unittest.TestCase):
     def test_protected_exclusion_and_variety(self):
         self.assertFalse(any('openonda' in name.lower() for name in ART))
         self.assertEqual({family for family, _ in ART.values()}, {'copper', 'blue', 'ochre'})
-        self.assertEqual(sum(dark for _, dark in ART.values()), 4)
+        self.assertTrue(all(dark for _, dark in ART.values()))
+        self.assertEqual(len({palette(family, dark)[3] for family, dark in ART.values()}), 1)
 
     def test_site_palette_bindings(self):
         html = (ROOT / 'index.html').read_text()
@@ -46,7 +47,7 @@ class PaletteTests(unittest.TestCase):
             if not asset:
                 continue  # OpenONDA keeps its original raster and styling.
             family, dark = ART[asset[1]]
-            self.assertIn('.svg?v=20260921-colours', figure)
+            self.assertIn('.svg?v=20260921-dark', figure)
             if dark:
                 self.assertIn(f'data-art-tone="{family}"', figure)
             else:

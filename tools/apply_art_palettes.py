@@ -13,32 +13,33 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE = '270a2c61d23e85715a83b267b8c855f43efd1b2d'
 HEX = re.compile(r'#[0-9a-fA-F]{6}\b')
 
-# Saturated foregrounds on white; luminous counterparts on selected deep panels.
+# Retain preview definitions, but all published art uses one dark background.
 PALETTES = {
     'copper': ('#006d61', '#b4471e', '#765115'),
     'blue': ('#006b50', '#175ea8', '#906000'),
     'ochre': ('#006d5b', '#8c5800', '#215c9d'),
 }
+DARK_BACKGROUND = '#102b32'
 DARK = {
-    'copper': ('#4fe0bd', '#ffae73', '#f6d66b', '#172d32'),
-    'blue': ('#4fe0bd', '#79beff', '#f6d66b', '#102b43'),
-    'ochre': ('#63e4b9', '#efc34f', '#83c9ff', '#0b302f'),
+    'copper': ('#4fe0bd', '#ffae73', '#f6d66b', DARK_BACKGROUND),
+    'blue': ('#4fe0bd', '#79beff', '#f6d66b', DARK_BACKGROUND),
+    'ochre': ('#63e4b9', '#efc34f', '#83c9ff', DARK_BACKGROUND),
 }
 ART = {
-    'cylinder-wake': ('copper', False),
-    'truss-sizing': ('copper', False),
-    'voronoi-neighbours': ('copper', False),
-    'openfoam-actuator-surface': ('ochre', False),
-    'regenerative-wakes': ('ochre', False),
-    'wake-validation': ('blue', False),
+    'cylinder-wake': ('copper', True),
+    'truss-sizing': ('copper', True),
+    'voronoi-neighbours': ('copper', True),
+    'openfoam-actuator-surface': ('ochre', True),
+    'regenerative-wakes': ('ochre', True),
+    'wake-validation': ('blue', True),
     'vertical-momentum': ('ochre', True),
     'hybrid-vortex-grid': ('blue', True),
     'three-body-schematic': ('blue', True),
-    'truss-topology-mass': ('copper', False),
+    'truss-topology-mass': ('copper', True),
     'vortex-particle-ring': ('copper', True),
-    'cavity-flow': ('blue', False),
-    'openfoam-postprocessing': ('blue', False),
-    'sparse-lagrangian-tracks': ('copper', False),
+    'cavity-flow': ('blue', True),
+    'openfoam-postprocessing': ('blue', True),
+    'sparse-lagrangian-tracks': ('copper', True),
 }
 
 
@@ -58,7 +59,7 @@ def palette(name, dark):
     return *PALETTES[name], '#ffffff', '#173439'
 
 
-def recolour(source, name, dark):
+def recolour(source, name, dark, strengthen_particles=False):
     green, accent, third, paper, ink = palette(name, dark)
     exact = {
         '#f4f5f8': paper, '#ffffff': paper, '#24283e': ink,
@@ -85,7 +86,7 @@ def recolour(source, name, dark):
         return blend(paper, target, amount)
 
     result = HEX.sub(colour, source)
-    if name == 'copper' and dark:
+    if strengthen_particles and dark:
         # Fine particle-ring marks need stronger opacity on the deep panel.
         result = result.replace('fill-opacity: 0.6', 'fill-opacity: 1')
         result = result.replace('stroke-opacity: 0.27', 'stroke-opacity: 0.8')
@@ -101,7 +102,7 @@ def original(name):
 
 def main():
     for name, (family, dark) in ART.items():
-        result = recolour(original(name), family, dark)
+        result = recolour(original(name), family, dark, name == 'vortex-particle-ring')
         (ROOT / 'assets/work' / f'{name}.svg').write_text(result)
         print(f'{name}: {family}, {"deep" if dark else "white"} background')
 

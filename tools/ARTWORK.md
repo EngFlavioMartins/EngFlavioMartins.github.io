@@ -1,6 +1,6 @@
 # Research artwork
 
-Original SVG artwork uses three coordinated, saturated palettes and restrained typography. Teal–copper covers structures and vortex motion; forest–blue covers numerical methods and orbital dynamics; green–ochre covers wind-energy studies. Most panels use clean white rather than pastel backgrounds. Four panels (vertical momentum, hybrid coupling, celestial dynamics and vortex rings) use deep backgrounds with luminous foregrounds. Conceptual diagrams are labelled separately from computed results. OpenONDA is excluded from this refresh; the separate hybrid paper uses its explicitly requested vector art.
+Original SVG artwork uses three coordinated, saturated palettes and restrained typography. Teal–copper covers structures and vortex motion; forest–blue covers numerical methods and orbital dynamics; green–ochre covers wind-energy studies. All editable illustration panels and captions share the same deep background (`#102b32`) with luminous foregrounds. Only the accent colours vary: there is no longer a mixture of light and dark figure backgrounds. Conceptual diagrams are labelled separately from computed results. OpenONDA is excluded from this refresh; the separate hybrid paper uses its explicitly requested vector art.
 
 ## Current palette build
 
@@ -65,7 +65,7 @@ The divider is full-bleed and repeats horizontally with matched positions and ta
 
 `python tools/generate_hybrid_art.py` produces `hybrid-vortex-grid.svg`: an obstacle-centred Eulerian mesh, an overlap region, two-way exchange and a Lagrangian particle wake. It is a conceptual plan view, not a computed velocity field or reconstruction of the paper's results. This replaces the separate hybrid-method paper figure only, **not** OpenONDA's image or repository.
 
-`tools/preview_art_palettes.py --data PATH_TO_DENSE_OUTPUT --output PREVIEW_DIRECTORY` reproduces the original three candidate comparisons using identical Voronoi data and hybrid geometry. The user selected a mixture of all three, with stronger colours and non-pastel backgrounds; the current implementation is `apply_art_palettes.py`.
+`tools/preview_art_palettes.py --data PATH_TO_DENSE_OUTPUT --output PREVIEW_DIRECTORY` reproduces the original three candidate comparisons using identical Voronoi data and hybrid geometry. The user selected a mixture of all three accent palettes, then requested a uniform dark background for all figures. The current implementation is `apply_art_palettes.py`.
 
 ## Consolidation and question-led titles
 

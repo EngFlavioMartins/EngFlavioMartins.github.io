@@ -25,7 +25,7 @@ L 691.2 432
 L 691.2 0
 L 0 0
 z
-" style="fill: #0b302f"/>
+" style="fill: #102b32"/>
   </g>
   <g id="axes_1">
    <g id="patch_2">
@@ -34,7 +34,7 @@ L 641.29536 322.9632
 L 641.29536 214.85952
 L 49.90464 214.85952
 z
-" clip-path="url(#p56dc78a3fa)" style="fill: #246457"/>
+" clip-path="url(#p56dc78a3fa)" style="fill: #286059"/>
    </g>
    <g id="patch_3">
     <path d="M 123.0336 287.98848
@@ -71,7 +71,7 @@ z
    <g id="line2d_1">
     <path d="M 49.90464 322.9632
 L 641.29536 322.9632
-" clip-path="url(#p56dc78a3fa)" style="fill: none; stroke: #90a3a1; stroke-width: 2; stroke-linecap: square"/>
+" clip-path="url(#p56dc78a3fa)" style="fill: none; stroke: #92a1a3; stroke-width: 2; stroke-linecap: square"/>
    </g>
    <g id="line2d_2">
     <path d="M 123.0336 322.9632
