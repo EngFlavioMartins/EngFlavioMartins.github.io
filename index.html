@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#19383c" />
     <title>Flavio A. C. Martins · Computational Fluid Dynamics</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23102a43'/%3E%3Cpath d='M13 43c10-4 13-24 25-24 6 0 9 5 13 5' fill='none' stroke='%232dd4bf' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M13 32c9 0 13 13 23 13 7 0 10-6 15-6' fill='none' stroke='%23fff' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="/assets/styles.css?v=20260921-refined" />
+    <link rel="stylesheet" href="/assets/styles.css?v=20260921-tags" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -68,6 +68,11 @@
             <div class="research-story-copy">
               <p class="work-meta">Scientific software · 2026</p>
               <h3>How does OpenONDA control OpenFOAM from Python?</h3>
+              <ul class="research-tags" aria-label="Research fields" role="list">
+                <li>CFD</li>
+                <li>Numerical methods</li>
+                <li>Scientific computing</li>
+              </ul>
               <p>OpenONDA exposes OpenFOAM’s finite-volume solver and a GPU-enabled vortex-particle method through Python. The framework supports in-line solver control and coupled Eulerian–Lagrangian external-flow simulations.</p>
               <a href="https://github.com/EngFlavioMartins/OpenONDA" rel="noreferrer">Repository and paper record <span aria-hidden="true">↗</span></a>
             </div>
@@ -81,6 +86,10 @@
             <div class="research-story-copy">
               <p class="work-meta">Fluid–structure interaction · 2019</p>
               <h3>How are cylinder motion and vortex shedding connected?</h3>
+              <ul class="research-tags" aria-label="Research fields" role="list">
+                <li>Fluid mechanics</li>
+                <li>Fluid–structure interaction</li>
+              </ul>
               <p>Two- and three-dimensional CFD calculations resolve how Reynolds number and structural damping reshape the response branches of an elastically mounted cylinder. The analysis connects vibration amplitudes with three-dimensional wake topology across transitional flow regimes.</p>
               <a href="https://doi.org/10.1016/j.ijmecsci.2019.03.024" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
             </div>
@@ -94,6 +103,10 @@
             <div class="research-story-copy">
               <p class="work-meta">Structures &amp; optimisation · 2019</p>
               <h3>How can member sizing make trusses lighter?</h3>
+              <ul class="research-tags" aria-label="Research fields" role="list">
+                <li>Structural mechanics</li>
+                <li>Optimisation</li>
+              </ul>
               <p>A linear scaling method turns sizing optimisation of statically determinate trusses into an iterative deterministic procedure. Benchmarks from 10 to 1,240 members compare mass reduction and constraint satisfaction with established optimisation methods.</p>
               <a href="https://doi.org/10.1007/s13296-018-0194-8" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
             </div>
@@ -108,6 +121,11 @@
             <div class="research-story-copy">
               <p class="work-meta">Flow diagnostics · Two studies · 2021</p>
               <h3>Can we retrieve information from sparse tracks?</h3>
+              <ul class="research-tags" aria-label="Research fields" role="list">
+                <li>Fluid mechanics</li>
+                <li>Dynamical systems</li>
+                <li>Flow diagnostics</li>
+              </ul>
               <p>The CSC study tests coherent-structure colouring on an Ahmed-body wake and a swirling jet. Detection improves with denser seeding; in the tested cases, mean inter-particle spacing below 15% of the characteristic flow scale matters more than track length.</p>
               <p>The separate Voronoi study identifies tracers that remain neighbours and converts their shared-edge history into a spectral colour field. Tests on double-gyre flow and three-dimensional bluff-body measurements reveal coherent motion even at sparse seeding. The Python companion implements the Voronoi method on a double-gyre example.</p>
               <div class="study-links"><a href="https://doi.org/10.1007/s00348-021-03135-5" rel="noreferrer">CSC paper ↗</a><a href="https://arxiv.org/abs/2103.09884" rel="noreferrer">Voronoi paper ↗</a><a href="https://github.com/EngFlavioMartins/voronoi-coherent-structures">Python examples ↗</a></div>
@@ -122,6 +140,11 @@
             <div class="research-story-copy">
               <p class="work-meta">Wind energy · 2025</p>
               <h3>How can passive actuators accelerate wind-power recovery?</h3>
+              <ul class="research-tags" aria-label="Research fields" role="list">
+                <li>Wind energy</li>
+                <li>Aerodynamics</li>
+                <li>Flow control</li>
+              </ul>
               <p>Steady CFD and wind-tunnel data probe one-, two- and four-wing devices behind a multirotor. Wing-tip vortices lift low-momentum wake flow and increase exchange with the faster air above, producing faster wake recovery in the modelled cases.</p>
               <p>The accompanying OpenFOAM cases represent rotor thrust and wing loading with cell selections and coded momentum sources. Rotor-only and one-, two- and four-wing layouts allow wake deflection and vertical momentum exchange to be studied without resolving the blade surfaces.</p>
               <div class="study-links"><a href="https://doi.org/10.5194/wes-10-41-2025" rel="noreferrer">Publication ↗</a><a href="https://github.com/EngFlavioMartins/openfoam-actuator-surface">OpenFOAM cases ↗</a></div>
@@ -135,6 +158,11 @@
             <div class="research-story-copy">
               <p class="work-meta">Wind energy · 2024</p>
               <h3>Why does wing arrangement change wake recovery?</h3>
+              <ul class="research-tags" aria-label="Research fields" role="list">
+                <li>Wind energy</li>
+                <li>Aerodynamics</li>
+                <li>CFD</li>
+              </ul>
               <p>An actuator-surface model is checked against wind-tunnel measurements, then used to compare one-, two- and four-wing layouts at the same total lift. Distributing the lift across more wings reshapes the tip vortices and strengthens vertical momentum exchange. In the simulated cases, the two- and four-wing layouts recover wake total pressure faster than the single-wing layout.</p>
               <a href="https://doi.org/10.1088/1742-6596/2767/7/072006" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
             </div>
@@ -147,6 +175,11 @@
             <div class="research-story-copy">
               <p class="work-meta">Wind-farm physics · 2024</p>
               <h3>Can momentum from above improve wind-farm efficiency?</h3>
+              <ul class="research-tags" aria-label="Research fields" role="list">
+                <li>Wind energy</li>
+                <li>Atmospheric flows</li>
+                <li>Flow control</li>
+              </ul>
               <p>A wind-farm-scale model examines how active control of vertical momentum entrainment could affect array performance. Its comparison curves predict smaller efficiency losses for controlled farms as installed power density increases.</p>
               <a href="https://doi.org/10.1088/1742-6596/2767/9/092107" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
             </div>
@@ -159,6 +192,11 @@
             <div class="research-story-copy">
               <p class="work-meta">Numerical methods · 2026</p>
               <h3>How to combine grids and vortex particles in one flow solver?</h3>
+              <ul class="research-tags" aria-label="Research fields" role="list">
+                <li>CFD</li>
+                <li>Numerical methods</li>
+                <li>Vortex methods</li>
+              </ul>
               <p>A near-body finite-volume solver resolves walls while vortex particles carry the wake downstream. This three-dimensional proof of concept tests two-way coupling against fully meshed reference calculations for a cube and a NACA4412 airfoil.</p>
               <a href="https://doi.org/10.1088/1742-6596/3224/4/042069" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
             </div>
@@ -171,6 +209,11 @@
             <div class="research-story-copy">
               <p class="work-meta">Dynamical systems · 2018</p>
               <h3>What separates regular and chaotic orbital motion?</h3>
+              <ul class="research-tags" aria-label="Research fields" role="list">
+                <li>Dynamical systems</li>
+                <li>Classical mechanics</li>
+                <li>Celestial mechanics</li>
+              </ul>
               <p>This review introduces the circular restricted three-body problem through orbital resonances, Poincaré sections and KAM theory. Phase-space geometry connects the Lagrange equilibria with regular and more complex orbital motion. An accompanying Python example computes trajectories, section crossings and Jacobi-conservation diagnostics.</p>
               <div class="study-links"><a href="https://doi.org/10.1590/1806-9126-rbef-2017-0174" rel="noreferrer">Publication ↗</a><a href="https://github.com/EngFlavioMartins/celestial-dynamics">Python examples ↗</a></div>
             </div>
@@ -183,6 +226,10 @@
             <div class="research-story-copy">
               <p class="work-meta">Structures &amp; optimisation · 2017</p>
               <h3>Can moving the nodes reduce a truss’s mass?</h3>
+              <ul class="research-tags" aria-label="Research fields" role="list">
+                <li>Structural mechanics</li>
+                <li>Optimisation</li>
+              </ul>
               <p>The two-dimensional truss study combines member sizing with node repositioning under stress and buckling constraints. Node shifts reduce the reported example from 15.26 to 11.60 kg, approximately 24% relative to the sized layout. Compression-member buckling governs much of the remaining design margin.</p>
               <a href="https://doi.org/10.20906/cps/cilamce2017-0035" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
             </div>
@@ -195,6 +242,11 @@
             <div class="research-story-copy">
               <p class="work-meta">Meshless CFD · 2026</p>
               <h3>How can vortex particles model turbulent flow?</h3>
+              <ul class="research-tags" aria-label="Research fields" role="list">
+                <li>CFD</li>
+                <li>Turbulence</li>
+                <li>Vortex methods</li>
+              </ul>
               <p>A Lagrangian dynamic subgrid model and core-spreading diffusion are assessed using vortex rings and leapfrogging rings. The preprint reports accurate ring kinematics with sparse particles, while post-instability behaviour remains sensitive to particle regularisation.</p>
               <a href="https://arxiv.org/abs/2601.06942" rel="noreferrer">Original preprint <span aria-hidden="true">↗</span></a>
             </div>
@@ -207,6 +259,10 @@
             <div class="research-story-copy">
               <p class="work-meta">Scientific software · Incompressible flow</p>
               <h3>Lid-driven cavity flow</h3>
+              <ul class="research-tags" aria-label="Research fields" role="list">
+                <li>Fluid mechanics</li>
+                <li>Numerical methods</li>
+              </ul>
               <p>A moving lid drives circulation inside a closed square cavity. This Python implementation advances velocity on a staggered grid and applies a pressure projection using a discrete cosine transform. The example shows the primary recirculation and corner motion produced by the wall boundary conditions.</p>
               <a href="https://github.com/EngFlavioMartins/cavity-flow">Code and examples ↗</a>
             </div>
@@ -219,6 +275,11 @@
             <div class="research-story-copy">
               <p class="work-meta">Scientific software · Flow analysis</p>
               <h3>From OpenFOAM fields to Python arrays</h3>
+              <ul class="research-tags" aria-label="Research fields" role="list">
+                <li>CFD</li>
+                <li>Scientific computing</li>
+                <li>Flow diagnostics</li>
+              </ul>
               <p>OpenFOAM velocity and pressure fields are read through fluidfoam and resampled using local radial-basis interpolation. Regular NumPy arrays support velocity profiles and planar sections. The repository includes a direct plotting example and the original notebook-based workflow.</p>
               <a href="https://github.com/EngFlavioMartins/openfoam-postprocessing">Code and examples ↗</a>
             </div>

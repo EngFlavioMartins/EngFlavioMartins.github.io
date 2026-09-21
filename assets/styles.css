@@ -488,6 +488,24 @@ h3 { font-size: clamp(1.55rem, 2.6vw, 2.45rem); }
 /* All findings are ordinary, visible articles; no tab-only or hidden content. */
 .research-findings .research-story { border-radius: .65rem; box-shadow: none; }
 .research-findings .research-story h3 { line-height: 1.16; letter-spacing: -.025em; }
+.research-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem .45rem;
+  list-style: none;
+  padding: 0;
+  margin: .85rem 0 0;
+}
+.research-tags li {
+  max-width: 100%;
+  padding: .22rem .55rem;
+  border: 1px solid #c4d3d0;
+  border-radius: .3rem;
+  color: #315c61;
+  font-size: .8125rem;
+  font-weight: 550;
+  line-height: 1.45;
+}
 .research-findings .research-story figcaption { font-size: .875rem; line-height: 1.5; }
 .research-findings .research-story figure[data-art-tone] { background: #102b32; }
 .research-findings .research-story figure[data-art-tone] figcaption { color: #e0ecea; }

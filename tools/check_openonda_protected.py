@@ -19,11 +19,19 @@ def block(text, pattern):
 
 # The requested grid migration and question-led titles may change wrappers and
 # headings. Artwork, captions, body copy and links remain protected.
+def strip_field_tags(card):
+    return re.sub(r'\n +<ul class="research-tags" aria-label="Research fields" role="list">.*?</ul>', '', card, flags=re.S)
+
+
 before_home = original("index.html").decode()
 after_home = (ROOT / "index.html").read_text()
 before_card = block(before_home, r'<article id="work-openonda".*?</article>')
 after_card = block(after_home, r'<article id="work-openonda".*?</article>')
+openonda_tags = block(after_card, r'<ul class="research-tags".*?</ul>')
+assert re.findall(r'<li>(.*?)</li>', openonda_tags) == ['CFD', 'Numerical methods', 'Scientific computing']
 def card_content(card):
+    # Only additive field metadata is allowed; original prose/art stay protected.
+    card = strip_field_tags(card)
     card = re.sub(r'<article[^>]*>', '<article>', card)
     card = re.sub(r'<figure[^>]*>', '<figure>', card)
     return re.sub(r'<div class="(?:work-copy|research-story-copy)">', '<div>', card)
@@ -38,7 +46,7 @@ after_hybrid = block(after_home, r'<article class="research-story" id="hybrid-vo
 assert '<h3>How to combine grids and vortex particles in one flow solver?</h3>' in after_hybrid
 after_hybrid = after_hybrid.replace('How to combine grids and vortex particles in one flow solver?',
                                     'Hybrid vortex particle–grid flow simulation')
-assert block(before_hybrid, r'<div class="research-story-copy">.*?</div>') == block(after_hybrid, r'<div class="research-story-copy">.*?</div>')
+assert block(before_hybrid, r'<div class="research-story-copy">.*?</div>') == block(strip_field_tags(after_hybrid), r'<div class="research-story-copy">.*?</div>')
 
 for file, patterns in {
     "projects/index.html": [r'<section class="featured-project shell".*?</section>'],

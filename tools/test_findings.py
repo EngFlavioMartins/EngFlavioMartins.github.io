@@ -51,6 +51,24 @@ class FindingsTests(unittest.TestCase):
         for obsolete in ['role="tab', ' hidden', 'Additional studies', 'Research summaries', 'featured-work.js']:
             self.assertNotIn(obsolete, html)
 
+    def test_research_field_tags(self):
+        html = (ROOT / 'index.html').read_text()
+        cards = re.findall(r'<article\b.*?</article>', html, re.S)
+        vocabulary = {'CFD', 'Numerical methods', 'Scientific computing', 'Fluid mechanics',
+                      'Fluid–structure interaction', 'Structural mechanics', 'Optimisation',
+                      'Dynamical systems', 'Flow diagnostics', 'Wind energy', 'Aerodynamics',
+                      'Flow control', 'Atmospheric flows', 'Vortex methods', 'Classical mechanics',
+                      'Celestial mechanics', 'Turbulence'}
+        for card in cards:
+            groups = re.findall(r'<ul class="research-tags" aria-label="Research fields" role="list">(.*?)</ul>', card, re.S)
+            self.assertEqual(len(groups), 1)
+            tags = re.findall(r'<li>(.*?)</li>', groups[0])
+            self.assertGreaterEqual(len(tags), 2)
+            self.assertLessEqual(len(tags), 4)
+            self.assertEqual(len(tags), len(set(tags)))
+            self.assertTrue(set(tags).issubset(vocabulary))
+            self.assertNotIn('<a', groups[0])  # labels, not nonfunctional filters
+
     def test_new_art_is_vector(self):
         for name in ['regenerative-wakes', 'wake-validation', 'vertical-momentum',
                      'cylinder-wake', 'truss-sizing', 'sparse-lagrangian-tracks', 'hybrid-vortex-grid']:
