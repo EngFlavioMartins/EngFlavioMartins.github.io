@@ -31,3 +31,9 @@ python3 -m http.server 4173
 Then open <http://127.0.0.1:4173/>. To publish local edits, commit and push to `main`. GitHub documents the [branch publishing setup](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
 
 The homepage URL is the stable destination for a QR code: `https://engflaviomartins.github.io/`. The HTML CV lives at `/cv/`; the PDF downloads remain optional.
+
+## Repository naming
+
+Repository names use lowercase ASCII words separated by hyphens: `cavity-flow`, `celestial-dynamics`, `openfoam-postprocessing`. Use a descriptive topic, a platform prefix when relevant (`openfoam-`), and a meaningful suffix for a retained older implementation (`-legacy`) or dimensional variant (`-3d`). Avoid spaces, underscores and decorative capitals in repository URLs. Fork names follow the same URL convention while retaining their upstream attribution and fork relationships.
+
+Two intentional exceptions remain: `OpenONDA` keeps its established name, and `EngFlavioMartins.github.io` follows GitHub Pages’ account-site naming requirement. Display names and Python module names are separate: recognised project branding may keep its capitals, and Python imports use `snake_case`.
