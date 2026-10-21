@@ -113,29 +113,43 @@
           </article>
 
           <article id="work-csc" class="research-story">
-            <span id="voronoi-coherence" class="study-anchor" aria-hidden="true"></span>
             <figure data-art-tone="copper">
               <img src="/assets/work/renders/coherent-structure-colouring.webp?v=20261021" width="2400" height="1500" loading="lazy" alt="Two views along the wake of an Ahmed body, sparse and dense particle tracks; red tracks curl around the trailing vortex beside the grey rear face" />
               <figcaption><strong>Figure 4.</strong> Coherent-structure colouring of particle tracks measured behind the Ahmed body, seen along the stream, for sparse (left) and dense (right) seeding. Red tracks belong to the trailing vortex; the grey panel is the rear face of the body.</figcaption>
             </figure>
             <div class="research-story-copy">
-              <p class="work-meta">Flow diagnostics · Two studies · 2021</p>
+              <p class="work-meta">Flow diagnostics · 2021</p>
               <h3>Can we retrieve information from sparse tracks?</h3>
+              <ul class="research-tags" aria-label="Research fields" role="list">
+                <li>Fluid mechanics</li>
+                <li>Flow diagnostics</li>
+              </ul>
+              <p>The CSC study tests coherent-structure colouring on an Ahmed-body wake and a swirling jet. Detection improves with denser seeding; in the tested cases, mean inter-particle spacing below 15% of the characteristic flow scale matters more than track length.</p>
+              <div class="study-links"><a href="https://doi.org/10.1007/s00348-021-03135-5" rel="noreferrer">CSC paper ↗</a><a href="https://github.com/EngFlavioMartins/coherent-structure-colouring">CSC code ↗</a></div>
+            </div>
+          </article>
+          <article class="research-story" id="voronoi-coherence">
+            <figure data-art-tone="copper">
+              <img src="/assets/work/renders/voronoi-coherence.webp?v=20261021" width="2400" height="1500" loading="lazy" alt="Voronoi cells of double-gyre tracers coloured by neighbour persistence, with light and dark bands following the two gyres and short grey trails of recent motion" />
+              <figcaption><strong>Figure 5.</strong> Voronoi cells of 784 tracers in the double-gyre flow, coloured by neighbour persistence (the sign of the colour is arbitrary). Grey trails show each tracer’s recent motion. Computed with the repository’s Python implementation.</figcaption>
+            </figure>
+            <div class="research-story-copy">
+              <p class="work-meta">Flow diagnostics · 2021</p>
+              <h3>Do tracers that stay neighbours reveal coherent motion?</h3>
               <ul class="research-tags" aria-label="Research fields" role="list">
                 <li>Fluid mechanics</li>
                 <li>Dynamical systems</li>
                 <li>Flow diagnostics</li>
               </ul>
-              <p>The CSC study tests coherent-structure colouring on an Ahmed-body wake and a swirling jet. Detection improves with denser seeding; in the tested cases, mean inter-particle spacing below 15% of the characteristic flow scale matters more than track length.</p>
-              <p>The separate Voronoi study identifies tracers that remain neighbours and converts their shared-edge history into a spectral colour field. Tests on double-gyre flow and three-dimensional bluff-body measurements reveal coherent motion even at sparse seeding. The Python companion implements the Voronoi method on a double-gyre example.</p>
-              <div class="study-links"><a href="https://doi.org/10.1007/s00348-021-03135-5" rel="noreferrer">CSC paper ↗</a><a href="https://arxiv.org/abs/2103.09884" rel="noreferrer">Voronoi paper ↗</a><a href="https://github.com/EngFlavioMartins/coherent-structure-colouring">CSC code ↗</a><a href="https://github.com/EngFlavioMartins/voronoi-coherent-structures">Voronoi code ↗</a></div>
+              <p>This study identifies tracers that remain neighbours and converts their shared-edge history into a spectral colour field. Tests on double-gyre flow and three-dimensional bluff-body measurements reveal coherent motion even at sparse seeding. The Python companion implements the Voronoi method on a double-gyre example.</p>
+              <div class="study-links"><a href="https://arxiv.org/abs/2103.09884" rel="noreferrer">Voronoi paper ↗</a><a href="https://github.com/EngFlavioMartins/voronoi-coherent-structures">Voronoi code ↗</a></div>
             </div>
           </article>
           <article class="research-story" id="regenerative-wakes">
             <span id="openfoam-actuator-surface" class="study-anchor" aria-hidden="true"></span>
             <figure class="panoramic-figure" data-art-tone="ochre">
               <img src="/assets/work/renders/regenerative-wakes.webp?v=20261021" width="2400" height="1200" loading="lazy" alt="Two rotor wakes side by side, each crossed by four velocity planes: without wings the dark wake stays square and level; with four wing strips it lifts into a mushroom shape and fades" />
-              <figcaption><strong>Figure 5.</strong> Streamwise velocity behind an actuator-surface rotor without wings (left) and with four wing strips (right); dark red is slow wake. With the wings the wake rises and recovers faster. Steady simulations of the repository case.</figcaption>
+              <figcaption><strong>Figure 6.</strong> Streamwise velocity behind an actuator-surface rotor without wings (left) and with four wing strips (right); dark red is slow wake. With the wings the wake rises and recovers faster. Steady simulations of the repository case.</figcaption>
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Wind energy · 2025</p>
@@ -203,8 +217,8 @@
           </article>
           <article class="research-story" id="celestial-dynamics">
             <figure data-art-tone="blue">
-              <img src="/assets/work/three-body-schematic.svg?v=20260921-refined" width="960" height="600" loading="lazy" alt="Computed rotating-frame orbits, zero-velocity boundary, Lagrange points and a Poincaré section" />
-              <figcaption>Computed restricted-three-body trajectories and upward-crossing Poincaré section.</figcaption>
+              <img src="/assets/work/renders/three-body.webp?v=20261021" width="2400" height="1500" loading="lazy" alt="Blue effective-potential landscape with a deep well around the Earth holding a copper rosette orbit, a grey zero-velocity curve and five small grey spheres at the Lagrange points" />
+              <figcaption><strong>Figure 10.</strong> Effective potential of the Earth–Moon restricted three-body problem in the rotating frame, with one computed orbit (copper) held in the Earth’s well by the zero-velocity curve (grey line). Grey spheres mark the five Lagrange points; the height is compressed logarithmically for display.</figcaption>
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Dynamical systems · 2018</p>
@@ -254,7 +268,7 @@
           <article class="research-story" id="cavity-flow">
             <figure data-art-tone="blue">
               <img src="/assets/work/renders/cavity-flow.webp?v=20261021" width="2400" height="1500" loading="lazy" alt="Square cavity with a dark lid on top, filled with a flow-direction texture; a large blue clockwise vortex fills the centre and small eddies sit in the lower corners" />
-              <figcaption><strong>Figure 12.</strong> Steady lid-driven cavity flow at Re = 1000 from the repository's solver. Texture follows the flow direction; colour is vorticity, blue clockwise and red anticlockwise. Secondary eddies form in both lower corners.</figcaption>
+              <figcaption><strong>Figure 13.</strong> Steady lid-driven cavity flow at Re = 1000 from the repository's solver. Texture follows the flow direction; colour is vorticity, blue clockwise and red anticlockwise. Secondary eddies form in both lower corners.</figcaption>
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Scientific software · Incompressible flow</p>
@@ -269,8 +283,8 @@
           </article>
           <article class="research-story" id="openfoam-postprocessing">
             <figure data-art-tone="blue">
-              <img src="/assets/work/openfoam-postprocessing.svg?v=20260921-refined" width="960" height="600" loading="lazy" alt="Unstructured mesh samples mapped to regular gridded velocity slices" />
-              <figcaption>Cell-centred samples, local interpolation and structured flow sections. Conceptual workflow illustration.</figcaption>
+              <img src="/assets/work/renders/openfoam-postprocessing.webp?v=20261021" width="2400" height="1500" loading="lazy" alt="One wake plane: on the left, spheres at OpenFOAM cell centres, denser in the dark wake; on the right, the same velocity on a regular grid of square cells" />
+              <figcaption><strong>Figure 14.</strong> One cross-flow plane of a rotor wake from the bundled OpenFOAM snapshot: cell-centre samples, sized by mesh spacing (left), and the same streamwise velocity resampled onto a regular grid (right). Dark red is slow wake.</figcaption>
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Scientific software · Flow analysis</p>

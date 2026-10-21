@@ -33,25 +33,58 @@
     "credit": "Measurements: TU Delft Aerodynamics Laboratories; analysis and render: Flavio A. C. Martins"
   },
   {
-    "slug": "regenerative-wakes",
+    "slug": "voronoi-coherence",
     "figure": 5,
+    "title": "Voronoi neighbour-persistence coherence in a double gyre",
+    "repo": "https://github.com/EngFlavioMartins/voronoi-coherent-structures",
+    "doi": "10.48550/arXiv.2103.09884",
+    "data_source": "run",
+    "description": "The repository's dense double-gyre example (784 tracers, 101 frames over t = 0-20, seed 7) analysed with its Python implementation of the Voronoi method. Render: Voronoi cells at t = 20 coloured by chi (Crameri lipari) and tapered trails over the last eight frames, ParaView.",
+    "caption": "Figure 5. Voronoi cells of 784 tracers in the double-gyre flow, coloured by neighbour persistence (the sign of the colour is arbitrary). Grey trails show each tracer's recent motion. Computed with the repository's Python implementation.",
+    "credit": "Computation and render: Flavio A. C. Martins"
+  },
+  {
+    "slug": "regenerative-wakes",
+    "figure": 6,
     "title": "Wake of an actuator-surface rotor without and with wings",
     "repo": "https://github.com/EngFlavioMartins/openfoam-actuator-surface",
     "doi": "10.5194/wes-10-41-2025",
     "data_source": "run",
     "description": "Steady RANS runs of the repository's actuator-surface case (rotor only and four wing strips) on the supplied mesh, ported to OpenFOAM v2412. Render: streamwise velocity on cross-flow planes 1, 4, 7 and 10 rotor sizes downstream and streamlines from the actuator ends, ParaView.",
-    "caption": "Figure 5. Streamwise velocity behind an actuator-surface rotor without wings (left) and with four wing strips (right); dark red is slow wake. With the wings the wake rises and recovers faster. Steady simulations of the repository case.",
+    "caption": "Figure 6. Streamwise velocity behind an actuator-surface rotor without wings (left) and with four wing strips (right); dark red is slow wake. With the wings the wake rises and recovers faster. Steady simulations of the repository case.",
     "credit": "Simulation and render: Flavio A. C. Martins"
   },
   {
+    "slug": "three-body",
+    "figure": 10,
+    "title": "Effective potential and an orbit of the restricted three-body problem",
+    "repo": "https://github.com/EngFlavioMartins/celestial-dynamics",
+    "doi": "10.1590/1806-9126-rbef-2017-0174",
+    "data_source": "run",
+    "description": "Earth-Moon-like mass fraction (0.0121505856) and Jacobi constant 3.2, as in the repository defaults; orbit started at x = 0.30 on y = 0 and integrated with the repository's DOP853 integrator. Render: height -log(Omega) (a monotonic display transform, wells cut off), zero-velocity curve and Lagrange points, ParaView.",
+    "caption": "Figure 10. Effective potential of the Earth–Moon restricted three-body problem in the rotating frame, with one computed orbit (copper) held in the Earth's well by the zero-velocity curve (grey line). Grey spheres mark the five Lagrange points; the height is compressed logarithmically for display.",
+    "credit": "Computation and render: Flavio A. C. Martins"
+  },
+  {
     "slug": "cavity-flow",
-    "figure": 12,
+    "figure": 13,
     "title": "Lid-driven cavity at Re = 1000",
     "repo": "https://github.com/EngFlavioMartins/cavity-flow",
     "doi": null,
     "data_source": "run",
     "description": "Steady lid-driven cavity flow at Re = 1000 computed with the repository's projection solver on a 192 x 192 grid; centreline velocities checked against Ghia, Ghia & Shin (1982). Render: line-integral convolution of the flow direction coloured by vorticity.",
-    "caption": "Figure 12. Steady lid-driven cavity flow at Re = 1000 from the repository's solver. Texture follows the flow direction; colour is vorticity, blue clockwise and red anticlockwise. Secondary eddies form in both lower corners.",
+    "caption": "Figure 13. Steady lid-driven cavity flow at Re = 1000 from the repository's solver. Texture follows the flow direction; colour is vorticity, blue clockwise and red anticlockwise. Secondary eddies form in both lower corners.",
     "credit": "Simulation and render: Flavio A. C. Martins"
+  },
+  {
+    "slug": "openfoam-postprocessing",
+    "figure": 14,
+    "title": "OpenFOAM cell-centre samples and their regular-grid resampling",
+    "repo": "https://github.com/EngFlavioMartins/openfoam-postprocessing",
+    "doi": null,
+    "data_source": "run",
+    "description": "Plane x = 12 of the bundled OpenFOAM snapshot (actuator-surface wake, time 429) read with fluidfoam: cell centres within 0.03 of the plane (left), and streamwise velocity resampled onto a 0.06 grid with the repository's RBF settings (right). Render: ParaView.",
+    "caption": "Figure 14. One cross-flow plane of a rotor wake from the bundled OpenFOAM snapshot: cell-centre samples, sized by mesh spacing (left), and the same streamwise velocity resampled onto a regular grid (right). Dark red is slow wake.",
+    "credit": "Processing and render: Flavio A. C. Martins"
   }
 ]
