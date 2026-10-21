@@ -1,6 +1,7 @@
 """Regression checks for the requested unified findings section."""
 import re
 import subprocess
+from collections import Counter
 import unittest
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -15,7 +16,9 @@ class FindingsTests(unittest.TestCase):
         after = (ROOT / 'index.html').read_text()
         def references(html):
             return re.findall(r'href="(https://(?:doi.org|arxiv.org|github.com/EngFlavioMartins/)[^"]+)"', html)
-        self.assertCountEqual(references(before), references(after))
+        # Links may be added (e.g. new repository buttons), never lost.
+        missing = Counter(references(before)) - Counter(references(after))
+        self.assertFalse(missing, f'links removed: {sorted(missing)}')
 
     def test_consolidated_cards_and_question_titles(self):
         html = (ROOT / 'index.html').read_text()
@@ -38,7 +41,7 @@ class FindingsTests(unittest.TestCase):
         flow = next(c for c in cards if 'github.com/EngFlavioMartins/voronoi-coherent-structures' in c)
         self.assertIn('10.1007/s00348-021-03135-5', flow)
         self.assertIn('Two studies', flow)
-        self.assertIn('voronoi-neighbours.svg', flow)
+        self.assertIn('renders/coherent-structure-colouring.webp', flow)
         self.assertNotIn('sparse-lagrangian-tracks.svg', html)
         self.assertIn('id="voronoi-coherence"', html)
         self.assertIn('id="openfoam-actuator-surface"', html)

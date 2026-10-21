@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "vortex-induced-vibration",
+    "figure": 2,
+    "title": "Vortex wake of an elastically mounted cylinder",
+    "repo": "https://github.com/EngFlavioMartins/vortex-induced-vibration",
+    "doi": "10.1016/j.ijmecsci.2019.03.024",
+    "data_source": "coarse-run",
+    "description": "Two-dimensional URANS (k-omega SST) re-run in OpenFOAM v2412 of a cylinder free to move across the flow, with the mass ratio, spring stiffness and damping of Martins & Avila (2019, Marine Structures 65); coarser than the published simulations and shown across the span. Render: Q-criterion iso-surfaces and spanwise vorticity, ParaView.",
+    "caption": "Figure 2. Vortex wake of an elastically mounted cylinder free to move across the flow. Vortex cores are coloured by spanwise vorticity, blue clockwise and red anticlockwise. Coarse two-dimensional re-run with the mass, stiffness and damping of the study, shown across the span; not the published simulations.",
+    "credit": "Simulation and render: Flavio A. C. Martins"
+  },
+  {
+    "slug": "truss-sizing",
+    "figure": 3,
+    "title": "37-member truss before and after sizing",
+    "repo": "https://github.com/EngFlavioMartins/truss-sizing-optimisation",
+    "doi": "10.1007/s13296-018-0194-8",
+    "data_source": "run",
+    "description": "The 37-member benchmark of the paper (Fig. 6) sized with a Python re-implementation of the linear indirect method, compared at equal mass with a truss of uniform member areas. Render: tubes with radius proportional to the square root of member area, coloured by axial stress over admissible stress, ParaView.",
+    "caption": "Figure 3. The 37-member benchmark truss at equal mass, with uniform member areas (top) and after linear sizing (bottom). Tube thickness follows member area; colour is axial stress relative to the admissible stress, with the admissible limits marked on the colour bar.",
+    "credit": "Computation and render: Flavio A. C. Martins"
+  },
+  {
+    "slug": "coherent-structure-colouring",
+    "figure": 4,
+    "title": "Coherent-structure colouring of Ahmed-body tracks",
+    "repo": "https://github.com/EngFlavioMartins/coherent-structure-colouring",
+    "doi": "10.1007/s00348-021-03135-5",
+    "data_source": "run",
+    "description": "Shake-the-Box particle tracks measured behind the Ahmed body (TU Delft Open Jet Facility), coloured with the Python CSC implementation; the CSC mode is selected against streamwise vorticity from the same measurements. Sparse and dense random subsets of the near-wake tracks, seen along the stream. Render: ParaView.",
+    "caption": "Figure 4. Coherent-structure colouring of particle tracks measured behind the Ahmed body, seen along the stream, for sparse (left) and dense (right) seeding. Red tracks belong to the trailing vortex; the grey panel is the rear face of the body.",
+    "credit": "Measurements: TU Delft Aerodynamics Laboratories; analysis and render: Flavio A. C. Martins"
+  },
+  {
+    "slug": "regenerative-wakes",
+    "figure": 5,
+    "title": "Wake of an actuator-surface rotor without and with wings",
+    "repo": "https://github.com/EngFlavioMartins/openfoam-actuator-surface",
+    "doi": "10.5194/wes-10-41-2025",
+    "data_source": "run",
+    "description": "Steady RANS runs of the repository's actuator-surface case (rotor only and four wing strips) on the supplied mesh, ported to OpenFOAM v2412. Render: streamwise velocity on cross-flow planes 1, 4, 7 and 10 rotor sizes downstream and streamlines from the actuator ends, ParaView.",
+    "caption": "Figure 5. Streamwise velocity behind an actuator-surface rotor without wings (left) and with four wing strips (right); dark red is slow wake. With the wings the wake rises and recovers faster. Steady simulations of the repository case.",
+    "credit": "Simulation and render: Flavio A. C. Martins"
+  },
+  {
+    "slug": "cavity-flow",
+    "figure": 12,
+    "title": "Lid-driven cavity at Re = 1000",
+    "repo": "https://github.com/EngFlavioMartins/cavity-flow",
+    "doi": null,
+    "data_source": "run",
+    "description": "Steady lid-driven cavity flow at Re = 1000 computed with the repository's projection solver on a 192 x 192 grid; centreline velocities checked against Ghia, Ghia & Shin (1982). Render: line-integral convolution of the flow direction coloured by vorticity.",
+    "caption": "Figure 12. Steady lid-driven cavity flow at Re = 1000 from the repository's solver. Texture follows the flow direction; colour is vorticity, blue clockwise and red anticlockwise. Secondary eddies form in both lower corners.",
+    "credit": "Simulation and render: Flavio A. C. Martins"
+  }
+]
