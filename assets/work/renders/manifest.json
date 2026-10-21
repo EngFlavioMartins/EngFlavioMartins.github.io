@@ -6,8 +6,8 @@
     "repo": "https://github.com/EngFlavioMartins/vortex-induced-vibration",
     "doi": "10.1016/j.ijmecsci.2019.03.024",
     "data_source": "coarse-run",
-    "description": "Two-dimensional URANS (k-omega SST) re-run in OpenFOAM v2412 of a cylinder free to move across the flow, with the mass ratio, spring stiffness and damping of Martins & Avila (2019, Marine Structures 65); coarser than the published simulations and shown across the span. Render: Q-criterion iso-surfaces and spanwise vorticity, ParaView.",
-    "caption": "Figure 2. Vortex wake of an elastically mounted cylinder free to move across the flow. Vortex cores are coloured by spanwise vorticity, blue clockwise and red anticlockwise. Coarse two-dimensional re-run with the mass, stiffness and damping of the study, shown across the span; not the published simulations.",
+    "description": "Two-dimensional URANS (k-omega SST) re-run in OpenFOAM v2412 of a cylinder free to move across the flow, with the mass ratio, spring stiffness and damping of Martins & Avila (2019, Marine Structures 65); coarser than the published simulations and shown across the span. Render style after the OpenONDA tutorial figures (black background, thesis colour maps, LaTeX overlay); reproduce with scripts/render/make_figure.sh in the repository.",
+    "caption": "Figure 2. Vortex wake of an elastically mounted cylinder free to move across the flow. Vortex cores and the plane behind them are coloured by spanwise vorticity, teal clockwise and red anticlockwise. Coarse two-dimensional re-run with the mass, stiffness and damping of the study, shown across the span; not the published simulations.",
     "credit": "Simulation and render: Flavio A. C. Martins"
   },
   {
@@ -17,8 +17,8 @@
     "repo": "https://github.com/EngFlavioMartins/truss-sizing-optimisation",
     "doi": "10.1007/s13296-018-0194-8",
     "data_source": "run",
-    "description": "The 37-member benchmark of the paper (Fig. 6) sized with a Python re-implementation of the linear indirect method, compared at equal mass with a truss of uniform member areas. Render: tubes with radius proportional to the square root of member area, coloured by axial stress over admissible stress, ParaView.",
-    "caption": "Figure 3. The 37-member benchmark truss at equal mass, with uniform member areas (top) and after linear sizing (bottom). Tube thickness follows member area; colour is axial stress relative to the admissible stress, with the admissible limits marked on the colour bar.",
+    "description": "The 37-member benchmark of the paper (Fig. 6) sized with a Python re-implementation of the linear indirect method, compared at equal mass with a truss of uniform member areas. Render style after the OpenONDA tutorial figures (black background, thesis colour maps, LaTeX overlay); reproduce with scripts/render/make_figure.sh in the repository.",
+    "caption": "Figure 3. The 37-member benchmark truss at equal mass, with uniform member areas (top) and after linear sizing (bottom). Tube thickness follows member area; colour is axial stress relative to the admissible stress, teal in compression and red in tension, paling where it exceeds the limit.",
     "credit": "Computation and render: Flavio A. C. Martins"
   },
   {
@@ -28,8 +28,8 @@
     "repo": "https://github.com/EngFlavioMartins/coherent-structure-colouring",
     "doi": "10.1007/s00348-021-03135-5",
     "data_source": "run",
-    "description": "Shake-the-Box particle tracks measured behind the Ahmed body (TU Delft Open Jet Facility), coloured with the Python CSC implementation; the CSC mode is selected against streamwise vorticity from the same measurements. Sparse and dense random subsets of the near-wake tracks, seen along the stream. Render: ParaView.",
-    "caption": "Figure 4. Coherent-structure colouring of particle tracks measured behind the Ahmed body, seen along the stream, for sparse (left) and dense (right) seeding. Red tracks belong to the trailing vortex; the grey panel is the rear face of the body.",
+    "description": "Shake-the-Box particle tracks measured behind the Ahmed body (TU Delft Open Jet Facility), coloured with the Python CSC implementation; the CSC mode is selected against streamwise vorticity from the same measurements. Sparse and dense random subsets of the near-wake tracks, seen along the stream. Render style after the OpenONDA tutorial figures (black background, thesis colour maps, LaTeX overlay); reproduce with scripts/render/make_figure.sh in the repository.",
+    "caption": "Figure 4. Coherent-structure colouring of particle tracks measured behind the Ahmed body, seen along the stream, for sparse (left) and dense (right) seeding. Red tracks belong to the trailing vortex and teal tracks lie outside it; the grey panel is the rear face of the body.",
     "credit": "Measurements: TU Delft Aerodynamics Laboratories; analysis and render: Flavio A. C. Martins"
   },
   {
@@ -39,8 +39,8 @@
     "repo": "https://github.com/EngFlavioMartins/voronoi-coherent-structures",
     "doi": "10.48550/arXiv.2103.09884",
     "data_source": "run",
-    "description": "The repository's dense double-gyre example (784 tracers, 101 frames over t = 0-20, seed 7) analysed with its Python implementation of the Voronoi method. Render: Voronoi cells at t = 20 coloured by chi (Crameri lipari) and tapered trails over the last eight frames, ParaView.",
-    "caption": "Figure 5. Voronoi cells of 784 tracers in the double-gyre flow, coloured by neighbour persistence (the sign of the colour is arbitrary). Grey trails show each tracer's recent motion. Computed with the repository's Python implementation.",
+    "description": "The repository's dense double-gyre example (784 tracers, 101 frames over t = 0-20, seed 7) analysed with its Python implementation of the Voronoi method. Render style after the OpenONDA tutorial figures (black background, thesis colour maps, LaTeX overlay); reproduce with scripts/render/make_figure.sh in the repository.",
+    "caption": "Figure 5. Voronoi cells of 784 tracers in the double-gyre flow, coloured by neighbour persistence (the sign of the colour is arbitrary). Amber trails show each tracer's recent motion. Computed with the repository's Python implementation.",
     "credit": "Computation and render: Flavio A. C. Martins"
   },
   {
@@ -50,8 +50,8 @@
     "repo": "https://github.com/EngFlavioMartins/openfoam-actuator-surface",
     "doi": "10.5194/wes-10-41-2025",
     "data_source": "run",
-    "description": "Steady RANS runs of the repository's actuator-surface case (rotor only and four wing strips) on the supplied mesh, ported to OpenFOAM v2412. Render: streamwise velocity on cross-flow planes 1, 4, 7 and 10 rotor sizes downstream and streamlines from the actuator ends, ParaView.",
-    "caption": "Figure 6. Streamwise velocity behind an actuator-surface rotor without wings (left) and with four wing strips (right); dark red is slow wake. With the wings the wake rises and recovers faster. Steady simulations of the repository case.",
+    "description": "Steady RANS runs of the repository's actuator-surface case (rotor only and four wing strips) on the supplied mesh, ported to OpenFOAM v2412. Render style after the OpenONDA tutorial figures (black background, thesis colour maps, LaTeX overlay); reproduce with scripts/render/make_figure.sh in the repository.",
+    "caption": "Figure 6. Velocity deficit behind an actuator-surface rotor without wings (top) and with four wing strips (bottom); the brighter the blue, the slower the wake, and amber lines are streamlines from the actuator ends. With the wings the wake rises and recovers faster. Steady simulations of the repository case.",
     "credit": "Simulation and render: Flavio A. C. Martins"
   },
   {
@@ -61,8 +61,8 @@
     "repo": "https://github.com/EngFlavioMartins/celestial-dynamics",
     "doi": "10.1590/1806-9126-rbef-2017-0174",
     "data_source": "run",
-    "description": "Earth-Moon-like mass fraction (0.0121505856) and Jacobi constant 3.2, as in the repository defaults; orbit started at x = 0.30 on y = 0 and integrated with the repository's DOP853 integrator. Render: height -log(Omega) (a monotonic display transform, wells cut off), zero-velocity curve and Lagrange points, ParaView.",
-    "caption": "Figure 10. Effective potential of the Earth–Moon restricted three-body problem in the rotating frame, with one computed orbit (copper) held in the Earth's well by the zero-velocity curve (grey line). Grey spheres mark the five Lagrange points; the height is compressed logarithmically for display.",
+    "description": "Earth-Moon-like mass fraction (0.0121505856) and Jacobi constant 3.2, as in the repository defaults; orbit started at x = 0.30 on y = 0 and integrated with the repository's DOP853 integrator. Render style after the OpenONDA tutorial figures (black background, thesis colour maps, LaTeX overlay); reproduce with scripts/render/make_figure.sh in the repository.",
+    "caption": "Figure 10. Effective potential of the Earth–Moon restricted three-body problem in the rotating frame, with one computed orbit (amber) held in the Earth's well by the zero-velocity curve (grey line). Grey spheres mark the five Lagrange points; the height is compressed logarithmically for display.",
     "credit": "Computation and render: Flavio A. C. Martins"
   },
   {
@@ -72,8 +72,8 @@
     "repo": "https://github.com/EngFlavioMartins/cavity-flow",
     "doi": null,
     "data_source": "run",
-    "description": "Steady lid-driven cavity flow at Re = 1000 computed with the repository's projection solver on a 192 x 192 grid; centreline velocities checked against Ghia, Ghia & Shin (1982). Render: line-integral convolution of the flow direction coloured by vorticity.",
-    "caption": "Figure 13. Steady lid-driven cavity flow at Re = 1000 from the repository's solver. Texture follows the flow direction; colour is vorticity, blue clockwise and red anticlockwise. Secondary eddies form in both lower corners.",
+    "description": "Steady lid-driven cavity flow at Re = 1000 computed with the repository's projection solver on a 192 x 192 grid; centreline velocities checked against Ghia, Ghia & Shin (1982). Render style after the OpenONDA tutorial figures (black background, thesis colour maps, LaTeX overlay); reproduce with scripts/render/make_figure.sh in the repository.",
+    "caption": "Figure 13. Steady lid-driven cavity flow at Re = 1000 from the repository's solver. Texture follows the flow direction; colour is vorticity, teal clockwise and red anticlockwise. Secondary eddies form in both lower corners.",
     "credit": "Simulation and render: Flavio A. C. Martins"
   },
   {
@@ -83,8 +83,8 @@
     "repo": "https://github.com/EngFlavioMartins/openfoam-postprocessing",
     "doi": null,
     "data_source": "run",
-    "description": "Plane x = 12 of the bundled OpenFOAM snapshot (actuator-surface wake, time 429) read with fluidfoam: cell centres within 0.03 of the plane (left), and streamwise velocity resampled onto a 0.06 grid with the repository's RBF settings (right). Render: ParaView.",
-    "caption": "Figure 14. One cross-flow plane of a rotor wake from the bundled OpenFOAM snapshot: cell-centre samples, sized by mesh spacing (left), and the same streamwise velocity resampled onto a regular grid (right). Dark red is slow wake.",
+    "description": "Plane x = 12 of the bundled OpenFOAM snapshot (actuator-surface wake, time 429) read with fluidfoam: cell centres within 0.03 of the plane (left), and streamwise velocity resampled onto a 0.06 grid with the repository's RBF settings (right). Render style after the OpenONDA tutorial figures (black background, thesis colour maps, LaTeX overlay); reproduce with scripts/render/make_figure.sh in the repository.",
+    "caption": "Figure 14. One cross-flow plane of a rotor wake from the bundled OpenFOAM snapshot: cell-centre samples, sized by mesh spacing (left), and the same velocity deficit resampled onto a regular grid (right). The brighter the blue, the slower the wake.",
     "credit": "Processing and render: Flavio A. C. Martins"
   }
 ]
