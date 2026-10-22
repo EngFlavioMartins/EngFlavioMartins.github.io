@@ -4,10 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Flavio A. C. Martins — computational fluid dynamics, fluid–structure interaction, wind energy and scientific software." />
-    <meta name="theme-color" content="#19383c" />
+    <meta name="theme-color" content="#0e1214" />
     <title>Flavio A. C. Martins · Computational Fluid Dynamics</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23102a43'/%3E%3Cpath d='M13 43c10-4 13-24 25-24 6 0 9 5 13 5' fill='none' stroke='%232dd4bf' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M13 32c9 0 13 13 23 13 7 0 10-6 15-6' fill='none' stroke='%23fff' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="/assets/styles.css?v=20260921-tags" />
+    <link rel="stylesheet" href="/assets/styles.css?v=20261022-redesign" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -24,42 +24,30 @@
     </header>
 
     <main id="main">
-      <section class="hero shell">
-        <div class="hero-copy">
-          <p class="eyebrow">Aerospace engineering · Computational fluid dynamics · Scientific computing</p>
-          <h1>Computational fluid dynamics <span class="accent-text">&amp; scientific computing</span></h1>
-          <p class="hero-lede">Numerical methods, experimental validation and open-source software for unsteady aerodynamics, fluid–structure interaction and wind-energy systems.</p>
-          <div class="hero-actions" aria-label="Primary links">
-            <a class="button button-primary" href="/cv/">View CV <span aria-hidden="true">→</span></a>
-            <a class="button button-secondary" href="mailto:flavio.martins@outlook.com">Contact</a>
-          </div>
-          <ul class="social-links" aria-label="External profiles">
-            <li><a href="https://github.com/EngFlavioMartins" rel="me noreferrer">GitHub <span aria-hidden="true">↗</span></a></li>
-            <li><a href="https://www.linkedin.com/in/flavio-martins-8bb89772" rel="me noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></li>
-            <li><a href="https://scholar.google.com/citations?user=WZXamCcAAAAJ&amp;hl=en" rel="me noreferrer">Google Scholar <span aria-hidden="true">↗</span></a></li>
-            <li><a href="https://orcid.org/0000-0002-1374-5760" rel="me noreferrer">ORCID <span aria-hidden="true">↗</span></a></li>
+      <section class="masthead shell" aria-label="Introduction">
+        <img class="masthead-portrait" src="/assets/flavio-martins.jpg" width="886" height="886" alt="Portrait of Flavio Martins" />
+        <div class="masthead-copy">
+          <h1>Flavio A. C. Martins</h1>
+          <p class="masthead-role">PhD candidate in aerospace engineering · TU Delft</p>
+          <p class="masthead-lede">Numerical methods, experimental validation and open-source software for unsteady aerodynamics, fluid–structure interaction and wind energy.</p>
+          <ul class="masthead-links" aria-label="Profiles and contact" role="list">
+            <li><a href="https://github.com/EngFlavioMartins" rel="me noreferrer">GitHub</a></li>
+            <li><a href="https://scholar.google.com/citations?user=WZXamCcAAAAJ&amp;hl=en" rel="me noreferrer">Google Scholar</a></li>
+            <li><a href="https://orcid.org/0000-0002-1374-5760" rel="me noreferrer">ORCID</a></li>
+            <li><a href="https://www.linkedin.com/in/flavio-martins-8bb89772" rel="me noreferrer">LinkedIn</a></li>
+            <li><a href="mailto:flavio.martins@outlook.com">Email</a></li>
           </ul>
         </div>
-
-        <aside class="profile-panel" aria-label="Profile summary">
-          <div class="portrait-frame">
-            <img src="/assets/flavio-martins.jpg" width="886" height="886" alt="Portrait of Flavio Martins" />
-          </div>
-          <div class="profile-meta">
-            <p><span>Current role</span>PhD candidate, TU Delft</p>
-            <p><span>Focus</span>CFD · FSI · Wind energy</p>
-          </div>
-        </aside>
       </section>
 
-      <div class="flow-divider" aria-hidden="true"></div>
-      <section class="research-findings shell section-pad" aria-labelledby="work-heading">
-        <header class="section-heading compact-heading">
-          <h2 id="work-heading">Research findings</h2>
-          <a href="/publications/">All publications <span aria-hidden="true">→</span></a>
-        </header>
+      <section class="research-findings section-dark" aria-labelledby="work-heading">
+        <div class="shell">
+          <header class="section-heading compact-heading">
+            <h2 id="work-heading">Research and code</h2>
+            <a href="/publications/">All publications <span aria-hidden="true">→</span></a>
+          </header>
 
-        <div class="research-stories" aria-labelledby="work-heading">
+          <div class="research-stories" aria-labelledby="work-heading">
           <article id="work-openonda" class="research-story">
             <figure class="dark-figure">
               <img src="/assets/work/openonda-hybrid.png" width="1280" height="720" alt="Hybrid finite-volume and vortex-particle wake simulation around a cube" />
@@ -77,214 +65,109 @@
               <a href="https://github.com/EngFlavioMartins/OpenONDA" rel="noreferrer">Repository and paper record <span aria-hidden="true">↗</span></a>
             </div>
           </article>
-
-          <article id="work-viv" class="research-story">
-            <figure data-art-tone="copper">
-              <img src="/assets/work/renders/vortex-induced-vibration.webp?v=20261022b" width="2400" height="1500" loading="lazy" alt="On black, a brushed-metal cylinder with teal and red vortex cores shed alternately behind it over a glowing plane of spanwise vorticity, with a colour bar" />
-              <figcaption><strong>Figure 2.</strong> Vortex wake of an elastically mounted cylinder free to move across the flow. Vortex cores and the plane behind them are coloured by spanwise vorticity, teal clockwise and red anticlockwise. Coarse two-dimensional re-run with the mass, stiffness and damping of the study, shown across the span; not the published simulations.</figcaption>
+          <article class="research-story" id="regenerative-wakes">
+            <span id="openfoam-actuator-surface" class="study-anchor" aria-hidden="true"></span>
+            <figure>
+              <img src="/assets/work/renders/regenerative-wakes.webp?v=20261022d" width="2400" height="1500" loading="lazy" alt="On black, two rotor wakes stacked, each crossed by four glowing velocity-deficit planes and amber streamlines: without wings the wake stays square and level; with four wing strips it lifts into a mushroom shape and fades" />
+              <figcaption><strong>Figure 2.</strong> Velocity deficit behind an actuator-surface rotor alone (top) and with four wing strips (bottom); brighter blue is slower flow, amber lines are streamlines from the actuator ends.</figcaption>
+            </figure>
+            <div class="research-story-copy">
+              <p class="work-meta">Wind energy · 2025</p>
+              <h3>Can wings behind a rotor speed up wake recovery?</h3>
+              <ul class="research-tags" aria-label="Research fields" role="list">
+                <li>Wind energy</li>
+                <li>Aerodynamics</li>
+                <li>Flow control</li>
+              </ul>
+              <p>Wings mounted behind a multirotor shed tip vortices that lift slow wake air and bring faster air down from above. Steady CFD, compared with wind-tunnel measurements, tests one-, two- and four-wing layouts; in the modelled cases the wake recovers faster with the wings. The OpenFOAM case represents rotor thrust and wing lift as momentum sources on selected cells.</p>
+              <div class="study-links"><a href="https://doi.org/10.5194/wes-10-41-2025" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a><a href="https://github.com/EngFlavioMartins/openfoam-actuator-surface">Code <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+          <article class="research-story" id="work-csc">
+            <figure>
+              <img src="/assets/work/renders/coherent-structure-colouring.webp?v=20261022d" width="2400" height="1500" loading="lazy" alt="On black, two views along the wake of an Ahmed body with sparse and dense particle tracks; red tracks curl around the trailing vortex beside the dark grey rear face, teal tracks lie outside it" />
+              <figcaption><strong>Figure 3.</strong> Particle tracks measured behind an Ahmed body, seen along the stream, with sparse (left) and dense (right) seeding; red tracks belong to the trailing vortex.</figcaption>
+            </figure>
+            <div class="research-story-copy">
+              <p class="work-meta">Flow diagnostics · 2021</p>
+              <h3>How sparse can particle tracks be before vortices are lost?</h3>
+              <ul class="research-tags" aria-label="Research fields" role="list">
+                <li>Fluid mechanics</li>
+                <li>Flow diagnostics</li>
+              </ul>
+              <p>Coherent-structure colouring (CSC) groups particle tracks by how their mutual distances change in time. Applied to measured tracks in an Ahmed-body wake and a swirling jet, detection depended mainly on seeding density: a mean particle spacing below about 15 % of the flow’s characteristic length mattered more than track length. The Python code includes the Ahmed-body tracks.</p>
+              <div class="study-links"><a href="https://doi.org/10.1007/s00348-021-03135-5" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a><a href="https://github.com/EngFlavioMartins/coherent-structure-colouring">Code <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+          <article class="research-story" id="voronoi-coherence">
+            <figure>
+              <img src="/assets/work/renders/voronoi-coherence.webp?v=20261022d" width="2400" height="1500" loading="lazy" alt="Voronoi cells of double-gyre tracers coloured by neighbour persistence, glowing in light and dark teal bands that follow the two gyres, with short amber trails of recent motion" />
+              <figcaption><strong>Figure 4.</strong> Voronoi cells of 784 double-gyre tracers coloured by neighbour persistence (the sign is arbitrary), with amber trails of their recent motion.</figcaption>
+            </figure>
+            <div class="research-story-copy">
+              <p class="work-meta">Flow diagnostics · 2021</p>
+              <h3>Do tracers that stay neighbours belong to one structure?</h3>
+              <ul class="research-tags" aria-label="Research fields" role="list">
+                <li>Fluid mechanics</li>
+                <li>Dynamical systems</li>
+                <li>Flow diagnostics</li>
+              </ul>
+              <p>Tracers that remain Voronoi neighbours over time tend to move together. The method counts the edges each pair of tracers shares along their tracks and turns this into one spectral colour per tracer, without fixing a number of clusters. It was tested on the double gyre and on sparse three-dimensional measurements behind a bluff body.</p>
+              <div class="study-links"><a href="https://arxiv.org/abs/2103.09884" rel="noreferrer">Preprint <span aria-hidden="true">↗</span></a><a href="https://github.com/EngFlavioMartins/voronoi-coherent-structures">Code <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+          <article class="research-story" id="work-viv">
+            <figure>
+              <img src="/assets/work/renders/vortex-induced-vibration.webp?v=20261022d" width="2400" height="1500" loading="lazy" alt="On black, a brushed-metal cylinder with teal and red vortex cores shed alternately behind it over a glowing plane of spanwise vorticity, with a colour bar" />
+              <figcaption><strong>Figure 5.</strong> Vortex cores behind an elastically mounted cylinder, coloured by spanwise vorticity (teal clockwise, red anticlockwise). Coarse 2D OpenFOAM re-run with the study’s mass, stiffness and damping; not the published simulations.</figcaption>
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Fluid–structure interaction · 2019</p>
-              <h3>How are cylinder motion and vortex shedding connected?</h3>
+              <h3>How do Reynolds number and damping shape vortex-induced vibration?</h3>
               <ul class="research-tags" aria-label="Research fields" role="list">
                 <li>Fluid mechanics</li>
                 <li>Fluid–structure interaction</li>
               </ul>
-              <p>Two- and three-dimensional CFD calculations resolve how Reynolds number and structural damping reshape the response branches of an elastically mounted cylinder. The analysis connects vibration amplitudes with three-dimensional wake topology across transitional flow regimes.</p>
-              <div class="study-links"><a href="https://doi.org/10.1016/j.ijmecsci.2019.03.024" rel="noreferrer">Publication ↗</a><a href="https://github.com/EngFlavioMartins/vortex-induced-vibration">OpenFOAM case ↗</a></div>
+              <p>A cylinder on springs, free to move across the flow, locks onto its own vortex shedding over a range of flow speeds. Two- and three-dimensional CFD maps how Reynolds number and structural damping change the amplitude branches and the wake modes. The repository writes an equivalent OpenFOAM case from one script.</p>
+              <div class="study-links"><a href="https://doi.org/10.1016/j.ijmecsci.2019.03.024" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a><a href="https://doi.org/10.1016/j.marstruc.2019.01.005" rel="noreferrer">3D damping paper <span aria-hidden="true">↗</span></a><a href="https://github.com/EngFlavioMartins/vortex-induced-vibration">Code <span aria-hidden="true">↗</span></a></div>
             </div>
           </article>
-
-          <article id="work-truss" class="research-story">
-            <figure data-art-tone="copper">
-              <img src="/assets/work/renders/truss-sizing.webp?v=20261022b" width="2400" height="1500" loading="lazy" alt="On black, two bridge-like trusses of equal mass: the top one with equal member thickness and pale over-stressed chords, the bottom one with sized members in even teal and red, with brushed-metal joints and supports, beside a stress colour bar" />
-              <figcaption><strong>Figure 3.</strong> The 37-member benchmark truss at equal mass, with uniform member areas (top) and after linear sizing (bottom). Tube thickness follows member area; colour is axial stress relative to the admissible stress, teal in compression and red in tension, paling where it exceeds the limit.</figcaption>
+          <article class="research-story" id="work-truss">
+            <figure>
+              <img src="/assets/work/renders/truss-sizing.webp?v=20261022d" width="2400" height="1500" loading="lazy" alt="On black, two bridge-like trusses of equal mass: the top one with equal member thickness and pale over-stressed chords, the bottom one with sized members in even teal and red, with brushed-metal joints and supports, beside a stress colour bar" />
+              <figcaption><strong>Figure 6.</strong> The 37-member benchmark truss at equal mass with uniform areas (top) and after sizing (bottom); tube thickness follows area, colour is stress over admissible stress (teal compression, red tension).</figcaption>
             </figure>
             <div class="research-story-copy">
-              <p class="work-meta">Structures &amp; optimisation · 2019</p>
-              <h3>How can member sizing make trusses lighter?</h3>
+              <p class="work-meta">Structural optimisation · 2019</p>
+              <h3>Can truss sizing with self-weight be solved as a linear problem?</h3>
               <ul class="research-tags" aria-label="Research fields" role="list">
                 <li>Structural mechanics</li>
                 <li>Optimisation</li>
               </ul>
-              <p>A linear scaling method turns sizing optimisation of statically determinate trusses into an iterative deterministic procedure. Benchmarks from 10 to 1,240 members compare mass reduction and constraint satisfaction with established optimisation methods.</p>
-              <div class="study-links"><a href="https://doi.org/10.1007/s13296-018-0194-8" rel="noreferrer">Publication ↗</a><a href="https://github.com/EngFlavioMartins/truss-sizing-optimisation">Python code ↗</a></div>
-            </div>
-          </article>
-
-          <article id="work-csc" class="research-story">
-            <figure data-art-tone="copper">
-              <img src="/assets/work/renders/coherent-structure-colouring.webp?v=20261022b" width="2400" height="1500" loading="lazy" alt="On black, two views along the wake of an Ahmed body with sparse and dense particle tracks; red tracks curl around the trailing vortex beside the dark grey rear face, teal tracks lie outside it" />
-              <figcaption><strong>Figure 4.</strong> Coherent-structure colouring of particle tracks measured behind the Ahmed body, seen along the stream, for sparse (left) and dense (right) seeding. Red tracks belong to the trailing vortex and teal tracks lie outside it; the grey panel is the rear face of the body.</figcaption>
-            </figure>
-            <div class="research-story-copy">
-              <p class="work-meta">Flow diagnostics · 2021</p>
-              <h3>Can we retrieve information from sparse tracks?</h3>
-              <ul class="research-tags" aria-label="Research fields" role="list">
-                <li>Fluid mechanics</li>
-                <li>Flow diagnostics</li>
-              </ul>
-              <p>The CSC study tests coherent-structure colouring on an Ahmed-body wake and a swirling jet. Detection improves with denser seeding; in the tested cases, mean inter-particle spacing below 15% of the characteristic flow scale matters more than track length.</p>
-              <div class="study-links"><a href="https://doi.org/10.1007/s00348-021-03135-5" rel="noreferrer">CSC paper ↗</a><a href="https://github.com/EngFlavioMartins/coherent-structure-colouring">CSC code ↗</a></div>
-            </div>
-          </article>
-          <article class="research-story" id="voronoi-coherence">
-            <figure data-art-tone="copper">
-              <img src="/assets/work/renders/voronoi-coherence.webp?v=20261022b" width="2400" height="1500" loading="lazy" alt="Voronoi cells of double-gyre tracers coloured by neighbour persistence, glowing in light and dark teal bands that follow the two gyres, with short amber trails of recent motion" />
-              <figcaption><strong>Figure 5.</strong> Voronoi cells of 784 tracers in the double-gyre flow, coloured by neighbour persistence (the sign of the colour is arbitrary). Amber trails show each tracer’s recent motion. Computed with the repository’s Python implementation.</figcaption>
-            </figure>
-            <div class="research-story-copy">
-              <p class="work-meta">Flow diagnostics · 2021</p>
-              <h3>Do tracers that stay neighbours reveal coherent motion?</h3>
-              <ul class="research-tags" aria-label="Research fields" role="list">
-                <li>Fluid mechanics</li>
-                <li>Dynamical systems</li>
-                <li>Flow diagnostics</li>
-              </ul>
-              <p>This study identifies tracers that remain neighbours and converts their shared-edge history into a spectral colour field. Tests on double-gyre flow and three-dimensional bluff-body measurements reveal coherent motion even at sparse seeding. The Python companion implements the Voronoi method on a double-gyre example.</p>
-              <div class="study-links"><a href="https://arxiv.org/abs/2103.09884" rel="noreferrer">Voronoi paper ↗</a><a href="https://github.com/EngFlavioMartins/voronoi-coherent-structures">Voronoi code ↗</a></div>
-            </div>
-          </article>
-          <article class="research-story" id="regenerative-wakes">
-            <span id="openfoam-actuator-surface" class="study-anchor" aria-hidden="true"></span>
-            <figure data-art-tone="ochre">
-              <img src="/assets/work/renders/regenerative-wakes.webp?v=20261022b" width="2400" height="1500" loading="lazy" alt="On black, two rotor wakes stacked, each crossed by four glowing velocity-deficit planes and amber streamlines: without wings the wake stays square and level; with four wing strips it lifts into a mushroom shape and fades" />
-              <figcaption><strong>Figure 6.</strong> Velocity deficit behind an actuator-surface rotor without wings (top) and with four wing strips (bottom); the brighter the blue, the slower the wake, and amber lines are streamlines from the actuator ends. With the wings the wake rises and recovers faster. Steady simulations of the repository case.</figcaption>
-            </figure>
-            <div class="research-story-copy">
-              <p class="work-meta">Wind energy · 2025</p>
-              <h3>How can passive actuators accelerate wind-power recovery?</h3>
-              <ul class="research-tags" aria-label="Research fields" role="list">
-                <li>Wind energy</li>
-                <li>Aerodynamics</li>
-                <li>Flow control</li>
-              </ul>
-              <p>Steady CFD and wind-tunnel data probe one-, two- and four-wing devices behind a multirotor. Wing-tip vortices lift low-momentum wake flow and increase exchange with the faster air above, producing faster wake recovery in the modelled cases.</p>
-              <p>The accompanying OpenFOAM cases represent rotor thrust and wing loading with cell selections and coded momentum sources. Rotor-only and one-, two- and four-wing layouts allow wake deflection and vertical momentum exchange to be studied without resolving the blade surfaces.</p>
-              <div class="study-links"><a href="https://doi.org/10.5194/wes-10-41-2025" rel="noreferrer">Publication ↗</a><a href="https://github.com/EngFlavioMartins/openfoam-actuator-surface">OpenFOAM cases ↗</a></div>
-            </div>
-          </article>
-          <article class="research-story" id="wake-validation">
-            <figure data-art-tone="blue">
-              <img src="/assets/work/wake-validation.svg?v=20260921-refined" width="960" height="600" loading="lazy" alt="A gridded CFD wake section beside point-sampled wind-tunnel flow, with two control-wing positions" />
-              <figcaption>CFD fields compared with wind-tunnel samples. Schematic comparison, not validation data.</figcaption>
-            </figure>
-            <div class="research-story-copy">
-              <p class="work-meta">Wind energy · 2024</p>
-              <h3>Why does wing arrangement change wake recovery?</h3>
-              <ul class="research-tags" aria-label="Research fields" role="list">
-                <li>Wind energy</li>
-                <li>Aerodynamics</li>
-                <li>CFD</li>
-              </ul>
-              <p>An actuator-surface model is checked against wind-tunnel measurements, then used to compare one-, two- and four-wing layouts at the same total lift. Distributing the lift across more wings reshapes the tip vortices and strengthens vertical momentum exchange. In the simulated cases, the two- and four-wing layouts recover wake total pressure faster than the single-wing layout.</p>
-              <a href="https://doi.org/10.1088/1742-6596/2767/7/072006" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
-            </div>
-          </article>
-          <article class="research-story" id="vertical-momentum">
-            <figure data-art-tone="ochre">
-              <img src="/assets/work/vertical-momentum.svg?v=20260921-refined" width="960" height="600" loading="lazy" alt="Horizontal flow above a wind farm transfers momentum downward into the turbine layer" />
-              <figcaption>Momentum transfer into turbine wakes. Arrow widths indicate qualitative transport, not measured flux.</figcaption>
-            </figure>
-            <div class="research-story-copy">
-              <p class="work-meta">Wind-farm physics · 2024</p>
-              <h3>Can momentum from above improve wind-farm efficiency?</h3>
-              <ul class="research-tags" aria-label="Research fields" role="list">
-                <li>Wind energy</li>
-                <li>Atmospheric flows</li>
-                <li>Flow control</li>
-              </ul>
-              <p>A wind-farm-scale model examines how active control of vertical momentum entrainment could affect array performance. Its comparison curves predict smaller efficiency losses for controlled farms as installed power density increases.</p>
-              <a href="https://doi.org/10.1088/1742-6596/2767/9/092107" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
-            </div>
-          </article>
-          <article class="research-story" id="hybrid-vortex-grid">
-            <figure data-art-tone="blue">
-              <img src="/assets/work/hybrid-vortex-grid.svg?v=20260921-refined" width="960" height="600" loading="lazy" alt="A near-body mesh around an obstacle exchanges information with a downstream wake represented by vortex particles" />
-              <figcaption>Near-body grid, particle wake and two-way exchange. Conceptual method illustration.</figcaption>
-            </figure>
-            <div class="research-story-copy">
-              <p class="work-meta">Numerical methods · 2026</p>
-              <h3>How to combine grids and vortex particles in one flow solver?</h3>
-              <ul class="research-tags" aria-label="Research fields" role="list">
-                <li>CFD</li>
-                <li>Numerical methods</li>
-                <li>Vortex methods</li>
-              </ul>
-              <p>A near-body finite-volume solver resolves walls while vortex particles carry the wake downstream. This three-dimensional proof of concept tests two-way coupling against fully meshed reference calculations for a cube and a NACA4412 airfoil.</p>
-              <a href="https://doi.org/10.1088/1742-6596/3224/4/042069" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
+              <p>In a statically determinate truss, member forces stay linear in the member areas even with self-weight, so minimum-mass sizing under stress limits becomes a linear problem. The paper tests the method on benchmarks from 10 to 1,240 members. The Python re-implementation sizes the 37-member benchmark to 13.15 kg (paper: 13.23–13.35 kg).</p>
+              <div class="study-links"><a href="https://doi.org/10.1007/s13296-018-0194-8" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a><a href="https://github.com/EngFlavioMartins/truss-sizing-optimisation">Code <span aria-hidden="true">↗</span></a></div>
             </div>
           </article>
           <article class="research-story" id="celestial-dynamics">
-            <figure data-art-tone="blue">
-              <img src="/assets/work/renders/three-body.webp?v=20261022b" width="2400" height="1500" loading="lazy" alt="On black, a teal effective-potential landscape with a dark well around the Earth holding an amber rosette orbit, a grey zero-velocity curve and five labelled grey spheres at the Lagrange points" />
-              <figcaption><strong>Figure 10.</strong> Effective potential of the Earth–Moon restricted three-body problem in the rotating frame, with one computed orbit (amber) held in the Earth’s well by the zero-velocity curve (grey line). Grey spheres mark the five Lagrange points; the height is compressed logarithmically for display.</figcaption>
+            <figure>
+              <img src="/assets/work/renders/three-body.webp?v=20261022d" width="2400" height="1500" loading="lazy" alt="On black, a teal effective-potential landscape with a dark well around the Earth holding an amber rosette orbit, a grey zero-velocity curve and five labelled grey spheres at the Lagrange points" />
+              <figcaption><strong>Figure 7.</strong> Effective potential of the Earth–Moon system in the rotating frame, with one orbit (amber), the zero-velocity curve and the five Lagrange points; height compressed logarithmically.</figcaption>
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Dynamical systems · 2018</p>
-              <h3>What separates regular and chaotic orbital motion?</h3>
+              <h3>What separates regular from chaotic orbits in the three-body problem?</h3>
               <ul class="research-tags" aria-label="Research fields" role="list">
                 <li>Dynamical systems</li>
-                <li>Classical mechanics</li>
                 <li>Celestial mechanics</li>
               </ul>
-              <p>This review introduces the circular restricted three-body problem through orbital resonances, Poincaré sections and KAM theory. Phase-space geometry connects the Lagrange equilibria with regular and more complex orbital motion. An accompanying Python example computes trajectories, section crossings and Jacobi-conservation diagnostics.</p>
-              <div class="study-links"><a href="https://doi.org/10.1590/1806-9126-rbef-2017-0174" rel="noreferrer">Publication ↗</a><a href="https://github.com/EngFlavioMartins/celestial-dynamics">Python examples ↗</a></div>
-            </div>
-          </article>
-          <article class="research-story">
-            <figure data-art-tone="copper">
-              <img src="/assets/work/truss-topology-mass.svg?v=20260921-refined" width="960" height="600" loading="lazy" alt="Tapered truss under upward nodal loads, with tension and compression members and dashed original node positions" />
-              <figcaption>Loading and node repositioning; member colours show axial-force sign in an illustrative linear-truss calculation.</figcaption>
-            </figure>
-            <div class="research-story-copy">
-              <p class="work-meta">Structures &amp; optimisation · 2017</p>
-              <h3>Can moving the nodes reduce a truss’s mass?</h3>
-              <ul class="research-tags" aria-label="Research fields" role="list">
-                <li>Structural mechanics</li>
-                <li>Optimisation</li>
-              </ul>
-              <p>The two-dimensional truss study combines member sizing with node repositioning under stress and buckling constraints. Node shifts reduce the reported example from 15.26 to 11.60 kg, approximately 24% relative to the sized layout. Compression-member buckling governs much of the remaining design margin.</p>
-              <a href="https://doi.org/10.20906/cps/cilamce2017-0035" rel="noreferrer">Original publication <span aria-hidden="true">↗</span></a>
-            </div>
-          </article>
-          <article class="research-story">
-            <figure data-art-tone="copper">
-              <img src="/assets/work/vortex-particle-ring.svg?v=20260921-refined" width="960" height="600" loading="lazy" alt="Three stages of coaxial vortex rings contracting, passing through each other and exchanging positions" />
-              <figcaption>Leapfrogging vortex rings: particle cores, contraction and expansion. Conceptual method illustration.</figcaption>
-            </figure>
-            <div class="research-story-copy">
-              <p class="work-meta">Meshless CFD · 2026</p>
-              <h3>How can vortex particles model turbulent flow?</h3>
-              <ul class="research-tags" aria-label="Research fields" role="list">
-                <li>CFD</li>
-                <li>Turbulence</li>
-                <li>Vortex methods</li>
-              </ul>
-              <p>A Lagrangian dynamic subgrid model and core-spreading diffusion are assessed using vortex rings and leapfrogging rings. The preprint reports accurate ring kinematics with sparse particles, while post-instability behaviour remains sensitive to particle regularisation.</p>
-              <a href="https://arxiv.org/abs/2601.06942" rel="noreferrer">Original preprint <span aria-hidden="true">↗</span></a>
-            </div>
-          </article>
-          <article class="research-story" id="cavity-flow">
-            <figure data-art-tone="blue">
-              <img src="/assets/work/renders/cavity-flow.webp?v=20261022b" width="2400" height="1500" loading="lazy" alt="On black, a square cavity with a grey lid on top, filled with a flow-direction texture; a large teal clockwise vortex fills the centre, red layers line the walls and small eddies sit in the lower corners" />
-              <figcaption><strong>Figure 13.</strong> Steady lid-driven cavity flow at Re = 1000 from the repository's solver. Texture follows the flow direction; colour is vorticity, teal clockwise and red anticlockwise. Secondary eddies form in both lower corners.</figcaption>
-            </figure>
-            <div class="research-story-copy">
-              <p class="work-meta">Scientific software · Incompressible flow</p>
-              <h3>Lid-driven cavity flow</h3>
-              <ul class="research-tags" aria-label="Research fields" role="list">
-                <li>Fluid mechanics</li>
-                <li>Numerical methods</li>
-              </ul>
-              <p>A moving lid drives circulation inside a closed square cavity. This Python implementation advances velocity on a staggered grid and applies a pressure projection using a discrete cosine transform. The example shows the primary recirculation and corner motion produced by the wall boundary conditions.</p>
-              <a href="https://github.com/EngFlavioMartins/cavity-flow">Code and examples ↗</a>
+              <p>This review (in Portuguese) introduces the circular restricted three-body problem: the rotating frame, Lagrange points, zero-velocity curves, Poincaré sections and KAM theory. The Python code computes Earth–Moon orbits and their section crossings, and reports the drift of the Jacobi constant as an accuracy check.</p>
+              <div class="study-links"><a href="https://doi.org/10.1590/1806-9126-rbef-2017-0174" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a><a href="https://github.com/EngFlavioMartins/celestial-dynamics">Code <span aria-hidden="true">↗</span></a></div>
             </div>
           </article>
           <article class="research-story" id="openfoam-postprocessing">
-            <figure data-art-tone="blue">
-              <img src="/assets/work/renders/openfoam-postprocessing.webp?v=20261022b" width="2400" height="1500" loading="lazy" alt="On black, one wake plane: on the left, spheres at OpenFOAM cell centres, denser and brighter in the wake; on the right, the same velocity deficit on a regular grid of square cells" />
-              <figcaption><strong>Figure 14.</strong> One cross-flow plane of a rotor wake from the bundled OpenFOAM snapshot: cell-centre samples, sized by mesh spacing (left), and the same velocity deficit resampled onto a regular grid (right). The brighter the blue, the slower the wake.</figcaption>
+            <figure>
+              <img src="/assets/work/renders/openfoam-postprocessing.webp?v=20261022d" width="2400" height="1500" loading="lazy" alt="On black, one wake plane: on the left, spheres at OpenFOAM cell centres, denser and brighter in the wake; on the right, the same velocity deficit on a regular grid of square cells" />
+              <figcaption><strong>Figure 8.</strong> One wake plane of the bundled snapshot: OpenFOAM cell centres sized by mesh spacing (left) and the same velocity deficit on a regular grid (right).</figcaption>
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Scientific software · Flow analysis</p>
@@ -294,10 +177,61 @@
                 <li>Scientific computing</li>
                 <li>Flow diagnostics</li>
               </ul>
-              <p>OpenFOAM velocity and pressure fields are read through fluidfoam and resampled using local radial-basis interpolation. Regular NumPy arrays support velocity profiles and planar sections. The repository includes a direct plotting example and the original notebook-based workflow.</p>
-              <a href="https://github.com/EngFlavioMartins/openfoam-postprocessing">Code and examples ↗</a>
+              <p>Reads OpenFOAM cell data with fluidfoam and resamples it onto regular NumPy grids with local radial-basis interpolation, ready for profiles and planar sections. A multirotor-wake snapshot from the 2025 wing study is included, so OpenFOAM is not needed to try it.</p>
+              <div class="study-links"><a href="https://github.com/EngFlavioMartins/openfoam-postprocessing">Code <span aria-hidden="true">↗</span></a><a href="https://doi.org/10.5194/wes-10-41-2025" rel="noreferrer">Paper (data) <span aria-hidden="true">↗</span></a></div>
             </div>
           </article>
+          <article class="research-story" id="cavity-flow">
+            <figure>
+              <img src="/assets/work/renders/cavity-flow.webp?v=20261022d" width="2400" height="1500" loading="lazy" alt="On black, a square cavity with a grey lid on top, filled with a flow-direction texture; a large teal clockwise vortex fills the centre, red layers line the walls and small eddies sit in the lower corners" />
+              <figcaption><strong>Figure 9.</strong> Steady cavity flow at Re = 1000: the texture follows the flow direction, colour is vorticity (teal clockwise, red anticlockwise), with eddies in both lower corners.</figcaption>
+            </figure>
+            <div class="research-story-copy">
+              <p class="work-meta">Scientific software · Incompressible flow</p>
+              <h3>Lid-driven cavity flow</h3>
+              <ul class="research-tags" aria-label="Research fields" role="list">
+                <li>Fluid mechanics</li>
+                <li>Numerical methods</li>
+              </ul>
+              <p>A compact incompressible Navier–Stokes solver for the two-dimensional lid-driven cavity: staggered grid, explicit time stepping and a pressure projection solved with a discrete cosine transform. The Re = 1000 solution is checked against the Ghia, Ghia &amp; Shin (1982) benchmark.</p>
+              <div class="study-links"><a href="https://github.com/EngFlavioMartins/cavity-flow">Code <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+          <article class="research-story" id="lifting-line-solver">
+            <figure>
+              <img src="/assets/work/renders/lifting-line-rotor.webp?v=20261022d" width="2400" height="1500" loading="lazy" alt="On black, a three-bladed rotor with brushed-metal blades and a grey hub; red helical tip vortices wind downstream around a tighter teal helix of root vortices" />
+              <figcaption><strong>Figure 10.</strong> Three-bladed rotor (radius 50 m, tip-speed ratio 8) and its helical wake to two radii downstream; filaments are coloured by the circulation they trail, red at the tips and teal at the roots.</figcaption>
+            </figure>
+            <div class="research-story-copy">
+              <p class="work-meta">Scientific software · Rotor aerodynamics</p>
+              <h3>Lifting-line model of a wind-turbine rotor</h3>
+              <ul class="research-tags" aria-label="Research fields" role="list">
+                <li>Wind energy</li>
+                <li>Aerodynamics</li>
+                <li>Vortex methods</li>
+              </ul>
+              <p>Each blade carries bound vortices whose trailing filaments follow a prescribed helical wake; the circulation is iterated against airfoil polars until the loads agree. The solver returns spanwise loads, induction factors, and thrust and power coefficients, for the three-bladed example in under a second.</p>
+              <div class="study-links"><a href="https://github.com/EngFlavioMartins/lifting-line-solver">Code <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+          <article class="research-story" id="unsteady-vortex-source-solver">
+            <figure>
+              <img src="/assets/work/renders/plunging-plate.webp?v=20261022d" width="2400" height="1500" loading="lazy" alt="On black, a short grey flat plate on the left; behind it, alternating teal and red vortices roll up into a reverse vortex street" />
+              <figcaption><strong>Figure 11.</strong> Wake of a flat plate plunging at reduced frequency k = 1 (amplitude 0.2 chord): shed vortices, drawn as blobs of their vorticity, form a reverse von Kármán street.</figcaption>
+            </figure>
+            <div class="research-story-copy">
+              <p class="work-meta">Scientific software · Unsteady aerodynamics</p>
+              <h3>Vortex wakes of pitching and plunging airfoils</h3>
+              <ul class="research-tags" aria-label="Research fields" role="list">
+                <li>Aerodynamics</li>
+                <li>Vortex methods</li>
+                <li>Numerical methods</li>
+              </ul>
+              <p>The airfoil is a row of vortex panels. At every time step the solver enforces zero normal flow and Kelvin’s circulation theorem, sheds a vortex from the trailing edge and lets the wake roll up freely. A thousand time steps take about two seconds.</p>
+              <div class="study-links"><a href="https://github.com/EngFlavioMartins/unsteady-vortex-source-solver">Code <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+          </div>
         </div>
       </section>
     </main>

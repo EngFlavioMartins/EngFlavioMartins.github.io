@@ -39,14 +39,8 @@ assert '<h3>How does OpenONDA control OpenFOAM from Python?</h3>' in after_card
 after_card = after_card.replace('How does OpenONDA control OpenFOAM from Python?', 'OpenONDA')
 assert card_content(before_card) == card_content(after_card), 'Changed OpenONDA content'
 
-# The user explicitly requested new art for the separate hybrid-method paper.
-# Keep its text/link protected while allowing that figure and caption replacement.
-before_hybrid = block(before_home, r'<article class="research-story">\s*<figure class="dark-figure panoramic-figure">.*?</article>')
-after_hybrid = block(after_home, r'<article class="research-story" id="hybrid-vortex-grid">.*?</article>')
-assert '<h3>How to combine grids and vortex particles in one flow solver?</h3>' in after_hybrid
-after_hybrid = after_hybrid.replace('How to combine grids and vortex particles in one flow solver?',
-                                    'Hybrid vortex particle–grid flow simulation')
-assert block(before_hybrid, r'<div class="research-story-copy">.*?</div>') == block(strip_field_tags(after_hybrid), r'<div class="research-story-copy">.*?</div>')
+# The hybrid-method and vortex-particle papers no longer have homepage posts (no public code
+# yet); they remain on the publications page.
 
 for file, patterns in {
     "projects/index.html": [r'<section class="featured-project shell".*?</section>'],
@@ -58,4 +52,4 @@ for file, patterns in {
 for file in ["assets/work/openonda-hybrid.png", "assets/work/hybrid-particle-grid.png"]:
     assert original(file) == (ROOT / file).read_bytes(), f"Changed protected asset: {file}"
 
-print("OpenONDA artwork/copy protected; separate hybrid-paper figure replacement allowed.")
+print("OpenONDA artwork/copy protected.")
