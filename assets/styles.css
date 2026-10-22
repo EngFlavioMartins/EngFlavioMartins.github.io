@@ -232,47 +232,73 @@ h3 { font-size: clamp(1.55rem, 2.6vw, 2.45rem); }
   border-bottom: 2px solid var(--cyan);
 }
 
-/* Masthead: name, role and links beside a small portrait. */
+/* Painted band: navigation and masthead over a darkened landscape (Facchinetti, c. 1884). */
+.hero-band {
+  position: relative;
+  isolation: isolate;
+  color: var(--dark-ink);
+  background: var(--dark-bg) image-set(url('/assets/hero/facchinetti-lagoa-2400.webp') 1x) center 58% / cover no-repeat;
+}
+.hero-band::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(8, 11, 13, 0.9) 0%, rgba(8, 11, 13, 0.7) 48%, rgba(8, 11, 13, 0.3) 100%),
+    linear-gradient(0deg, rgba(8, 11, 13, 0.5), rgba(8, 11, 13, 0) 45%);
+}
+@media (max-width: 1200px) {
+  .hero-band { background-image: url('/assets/hero/facchinetti-lagoa-1200.webp'); }
+}
+.hero-band .site-header { border-bottom-color: rgba(255, 255, 255, 0.16); }
+.hero-band .wordmark,
+.hero-band .site-nav a { color: var(--dark-ink); }
+.hero-band .site-nav a:hover,
+.hero-band .site-nav a[aria-current="page"] { color: white; background: rgba(255, 255, 255, 0.14); }
+.wordmark-mark { width: 2.5rem; height: 2.5rem; background: none; border-radius: 0.55rem; }
+
 .masthead {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
   gap: clamp(1.25rem, 3vw, 2.5rem);
   align-items: center;
-  padding-block: clamp(2.5rem, 5vw, 4rem) clamp(2.75rem, 5.5vw, 4.25rem);
+  padding-block: clamp(3.5rem, 7vw, 6rem) clamp(3rem, 6vw, 5rem);
 }
 .masthead-portrait {
-  width: clamp(96px, 11vw, 144px);
+  width: clamp(104px, 12vw, 156px);
   height: auto;
   aspect-ratio: 1;
   object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 0 0 1px var(--line);
+  border-radius: 0.9rem;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.28), 0 12px 32px rgba(0, 0, 0, 0.35);
 }
-.masthead h1 { max-width: none; font-size: clamp(2.15rem, 4.2vw, 3.2rem); line-height: 1.05; letter-spacing: -0.03em; }
-.masthead-role { margin: 0.55rem 0 0; color: var(--violet); font-size: 0.95rem; font-weight: 650; }
-.masthead-lede { max-width: 60ch; margin: 0.55rem 0 0; color: var(--muted); font-size: 1.04rem; line-height: 1.6; }
-.masthead-links { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 1.1rem 0 0; padding: 0; list-style: none; }
+.masthead h1 { max-width: none; color: white; font-size: clamp(2.2rem, 4.4vw, 3.4rem); line-height: 1.05; letter-spacing: -0.03em; }
+.masthead-role { margin: 0.6rem 0 0; color: var(--dark-accent); font-size: 0.98rem; font-weight: 650; }
+.masthead-lede { max-width: 60ch; margin: 0.55rem 0 0; color: #d3dcdf; font-size: 1.05rem; line-height: 1.6; }
+.masthead-links { display: flex; flex-wrap: wrap; gap: 0.45rem; margin: 1.2rem 0 0; padding: 0; list-style: none; }
 .masthead-links a {
   min-height: 36px;
   display: inline-flex;
   align-items: center;
-  padding: 0.3rem 0.8rem;
-  color: var(--ink-soft);
-  border: 1px solid var(--line);
+  padding: 0.3rem 0.85rem;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.32);
   border-radius: 999px;
-  background: var(--surface);
+  background: rgba(8, 11, 13, 0.35);
   font-size: 0.86rem;
   font-weight: 650;
   text-decoration: none;
 }
-.masthead-links a:hover { color: white; border-color: var(--violet); background: var(--violet); }
+.masthead-links a:hover { color: var(--night); border-color: var(--dark-accent); background: var(--dark-accent); }
+.hero-credit { margin: 0 auto; padding-bottom: 0.7rem; color: rgba(233, 238, 240, 0.6); font-size: 0.72rem; text-align: right; }
+.hero-credit a { color: inherit; }
+.hero-credit a:hover { color: white; }
 
-/* Research section: on the figures' black, so the change of ground separates it from the masthead. */
-.section-dark { color: var(--dark-ink); background: var(--dark-bg); padding-block: clamp(2.6rem, 5.5vw, 4.25rem) clamp(4rem, 8vw, 6rem); }
-.section-dark h2 { max-width: none; color: var(--dark-ink); font-size: clamp(1.85rem, 3.2vw, 2.6rem); letter-spacing: -0.03em; }
-.section-dark .section-heading { margin-bottom: clamp(1.4rem, 3vw, 2.2rem); }
-.section-dark .compact-heading a { color: var(--dark-ink); border-bottom-color: var(--dark-accent); }
-.section-dark .compact-heading a:hover { color: var(--dark-accent); }
+/* Research section: light, below the dark band. Figures keep their black ground. */
+.section-light { background: var(--paper); padding-block: clamp(2.8rem, 6vw, 4.5rem) clamp(4rem, 8vw, 6rem); }
+.section-light h2 { max-width: none; font-size: clamp(1.85rem, 3.2vw, 2.6rem); letter-spacing: -0.03em; }
+.section-light .section-heading { margin-bottom: clamp(1.4rem, 3vw, 2.2rem); }
 
 .research-stories { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
 .research-story {
@@ -280,44 +306,38 @@ h3 { font-size: clamp(1.55rem, 2.6vw, 2.45rem); }
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  border: 1px solid var(--dark-line);
+  border: 1px solid var(--line);
   border-radius: 0.6rem;
-  background: var(--dark-card);
+  background: var(--surface);
 }
-.research-story figure { margin: 0; background: #000; }
+.research-story figure { margin: 0; }
 .research-story img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: contain; background: #000; }
-.research-story figcaption {
-  padding: 0.65rem 1.15rem 0.75rem;
-  color: var(--dark-muted);
-  border-top: 1px solid var(--dark-line);
-  font-size: 0.8rem;
-  line-height: 1.45;
-}
-.research-story figcaption strong { color: var(--dark-ink); font-weight: 650; }
-.research-story-copy { display: flex; flex: 1; flex-direction: column; padding: 1.2rem 1.25rem 1.35rem; border-top: 1px solid var(--dark-line); }
-.research-story .work-meta { margin-bottom: 0.5rem; color: var(--dark-accent); font-size: 0.7rem; }
-.research-story h3 { max-width: 34ch; color: var(--dark-ink); font-size: clamp(1.25rem, 1.9vw, 1.55rem); line-height: 1.2; letter-spacing: -0.015em; }
+.research-story figcaption { padding: 0.65rem 1.15rem 0.75rem; color: var(--muted); border-bottom: 1px solid var(--line); font-size: 0.8rem; line-height: 1.45; }
+.research-story figcaption strong { color: var(--ink); font-weight: 650; }
+.research-story-copy { display: flex; flex: 1; flex-direction: column; padding: 1.2rem 1.25rem 1.35rem; }
+.research-story .work-meta { margin-bottom: 0.5rem; font-size: 0.7rem; }
+.research-story h3 { max-width: 34ch; font-size: clamp(1.25rem, 1.9vw, 1.55rem); line-height: 1.2; letter-spacing: -0.015em; }
 .research-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.7rem 0 0; padding: 0; list-style: none; }
 .research-tags li {
   padding: 0.1rem 0.5rem;
-  color: var(--dark-muted);
-  border: 1px solid var(--dark-line);
+  color: var(--muted);
+  border: 1px solid var(--line);
   border-radius: 0.3rem;
   font-size: 0.75rem;
   font-weight: 550;
   line-height: 1.5;
 }
-.research-story-copy > p:not(.work-meta) { margin: 0.8rem 0 1.1rem; color: var(--dark-muted); font-size: 0.95rem; line-height: 1.6; }
+.research-story-copy > p:not(.work-meta) { margin: 0.8rem 0 1.1rem; color: var(--muted); font-size: 0.95rem; line-height: 1.6; }
 .study-links { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; margin-top: auto; }
 .research-story-copy > a { align-self: flex-start; margin-top: auto; }
 .research-story-copy a {
   padding-block: 0.25rem;
-  color: var(--dark-ink);
-  border-bottom: 2px solid var(--dark-accent);
+  color: var(--ink);
+  border-bottom: 2px solid var(--cyan);
   font-weight: 700;
   text-decoration: none;
 }
-.research-story-copy a:hover { color: var(--dark-accent); }
+.research-story-copy a:hover { color: var(--violet); }
 .study-anchor { display: block; height: 0; scroll-margin-top: 2rem; }
 #work-openonda img { object-fit: contain; }
 
@@ -326,12 +346,13 @@ h3 { font-size: clamp(1.55rem, 2.6vw, 2.45rem); }
 }
 @media (max-width: 520px) {
   .masthead { grid-template-columns: 1fr; }
-  .masthead-portrait { width: 96px; }
+  .masthead-portrait { width: 104px; }
+  .hero-credit { text-align: left; }
 }
 
-.site-footer { color: var(--dark-muted); background: var(--night); border-top: 1px solid var(--dark-line); }
+.site-footer { color: var(--muted); background: var(--surface-tint); border-top: 1px solid var(--line); }
 .footer-inner { min-height: 130px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
-.footer-inner p { color: white; font-weight: 750; }
+.footer-inner p { color: var(--ink); font-weight: 750; }
 
 .visually-hidden {
   position: absolute !important;

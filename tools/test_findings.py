@@ -90,16 +90,23 @@ class FindingsTests(unittest.TestCase):
             self.assertTrue(root.tag.endswith('svg'))
             self.assertFalse(root.findall('.//{http://www.w3.org/2000/svg}image'))
 
-    def test_masthead_then_dark_research_section(self):
+    def test_painted_masthead_then_light_research_section(self):
         html = (ROOT / 'index.html').read_text()
-        main = html[html.index('<main id="main">'):html.index('</main>')]
-        # The change from the light masthead to the dark research section is the divider.
-        self.assertLess(main.index('class="masthead shell"'), main.index('class="research-findings section-dark"'))
+        band = html[html.index('<div class="hero-band">'):html.index('<main id="main">')]
+        # Navigation and masthead share the darkened painting; the light research section follows.
+        self.assertIn('class="site-header"', band)
+        self.assertIn('class="masthead shell"', band)
+        self.assertIn('class="hero-credit', band)          # the painting is credited
+        self.assertIn('commons.wikimedia.org', band)
+        self.assertIn('class="research-findings section-light"', html)
         self.assertNotIn('flow-divider', html)
-        self.assertEqual(main.count('<h1>'), 1)
+        self.assertEqual(html.count('<h1>'), 1)
         css = (ROOT / 'assets/styles.css').read_text()
-        self.assertIn('.section-dark {', css)
+        self.assertIn('.hero-band::before', css)
+        self.assertTrue((ROOT / 'assets/hero/facchinetti-lagoa-2400.webp').exists())
         self.assertNotIn('environmental-flow.svg', css)
+        for page in ['index.html', 'cv/index.html', 'publications/index.html', 'projects/index.html']:
+            self.assertIn('href="/assets/logo.svg"', (ROOT / page).read_text())
 
     def test_main_palette_contrast(self):
         def luminance(colour):
