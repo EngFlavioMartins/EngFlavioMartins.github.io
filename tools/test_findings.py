@@ -19,7 +19,7 @@ class FindingsTests(unittest.TestCase):
         # Links may be added. Papers whose homepage post was removed (no public code) must still be
         # listed on the publications page.
         missing = Counter(references(before)) - Counter(references(after))
-        publications = (ROOT / 'assets/publications.js').read_text()  # the publications page renders this list
+        publications = (ROOT / 'publications/index.html').read_text()
         lost = [link for link in missing
                 if re.sub(r'^https://(doi.org/|arxiv.org/abs/)', '', link) not in publications]
         self.assertFalse(lost, f'links removed: {sorted(lost)}')
@@ -96,8 +96,6 @@ class FindingsTests(unittest.TestCase):
         # Navigation and masthead share the darkened painting; the light research section follows.
         self.assertIn('class="site-header"', band)
         self.assertIn('class="masthead shell"', band)
-        self.assertIn('class="hero-credit', band)          # the painting is credited
-        self.assertIn('commons.wikimedia.org', band)
         self.assertIn('class="research-findings section-light"', html)
         self.assertNotIn('flow-divider', html)
         self.assertEqual(html.count('<h1>'), 1)
@@ -105,8 +103,16 @@ class FindingsTests(unittest.TestCase):
         self.assertIn('.hero-band::before', css)
         self.assertTrue((ROOT / 'assets/hero/facchinetti-lagoa-2400.webp').exists())
         self.assertNotIn('environmental-flow.svg', css)
-        for page in ['index.html', 'cv/index.html', 'publications/index.html', 'projects/index.html']:
-            self.assertIn('href="/assets/logo.svg"', (ROOT / page).read_text())
+        for page in ['index.html', 'cv/index.html', 'publications/index.html']:
+            text = (ROOT / page).read_text()
+            self.assertIn('href="/assets/logo.svg"', text)
+            # the same painted header and footer on every page, the painting credited, the TU Delft address
+            self.assertEqual(text.count('<div class="hero-band">'), 1, page)
+            self.assertIn('footer-credit', text)
+            self.assertIn('commons.wikimedia.org', text)
+            self.assertIn('mailto:f.m.martins@tudelft.nl', text)
+            self.assertNotIn('outlook.com', text)
+            self.assertNotIn('/projects/', text)
 
     def test_main_palette_contrast(self):
         def luminance(colour):

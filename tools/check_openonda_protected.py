@@ -42,12 +42,7 @@ assert card_content(before_card) == card_content(after_card), 'Changed OpenONDA 
 # The hybrid-method and vortex-particle papers no longer have homepage posts (no public code
 # yet); they remain on the publications page.
 
-for file, patterns in {
-    "projects/index.html": [r'<section class="featured-project shell".*?</section>'],
-}.items():
-    before, after = original(file).decode(), (ROOT / file).read_text()
-    for pattern in patterns:
-        assert block(before, pattern) == block(after, pattern), f"Changed OpenONDA block in {file}"
+# The projects page was removed (it repeated the homepage); its OpenONDA block went with it.
 
 for file in ["assets/work/openonda-hybrid.png", "assets/work/hybrid-particle-grid.png"]:
     assert original(file) == (ROOT / file).read_bytes(), f"Changed protected asset: {file}"

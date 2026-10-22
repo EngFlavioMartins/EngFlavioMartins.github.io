@@ -3,49 +3,288 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Journal articles, preprints and conference publications by Flavio A. C. Martins." />
-    <meta name="theme-color" content="#19383c" />
+    <meta name="description" content="Journal articles, preprints, conference papers and reports by Flavio A. C. Martins." />
+    <meta name="theme-color" content="#0b0e10" />
     <title>Publications · Flavio A. C. Martins</title>
     <link rel="icon" type="image/svg+xml" href="/assets/logo.svg" />
-    <link rel="stylesheet" href="/assets/styles.css?v=20261022-redesign" />
-    <script src="/assets/publications.js" defer></script>
+    <link rel="stylesheet" href="/assets/styles.css?v=20261022-pages" />
+    <script src="/assets/site.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header">
-      <a class="wordmark" href="/" aria-label="Flavio Martins, home"><img class="wordmark-mark" src="/assets/logo.svg" width="40" height="40" alt="Vortex logo" /><span>Flavio Martins</span></a>
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="/cv/">CV</a>
-        <a href="/publications/" aria-current="page">Publications</a>
-        <a href="/projects/">Projects</a>
-      </nav>
-    </header>
-
-    <main id="main">
-      <header class="page-hero shell publications-hero">
+    <!-- site:header -->
+    <div class="hero-band">
+      <header class="site-header">
+        <a class="wordmark" href="/" aria-label="Flavio Martins, home"><img class="wordmark-mark" src="/assets/logo.svg" width="40" height="40" alt="Vortex logo" /><span>Flavio Martins</span></a>
+        <nav class="site-nav" aria-label="Primary navigation"><a href="/cv/">CV</a><a href="/publications/" aria-current="page">Publications</a></nav>
+      </header>
+      <section class="page-intro shell">
         <div>
           <h1>Publications</h1>
+          <p class="page-lede">22 journal articles, preprints, conference papers and reports, newest first in each group.</p>
         </div>
-        <div class="page-actions">
-          <div class="profile-link-row">
-            <a class="button button-primary" href="https://scholar.google.com/citations?user=WZXamCcAAAAJ&amp;hl=en">Google Scholar <span aria-hidden="true">↗</span></a>
-            <a class="button button-secondary" href="https://orcid.org/0000-0002-1374-5760">ORCID <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
-      </header>
-
-      <section class="publication-toolbar shell" aria-label="Publication categories">
-        <p class="publication-total"><span id="publication-count">18</span> publications</p>
-        <nav id="publication-categories" class="category-nav" aria-label="Jump to publication category"></nav>
+        <div class="page-actions"><a class="button button-primary" href="https://scholar.google.com/citations?user=WZXamCcAAAAJ&amp;hl=en" rel="noreferrer">Google Scholar ↗</a><a class="button button-ghost" href="https://orcid.org/0000-0002-1374-5760" rel="noreferrer">ORCID ↗</a></div>
       </section>
+    </div>
+    <!-- /site:header -->
 
-      <section class="publication-shell shell section-pad-small" aria-labelledby="publication-list-heading">
-        <h2 id="publication-list-heading" class="visually-hidden">Publication list</h2>
-        <div id="publication-list" class="publication-list" aria-live="polite"></div>
-        <noscript><p class="notice-card"><a href="https://scholar.google.com/citations?user=WZXamCcAAAAJ&amp;hl=en">Publication record on Google Scholar</a></p></noscript>
+    <main id="main" class="page-light">
+      <nav class="pub-toc shell" aria-label="Publication types"><a href="#journal">Journal articles <span>7</span></a><a href="#preprint">Preprints <span>2</span></a><a href="#conference">Conference papers and talks <span>9</span></a><a href="#report">Technical and academic reports <span>4</span></a></nav>
+      <div class="pub-shell shell">
+      <section class="pub-group" id="journal" aria-labelledby="journal-heading">
+        <h2 id="journal-heading">Journal articles <span>7</span></h2>
+        <ol class="pub-list" role="list">
+          <li class="pub">
+            <img class="pub-tile" src="/assets/work/thumbs/openonda.webp" width="160" height="100" loading="lazy" alt="Hybrid finite-volume and vortex-particle wake simulation around a cube" />
+            <div class="pub-body">
+              <p class="pub-label">2026 · Journal article · Accepted</p>
+              <h3><a href="https://github.com/EngFlavioMartins/OpenONDA" rel="noreferrer">OpenONDA: A Python Interface for In-Line Control of OpenFOAM Solvers</a></h3>
+              <p class="pub-authors"><strong>Flavio A. C. Martins</strong></p>
+              <p class="pub-meta">OpenFOAM Journal</p>
+              <p class="pub-links"><a href="https://github.com/EngFlavioMartins/OpenONDA" rel="noreferrer">Paper ↗</a><a href="https://github.com/EngFlavioMartins/OpenONDA" rel="noreferrer">Code ↗</a></p>
+            </div>
+          </li>
+          <li class="pub">
+            <img class="pub-tile" src="/assets/work/thumbs/regenerative-wakes.webp" width="160" height="100" loading="lazy" alt="Velocity-deficit planes behind a rotor with and without wing strips" />
+            <div class="pub-body">
+              <p class="pub-label">2025 · Journal article</p>
+              <h3><a href="https://doi.org/10.5194/wes-10-41-2025" rel="noreferrer">Proof of Concept for Multirotor Systems with Vortex-Generating Modes for Regenerative Wind Energy: A Study Based on Numerical Simulations and Experimental Data</a></h3>
+              <p class="pub-authors"><strong>Flavio A. C. Martins</strong>, A. van Zuijlen, C. S. Ferreira</p>
+              <p class="pub-meta">Wind Energy Science, 10, 41–58 · DOI 10.5194/wes-10-41-2025</p>
+              <p class="pub-links"><a href="https://doi.org/10.5194/wes-10-41-2025" rel="noreferrer">Paper ↗</a><a href="https://github.com/EngFlavioMartins/openfoam-actuator-surface" rel="noreferrer">Code ↗</a></p>
+            </div>
+          </li>
+          <li class="pub">
+            <img class="pub-tile" src="/assets/work/thumbs/coherent-structure-colouring.webp" width="160" height="100" loading="lazy" alt="Particle tracks behind an Ahmed body coloured by coherent-structure colouring" />
+            <div class="pub-body">
+              <p class="pub-label">2021 · Journal article</p>
+              <h3><a href="https://doi.org/10.1007/s00348-021-03135-5" rel="noreferrer">Detection of Vortical Structures in Sparse Lagrangian Data Using Coherent-Structure Colouring</a></h3>
+              <p class="pub-authors"><strong>Flavio A. C. Martins</strong>, A. Sciacchitano, D. E. Rival</p>
+              <p class="pub-meta">Experiments in Fluids, 62(4), 69 · DOI 10.1007/s00348-021-03135-5</p>
+              <p class="pub-links"><a href="https://doi.org/10.1007/s00348-021-03135-5" rel="noreferrer">Paper ↗</a><a href="https://github.com/EngFlavioMartins/coherent-structure-colouring" rel="noreferrer">Code ↗</a></p>
+            </div>
+          </li>
+          <li class="pub">
+            <img class="pub-tile" src="/assets/work/thumbs/truss-sizing.webp" width="160" height="100" loading="lazy" alt="A 37-member truss before and after sizing, coloured by stress" />
+            <div class="pub-body">
+              <p class="pub-label">2019 · Journal article</p>
+              <h3><a href="https://doi.org/10.1007/s13296-018-0194-8" rel="noreferrer">A Linear Approach for Sizing Optimization of Isostatic Trussed Structures Subjected to External and Self-Weight Loads</a></h3>
+              <p class="pub-authors"><strong>Flavio A. C. Martins</strong>, J. P. J. Avila, M. A. da Silva</p>
+              <p class="pub-meta">International Journal of Steel Structures, 19(4), 1146–1157 · DOI 10.1007/s13296-018-0194-8</p>
+              <p class="pub-links"><a href="https://doi.org/10.1007/s13296-018-0194-8" rel="noreferrer">Paper ↗</a><a href="https://github.com/EngFlavioMartins/truss-sizing-optimisation" rel="noreferrer">Code ↗</a></p>
+            </div>
+          </li>
+          <li class="pub">
+            <img class="pub-tile" src="/assets/work/thumbs/vortex-induced-vibration.webp" width="160" height="100" loading="lazy" alt="Vortex cores shed behind an elastically mounted cylinder" />
+            <div class="pub-body">
+              <p class="pub-label">2019 · Journal article</p>
+              <h3><a href="https://doi.org/10.1016/j.ijmecsci.2019.03.024" rel="noreferrer">Effects of the Reynolds Number and Structural Damping on Vortex-Induced Vibrations of an Elastically-Mounted Rigid Cylinder</a></h3>
+              <p class="pub-authors"><strong>Flavio A. C. Martins</strong>, J. P. J. Avila</p>
+              <p class="pub-meta">International Journal of Mechanical Sciences, 156, 235–249 · DOI 10.1016/j.ijmecsci.2019.03.024</p>
+              <p class="pub-links"><a href="https://doi.org/10.1016/j.ijmecsci.2019.03.024" rel="noreferrer">Paper ↗</a><a href="https://github.com/EngFlavioMartins/vortex-induced-vibration" rel="noreferrer">Code ↗</a></p>
+            </div>
+          </li>
+          <li class="pub">
+            <img class="pub-tile" src="/assets/work/cylinder-wake.svg" width="160" height="100" loading="lazy" alt="Illustration of a vortex wake behind a cylinder" />
+            <div class="pub-body">
+              <p class="pub-label">2019 · Journal article</p>
+              <h3><a href="https://doi.org/10.1016/j.marstruc.2019.01.005" rel="noreferrer">Three-Dimensional CFD Analysis of Damping Effects on Vortex-Induced Vibrations of 2DOF Elastically-Mounted Circular Cylinders</a></h3>
+              <p class="pub-authors"><strong>Flavio A. C. Martins</strong>, J. P. J. Avila</p>
+              <p class="pub-meta">Marine Structures, 65, 12–31 · DOI 10.1016/j.marstruc.2019.01.005</p>
+              <p class="pub-links"><a href="https://doi.org/10.1016/j.marstruc.2019.01.005" rel="noreferrer">Paper ↗</a><a href="https://github.com/EngFlavioMartins/vortex-induced-vibration" rel="noreferrer">Code ↗</a></p>
+            </div>
+          </li>
+          <li class="pub">
+            <img class="pub-tile" src="/assets/work/thumbs/three-body.webp" width="160" height="100" loading="lazy" alt="Earth–Moon effective-potential landscape with an orbit" />
+            <div class="pub-body">
+              <p class="pub-label">2018 · Journal article</p>
+              <h3><a href="https://doi.org/10.1590/1806-9126-rbef-2017-0174" rel="noreferrer">Mecânica Celeste e a Teoria dos Sistemas Dinâmicos: Uma Revisão do Problema Circular Restrito de Três Corpos</a></h3>
+              <p class="pub-authors"><strong>Flavio A. C. Martins</strong>, M. Zanotello</p>
+              <p class="pub-meta">Revista Brasileira de Ensino de Física, 40(2), e2310 · DOI 10.1590/1806-9126-rbef-2017-0174</p>
+              <p class="pub-links"><a href="https://doi.org/10.1590/1806-9126-rbef-2017-0174" rel="noreferrer">Paper ↗</a><a href="https://github.com/EngFlavioMartins/celestial-dynamics" rel="noreferrer">Code ↗</a></p>
+            </div>
+          </li>
+        </ol>
       </section>
+      <section class="pub-group" id="preprint" aria-labelledby="preprint-heading">
+        <h2 id="preprint-heading">Preprints <span>2</span></h2>
+        <ol class="pub-list" role="list">
+          <li class="pub">
+            <img class="pub-tile" src="/assets/work/vortex-particle-ring.svg" width="160" height="100" loading="lazy" alt="Illustration of leapfrogging vortex rings made of particles" />
+            <div class="pub-body">
+              <p class="pub-label">2026 · Preprint</p>
+              <h3><a href="https://arxiv.org/abs/2601.06942" rel="noreferrer">Toward Meshless Turbulent Flow Simulation: LES-Integrated Vortex Particle Method</a></h3>
+              <p class="pub-authors"><strong>Flavio A. C. Martins</strong>, A. van Zuijlen, C. S. Ferreira</p>
+              <p class="pub-meta">arXiv:2601.06942</p>
+              <p class="pub-links"><a href="https://arxiv.org/abs/2601.06942" rel="noreferrer">Paper ↗</a></p>
+            </div>
+          </li>
+          <li class="pub">
+            <img class="pub-tile" src="/assets/work/thumbs/voronoi-coherence.webp" width="160" height="100" loading="lazy" alt="Voronoi cells of double-gyre tracers coloured by coherence" />
+            <div class="pub-body">
+              <p class="pub-label">2021 · Preprint</p>
+              <h3><a href="https://arxiv.org/abs/2103.09884" rel="noreferrer">A Voronoi-Tessellation-Based Approach for Detection of Coherent Structures in Sparsely-Seeded Flows</a></h3>
+              <p class="pub-authors"><strong>Flavio A. C. Martins</strong>, D. E. Rival</p>
+              <p class="pub-meta">arXiv:2103.09884</p>
+              <p class="pub-links"><a href="https://arxiv.org/abs/2103.09884" rel="noreferrer">Paper ↗</a><a href="https://github.com/EngFlavioMartins/voronoi-coherent-structures" rel="noreferrer">Code ↗</a></p>
+            </div>
+          </li>
+        </ol>
+      </section>
+      <section class="pub-group" id="conference" aria-labelledby="conference-heading">
+        <h2 id="conference-heading">Conference papers and talks <span>9</span></h2>
+        <ol class="pub-list" role="list">
+          <li class="pub">
+            <img class="pub-tile" src="/assets/work/hybrid-vortex-grid.svg" width="160" height="100" loading="lazy" alt="Illustration of a near-body grid coupled to a particle wake" />
+            <div class="pub-body">
+              <p class="pub-label">2026 · Conference paper</p>
+              <h3><a href="https://doi.org/10.1088/1742-6596/3224/4/042069" rel="noreferrer">Toward a 3D Hybrid Vortex Particle–Grid Approach for External Flows</a></h3>
+              <p class="pub-authors"><strong>Flavio A. C. Martins</strong>, A. van Zuijlen, D. A. von Terzi</p>
+              <p class="pub-meta">Journal of Physics: Conference Series, 3224(4), 042069 · DOI 10.1088/1742-6596/3224/4/042069</p>
+              <p class="pub-links"><a href="https://doi.org/10.1088/1742-6596/3224/4/042069" rel="noreferrer">Paper ↗</a></p>
+            </div>
+          </li>
+          <li class="pub">
+            <img class="pub-tile" src="/assets/work/wake-validation.svg" width="160" height="100" loading="lazy" alt="Illustration of CFD wake fields compared with wind-tunnel samples" />
+            <div class="pub-body">
+              <p class="pub-label">2024 · Conference paper</p>
+              <h3><a href="https://doi.org/10.1088/1742-6596/2767/7/072006" rel="noreferrer">Numerical Investigation of Atmospheric Boundary Layer Control in Wind Farms with Multirotor Systems</a></h3>
+              <p class="pub-authors"><strong>Flavio A. C. Martins</strong>, C. S. Ferreira, A. van Zuijlen</p>
+              <p class="pub-meta">Journal of Physics: Conference Series, 2767(7), 072006 · DOI 10.1088/1742-6596/2767/7/072006</p>
+              <p class="pub-links"><a href="https://doi.org/10.1088/1742-6596/2767/7/072006" rel="noreferrer">Paper ↗</a></p>
+            </div>
+          </li>
+          <li class="pub">
+            <img class="pub-tile" src="/assets/work/vertical-momentum.svg" width="160" height="100" loading="lazy" alt="Illustration of momentum transfer into turbine wakes" />
+            <div class="pub-body">
+              <p class="pub-label">2024 · Conference paper</p>
+              <h3><a href="https://doi.org/10.1088/1742-6596/2767/9/092107" rel="noreferrer">Enhancing Wind Farm Efficiency Through Active Control of the Atmospheric Boundary Layer’s Vertical Entrainment of Momentum</a></h3>
+              <p class="pub-authors">C. S. Ferreira, D. Bensason, T. J. Broertjes, A. Sciacchitano, <strong>Flavio A. C. Martins</strong>, A. G. Ajay</p>
+              <p class="pub-meta">Journal of Physics: Conference Series, 2767(9), 092107 · DOI 10.1088/1742-6596/2767/9/092107</p>
+              <p class="pub-links"><a href="https://doi.org/10.1088/1742-6596/2767/9/092107" rel="noreferrer">Paper ↗</a></p>
+            </div>
+          </li>
+          <li class="pub">
+            <span class="pub-tile pub-tile-empty" aria-hidden="true"></span>
+            <div class="pub-body">
+              <p class="pub-label">2022 · Conference paper</p>
+              <h3>State-Observer-Based Data Assimilation for Real Flow Analysis: Integrating Computation and Measurement</h3>
+              <p class="pub-authors"><strong>Flavio A. C. Martins</strong>, A. Alcântara, D. E. Rival</p>
+              <p class="pub-meta">NATO Unclassified technical meeting, Kingston, Canada</p>
+              
+            </div>
+          </li>
+          <li class="pub">
+            <img class="pub-tile" src="/assets/work/cylinder-wake.svg" width="160" height="100" loading="lazy" alt="Illustration of a vortex wake behind a cylinder" />
+            <div class="pub-body">
+              <p class="pub-label">2018 · Conference paper</p>
+              <h3><a href="https://uspdigital.usp.br/siicusp/siicPublicacao.jsp?codmnu=7210" rel="noreferrer">Three-Dimensional CFD Analysis of Damping Effects on Vortex-Induced Vibrations of 2DOF Cylinders</a></h3>
+              <p class="pub-authors"><strong>Flavio A. C. Martins</strong>, J. P. J. Avila</p>
+              <p class="pub-meta">SIIC-USP, São Paulo, Brazil</p>
+              <p class="pub-links"><a href="https://uspdigital.usp.br/siicusp/siicPublicacao.jsp?codmnu=7210" rel="noreferrer">Paper ↗</a></p>
+            </div>
+          </li>
+          <li class="pub">
+            <span class="pub-tile pub-tile-empty" aria-hidden="true"></span>
+            <div class="pub-body">
+              <p class="pub-label">2018 · Conference paper</p>
+              <h3><a href="https://proceedings.sbmac.org.br/sbmac/article/download/1878/1896" rel="noreferrer">Detection of Damage in Aerospace Structures Using Optimization Techniques on Impact Tests Results</a></h3>
+              <p class="pub-authors"><strong>Flavio A. C. Martins</strong>, M. A. da Silva, R. M. L. R. F. Brasil</p>
+              <p class="pub-meta">Proceeding Series of the Brazilian Society of Computational and Applied Mathematics (CNMAC)</p>
+              <p class="pub-links"><a href="https://proceedings.sbmac.org.br/sbmac/article/download/1878/1896" rel="noreferrer">Paper ↗</a></p>
+            </div>
+          </li>
+          <li class="pub">
+            <img class="pub-tile" src="/assets/work/truss-topology-mass.svg" width="160" height="100" loading="lazy" alt="Illustration of a truss with repositioned nodes" />
+            <div class="pub-body">
+              <p class="pub-label">2017 · Conference paper</p>
+              <h3><a href="https://doi.org/10.20906/cps/cilamce2017-0035" rel="noreferrer">Topology Optimization of 2D Trussed Structures</a></h3>
+              <p class="pub-authors"><strong>Flavio A. C. Martins</strong>, M. A. da Silva, R. M. L. R. F. Brasil</p>
+              <p class="pub-meta">CILAMCE, São José dos Campos, Brazil · DOI 10.20906/cps/cilamce2017-0035</p>
+              <p class="pub-links"><a href="https://doi.org/10.20906/cps/cilamce2017-0035" rel="noreferrer">Paper ↗</a></p>
+            </div>
+          </li>
+          <li class="pub">
+            <span class="pub-tile pub-tile-empty" aria-hidden="true"></span>
+            <div class="pub-body">
+              <p class="pub-label">2017 · Conference paper</p>
+              <h3>Analysis of the Dynamic Response of the Internal Structure of the ONERA M6 Wing</h3>
+              <p class="pub-authors"><strong>Flavio A. C. Martins</strong>, M. A. da Silva</p>
+              <p class="pub-meta">IX Workshop in Dynamic Systems, São Paulo, Brazil</p>
+              
+            </div>
+          </li>
+          <li class="pub">
+            <span class="pub-tile pub-tile-empty" aria-hidden="true"></span>
+            <div class="pub-body">
+              <p class="pub-label">2017 · Conference paper</p>
+              <h3>Identification of Damage in Aerospace Structures Using Optimization Techniques and Impact Tests</h3>
+              <p class="pub-authors"><strong>Flavio A. C. Martins</strong>, M. A. da Silva</p>
+              <p class="pub-meta">ASCE Engineering Mechanics Institute Conference, Rio de Janeiro, Brazil</p>
+              
+            </div>
+          </li>
+        </ol>
+      </section>
+      <section class="pub-group" id="report" aria-labelledby="report-heading">
+        <h2 id="report-heading">Technical and academic reports <span>4</span></h2>
+        <ol class="pub-list" role="list">
+          <li class="pub">
+            <span class="pub-tile pub-tile-empty" aria-hidden="true"></span>
+            <div class="pub-body">
+              <p class="pub-label">2022 · Report</p>
+              <h3>Calibration of Menter’s RANS γ-Model for Transonic, Transitional Flows</h3>
+              <p class="pub-authors"><strong>Flavio A. C. Martins</strong> et al.</p>
+              <p class="pub-meta">RivalLab / Pratt &amp; Whitney Canada (NDA-protected)</p>
+              
+            </div>
+          </li>
+          <li class="pub">
+            <span class="pub-tile pub-tile-empty" aria-hidden="true"></span>
+            <div class="pub-body">
+              <p class="pub-label">2018 · Report</p>
+              <h3><a href="http://ic.ufabc.edu.br/simposios/index.php?conference=EIC&amp;schedConf=8EIC2018&amp;page=paper&amp;op=view&amp;path%5B%5D=3344" rel="noreferrer">Optimization of the Internal Structure of Statically and Dynamically Loaded Wings</a></h3>
+              <p class="pub-authors"><strong>Flavio A. C. Martins</strong>, M. A. da Silva</p>
+              <p class="pub-meta">UFABC research report (CNPq-funded)</p>
+              <p class="pub-links"><a href="http://ic.ufabc.edu.br/simposios/index.php?conference=EIC&amp;schedConf=8EIC2018&amp;page=paper&amp;op=view&amp;path%5B%5D=3344" rel="noreferrer">Read ↗</a></p>
+            </div>
+          </li>
+          <li class="pub">
+            <span class="pub-tile pub-tile-empty" aria-hidden="true"></span>
+            <div class="pub-body">
+              <p class="pub-label">2017 · Report</p>
+              <h3><a href="http://ic.ufabc.edu.br/simposios/index.php?conference=EIC&amp;schedConf=7EIC2017&amp;page=paper&amp;op=view&amp;path%5B%5D=2966" rel="noreferrer">Applications of Dynamical Systems Theory to Biological and Chemical Problems</a></h3>
+              <p class="pub-authors"><strong>Flavio A. C. Martins</strong>, M. Zanotello</p>
+              <p class="pub-meta">UFABC research report (CNPq-funded)</p>
+              <p class="pub-links"><a href="http://ic.ufabc.edu.br/simposios/index.php?conference=EIC&amp;schedConf=7EIC2017&amp;page=paper&amp;op=view&amp;path%5B%5D=2966" rel="noreferrer">Read ↗</a></p>
+            </div>
+          </li>
+          <li class="pub">
+            <img class="pub-tile" src="/assets/work/three-body-schematic.svg" width="160" height="100" loading="lazy" alt="Illustration of the restricted three-body problem" />
+            <div class="pub-body">
+              <p class="pub-label">2016 · Report</p>
+              <h3><a href="http://ic.ufabc.edu.br/simposios/index.php?conference=EIC&amp;schedConf=6EIC2016&amp;page=paper&amp;op=view&amp;path%5B%5D=2502" rel="noreferrer">Celestial Mechanics and the Theory of Dynamic Systems: A Revision of the Circular Restricted Three-Body Problem</a></h3>
+              <p class="pub-authors"><strong>Flavio A. C. Martins</strong>, M. Zanotello</p>
+              <p class="pub-meta">UFABC research report (CNPq-funded)</p>
+              <p class="pub-links"><a href="http://ic.ufabc.edu.br/simposios/index.php?conference=EIC&amp;schedConf=6EIC2016&amp;page=paper&amp;op=view&amp;path%5B%5D=2502" rel="noreferrer">Read ↗</a></p>
+            </div>
+          </li>
+        </ol>
+      </section>
+      </div>
     </main>
 
-    <footer class="site-footer"><div class="shell footer-inner"><p>Flavio A. C. Martins</p><a href="mailto:flavio.martins@outlook.com">flavio.martins@outlook.com</a></div></footer>
+    <!-- site:footer -->
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <div class="footer-id">
+          <img src="/assets/logo.svg" width="36" height="36" alt="Vortex logo" />
+          <div><p class="footer-name">Flavio A. C. Martins</p><p>PhD candidate · Wind Energy, TU Delft</p></div>
+        </div>
+        <ul class="footer-links" role="list"><li><a href="https://github.com/EngFlavioMartins" rel="noreferrer">GitHub</a></li><li><a href="https://scholar.google.com/citations?user=WZXamCcAAAAJ&amp;hl=en" rel="noreferrer">Google Scholar</a></li><li><a href="https://orcid.org/0000-0002-1374-5760" rel="noreferrer">ORCID</a></li><li><a href="https://www.linkedin.com/in/flavio-martins-8bb89772" rel="noreferrer">LinkedIn</a></li><li><a href="mailto:f.m.martins@tudelft.nl">f.m.martins@tudelft.nl</a></li></ul>
+      </div>
+      <p class="shell footer-credit">Painting: Nicola Facchinetti, <i>Lagoa Rodrigo de Freitas, Rio de Janeiro</i>, c. 1884 · public domain, <a href="https://commons.wikimedia.org/wiki/File:Nicola_Facchinetti_-_Lagoa_Rodrigo_de_Freitas,_Rio_de_Janeiro,_ca._1884.jpg" rel="noreferrer">Wikimedia Commons</a></p>
+    </footer>
+    <!-- /site:footer -->
   </body>
 </html>
