@@ -1,6 +1,7 @@
 """Regression checks for the requested unified findings section."""
 import re
 import subprocess
+from collections import Counter
 import unittest
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -15,12 +16,14 @@ class FindingsTests(unittest.TestCase):
         after = (ROOT / 'index.html').read_text()
         def references(html):
             return re.findall(r'href="(https://(?:doi.org|arxiv.org|github.com/EngFlavioMartins/)[^"]+)"', html)
-        self.assertCountEqual(references(before), references(after))
+        # Links may be added (e.g. new repository buttons), never lost.
+        missing = Counter(references(before)) - Counter(references(after))
+        self.assertFalse(missing, f'links removed: {sorted(missing)}')
 
     def test_consolidated_cards_and_question_titles(self):
         html = (ROOT / 'index.html').read_text()
         headings = re.findall(r'<h3>(.*?)</h3>', html)
-        self.assertEqual(len(headings), 13)
+        self.assertEqual(len(headings), 14)
         statements = {'Lid-driven cavity flow', 'From OpenFOAM fields to Python arrays'}
         self.assertTrue(all(title.endswith('?') or title in statements for title in headings))
         self.assertTrue(statements.issubset(headings))
@@ -35,10 +38,12 @@ class FindingsTests(unittest.TestCase):
             matches = [c for c in cards if 'github.com/EngFlavioMartins/'+repository in c]
             self.assertEqual(len(matches), 1)
             self.assertIn(paper, matches[0])
-        flow = next(c for c in cards if 'github.com/EngFlavioMartins/voronoi-coherent-structures' in c)
-        self.assertIn('10.1007/s00348-021-03135-5', flow)
-        self.assertIn('Two studies', flow)
-        self.assertIn('voronoi-neighbours.svg', flow)
+        # CSC and Voronoi studies have separate cards, each with its paper, code and render.
+        voronoi = next(c for c in cards if 'github.com/EngFlavioMartins/voronoi-coherent-structures' in c)
+        self.assertIn('renders/voronoi-coherence.webp', voronoi)
+        csc = next(c for c in cards if 'github.com/EngFlavioMartins/coherent-structure-colouring' in c)
+        self.assertIn('10.1007/s00348-021-03135-5', csc)
+        self.assertIn('renders/coherent-structure-colouring.webp', csc)
         self.assertNotIn('sparse-lagrangian-tracks.svg', html)
         self.assertIn('id="voronoi-coherence"', html)
         self.assertIn('id="openfoam-actuator-surface"', html)
@@ -46,7 +51,7 @@ class FindingsTests(unittest.TestCase):
     def test_one_visible_grid(self):
         html = (ROOT / 'index.html').read_text()
         self.assertEqual(html.count('class="research-stories"'), 1)
-        self.assertEqual(html.count('class="research-story"'), 13)
+        self.assertEqual(html.count('class="research-story"'), 14)
         self.assertIn('>Research findings</h2>', html)
         for obsolete in ['role="tab', ' hidden', 'Additional studies', 'Research summaries', 'featured-work.js']:
             self.assertNotIn(obsolete, html)
