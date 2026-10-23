@@ -7,7 +7,7 @@ from urllib.parse import unquote, urlsplit
 
 PROJECT = Path(__file__).resolve().parents[1]
 ROOT = PROJECT / "dist" if (PROJECT / "dist").is_dir() else PROJECT
-PAGES = ("index.html", "cv/index.html", "publications/index.html", "projects/index.html")
+PAGES = ("index.html", "cv/index.html", "publications/index.html")
 
 
 class PageParser(HTMLParser):

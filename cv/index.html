@@ -3,231 +3,343 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Professional and academic CV of Flavio A. C. Martins, covering aerospace engineering, CFD research and scientific software development." />
-    <meta name="theme-color" content="#19383c" />
+    <meta name="description" content="Professional and academic CV of Flavio A. C. Martins: CFD, fluid–structure interaction, wind energy and scientific software." />
+    <meta name="theme-color" content="#0b0e10" />
     <title>CV · Flavio A. C. Martins</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23102a43'/%3E%3Cpath d='M13 43c10-4 13-24 25-24 6 0 9 5 13 5' fill='none' stroke='%232dd4bf' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M13 32c9 0 13 13 23 13 7 0 10-6 15-6' fill='none' stroke='%23fff' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="/assets/styles.css?v=20260921-tags" />
+    <link rel="icon" type="image/svg+xml" href="/assets/logo.svg" />
+    <link rel="stylesheet" href="/assets/styles.css?v=20261023" />
+    <script src="/assets/site.js" defer></script>
     <script src="/assets/cv-tabs.js" defer></script>
     <noscript><style>.cv-panel[hidden]{display:block}.cv-tabs{display:none}</style></noscript>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header">
-      <a class="wordmark" href="/" aria-label="Flavio Martins, home"><span class="wordmark-mark" aria-hidden="true">FM</span><span>Flavio Martins</span></a>
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="/cv/" aria-current="page">CV</a>
-        <a href="/publications/">Publications</a>
-        <a href="/projects/">Projects</a>
-      </nav>
-    </header>
-
-    <main id="main">
-      <header class="page-hero shell">
+    <!-- site:header -->
+    <div class="hero-band">
+      <header class="site-header">
+        <a class="wordmark" href="/" aria-label="Flavio Martins, home"><img class="wordmark-mark" src="/assets/logo.svg" width="40" height="40" alt="Vortex-street logo" /><span>Flavio Martins</span></a>
+        <nav class="site-nav" aria-label="Primary navigation"><a href="/cv/" aria-current="page">CV</a><a href="/publications/">Publications</a></nav>
+      </header>
+      <section class="page-intro shell">
         <div>
           <h1>Curriculum vitae</h1>
+          <p class="page-lede">A two-page professional summary and the full academic record. Both are available as PDF.</p>
         </div>
-        <div class="page-actions">
-          <div class="download-row">
-            <a href="/downloads/flavio-martins-professional-cv.pdf" download>Professional PDF <span aria-hidden="true">↓</span></a>
-            <a href="/downloads/flavio-martins-academic-cv.pdf" download>Academic PDF <span aria-hidden="true">↓</span></a>
-          </div>
-        </div>
-      </header>
+        <div class="page-actions"><a class="button button-primary" href="/downloads/flavio-martins-professional-cv.pdf" download>Professional PDF ↓</a><a class="button button-ghost" href="/downloads/flavio-martins-academic-cv.pdf" download>Academic PDF ↓</a></div>
+      </section>
+    </div>
+    <!-- /site:header -->
 
+    <main id="main" class="page-light">
       <section class="cv-shell shell">
         <div class="cv-tabs" role="tablist" aria-label="CV version">
-          <button id="tab-professional" role="tab" aria-selected="true" aria-controls="panel-professional" data-cv-tab="professional">Professional CV</button>
-          <button id="tab-academic" role="tab" aria-selected="false" aria-controls="panel-academic" data-cv-tab="academic" tabindex="-1">Academic CV</button>
+          <button id="tab-professional" role="tab" aria-selected="true" aria-controls="panel-professional" data-cv-tab="professional">Professional</button>
+          <button id="tab-academic" role="tab" aria-selected="false" aria-controls="panel-academic" data-cv-tab="academic" tabindex="-1">Academic</button>
         </div>
-
         <article id="panel-professional" class="cv-panel" role="tabpanel" aria-labelledby="tab-professional" data-cv-panel="professional">
-          <header class="cv-heading">
+          <p class="cv-summary">Computational engineer with over seven years of experience in CFD, fluid–structure interaction and scientific software for wind energy, marine and aerospace applications: from numerical method to validated result, with GPU-accelerated solvers (Python, C++, CUDA), coupling with OpenFOAM and validation against experiments.</p>
+          <div class="cv-columns">
             <div>
-              <p class="eyebrow">Professional profile</p>
-              <h2>CFD &amp; simulation engineering</h2>
-            </div>
-            <p>Mechanical and aerospace engineering experience spanning computational fluid dynamics, finite-element methods, fluid–structure interaction and experimental validation. Reusable modelling workflows in Python and C++ connect numerical analysis with measured data.</p>
-          </header>
-
-          <div class="cv-layout">
-            <div class="cv-main">
-              <section class="cv-section" aria-labelledby="professional-experience">
-                <h3 id="professional-experience">Experience</h3>
-                <div class="timeline">
-                  <article class="timeline-item">
-                    <div class="timeline-date">2023—Present</div>
-                    <div>
-                      <h4>PhD Candidate · Computational Aerodynamics</h4>
-                      <p class="meta-line">TU Delft Wind Energy Institute · Delft, the Netherlands</p>
-                      <ul>
-                        <li>Developed hybrid Eulerian–Lagrangian CFD methods for unsteady external flows and integrated large-eddy simulation into a GPU-based particle solver.</li>
-                        <li>Created OpenONDA, a modular Python/C++ framework connecting a vortex-particle solver with OpenFOAM through in-line Python control.</li>
-                        <li>Investigated multirotor wakes and atmospheric-boundary-layer entrainment using simulations and experimental data.</li>
-                      </ul>
-                    </div>
-                  </article>
-                  <article class="timeline-item">
-                    <div class="timeline-date">2021—2022</div>
-                    <div>
-                      <h4>Research Engineer</h4>
-                      <p class="meta-line">RivalLab · Queen’s University · Kingston, Canada</p>
-                      <ul>
-                        <li>Calibrated a transition-sensitive RANS model against experiments for transonic turbine flows in a Pratt &amp; Whitney Canada partnership.</li>
-                        <li>Designed towing-tank setups with actuation and measurement systems and analysed PIV/PTV data for unsteady flows.</li>
-                      </ul>
-                    </div>
-                  </article>
-                  <article class="timeline-item">
-                    <div class="timeline-date">2019—2021</div>
-                    <div>
-                      <h4>Graduate Researcher · Fluid Dynamics</h4>
-                      <p class="meta-line">Queen’s University · Kingston, Canada</p>
-                      <ul>
-                        <li>Developed graph-based methods for coherent-structure detection in sparse particle-tracking data.</li>
-                        <li>Used CFD and towing-tank experiments to study a marine propulsion and energy-harvesting concept.</li>
-                      </ul>
-                    </div>
-                  </article>
-                  <article class="timeline-item">
-                    <div class="timeline-date">2018—2019</div>
-                    <div>
-                      <h4>Research Associate · Fluid–Structure Interaction</h4>
-                      <p class="meta-line">Federal University of ABC · Santo André, Brazil</p>
-                      <p>Investigated vortex-induced vibration and damping using 2D and 3D CFD models of elastically mounted cylinders relevant to offshore risers.</p>
-                    </div>
-                  </article>
-                  <article class="timeline-item">
-                    <div class="timeline-date">2017—2018</div>
-                    <div>
-                      <h4>Mechanical Engineering Intern</h4>
-                      <p class="meta-line">Civil Structural Engineering Ltd · São Paulo, Brazil</p>
-                      <p>Built a real-time vibration-monitoring system and supported load estimation, structural modelling, site work and technical reporting.</p>
-                    </div>
-                  </article>
+            <section class="cv-section">
+              <h3>Experience</h3>
+              <article class="cv-item">
+                <p class="cv-date">2023 – present</p>
+                <div>
+                  <h4>PhD candidate · computational aerodynamics</h4>
+                  <p class="cv-place">TU Delft, Wind Energy section</p>
+                  <ul><li>Designed and built OpenONDA, an open-source Python/C++ framework coupling a GPU-accelerated vortex-particle solver with OpenFOAM; accepted in the OpenFOAM Journal (2026).</li><li>Added large-eddy simulation to the particle solver and applied it to multirotor wind turbines and wind-farm momentum entrainment; published in Wind Energy Science (2025).</li><li>Co-supervised an MSc thesis (GPU fast multipole method); supervise BSc project teams.</li></ul>
                 </div>
-              </section>
+              </article>
+              <article class="cv-item">
+                <p class="cv-date">2021 – 2022</p>
+                <div>
+                  <h4>Research engineer</h4>
+                  <p class="cv-place">RivalLab, Queen’s University · project with Pratt &amp; Whitney Canada</p>
+                  <ul><li>Calibrated a transition-sensitive RANS model (k–ω–γ) against experiments for transonic turbine flows; delivered an NDA-protected report.</li><li>Designed and built towing-tank rigs with actuation and instrumentation; acquired and processed PIV/PTV and force data.</li></ul>
+                </div>
+              </article>
+              <article class="cv-item">
+                <p class="cv-date">2019 – 2021</p>
+                <div>
+                  <h4>Graduate researcher (MASc) · fluid dynamics</h4>
+                  <p class="cv-place">Queen’s University, Kingston, Canada</p>
+                  <ul><li>Developed graph-based methods to detect coherent structures in sparse particle-tracking data; published in Experiments in Fluids (2021).</li><li>Evaluated a marine propulsion and energy-harvesting concept with CFD, towing-tank tests and force measurements.</li></ul>
+                </div>
+              </article>
+              <article class="cv-item">
+                <p class="cv-date">2018 – 2019</p>
+                <div>
+                  <h4>Research associate · fluid–structure interaction</h4>
+                  <p class="cv-place">Federal University of ABC, Santo André, Brazil</p>
+                  <ul><li>Modelled vortex-induced vibration of elastically mounted cylinders in 2D and 3D CFD, quantifying the effects of damping and Reynolds number; published in Marine Structures and the International Journal of Mechanical Sciences (2019).</li></ul>
+                </div>
+              </article>
+              <article class="cv-item">
+                <p class="cv-date">2017 – 2018</p>
+                <div>
+                  <h4>Mechanical engineering intern</h4>
+                  <p class="cv-place">Civil Structural Engineering Ltd, São Paulo, Brazil</p>
+                  <ul><li>Supported civil and steel-structure projects: site visits, load estimation, CAD drawings, reports and client presentations.</li><li>Developed a real-time data-acquisition system for vibration monitoring of machine foundations, with sensors and spectral analysis.</li></ul>
+                </div>
+              </article>
+            </section>
+            <section class="cv-section">
+              <h3>Education</h3>
+              <article class="cv-item">
+                <p class="cv-date">2023 – present</p>
+                <div>
+                  <h4>PhD in Aerospace Engineering (in progress)</h4>
+                  <p class="cv-place">TU Delft, Delft, the Netherlands</p>
+                  
+                </div>
+              </article>
+              <article class="cv-item">
+                <p class="cv-date">2019 – 2021</p>
+                <div>
+                  <h4>MASc in Mechanical &amp; Materials Engineering · GPA 4.2/4.3</h4>
+                  <p class="cv-place">Queen’s University, Kingston, Canada</p>
+                  
+                </div>
+              </article>
+              <article class="cv-item">
+                <p class="cv-date">2016 – 2018</p>
+                <div>
+                  <h4>BSc in Aerospace Engineering (honours, valedictorian) · GPA 3.7/4.0</h4>
+                  <p class="cv-place">Federal University of ABC (UFABC), Santo André, Brazil</p>
+                  
+                </div>
+              </article>
+              <article class="cv-item">
+                <p class="cv-date">2012 – 2016</p>
+                <div>
+                  <h4>BSc in Science &amp; Technology (honours) · GPA 3.6/4.0</h4>
+                  <p class="cv-place">Federal University of ABC (UFABC), Santo André, Brazil</p>
+                  
+                </div>
+              </article>
+            </section>
             </div>
-
-            <aside class="cv-aside">
-              <section class="cv-section">
-                <h3>Capabilities</h3>
-                <dl class="skill-list">
-                  <div><dt>Flow modelling</dt><dd>OpenFOAM, CFD, LES, RANS, vortex-particle and finite-volume methods, FSI</dd></div>
-                  <div><dt>Scientific software</dt><dd>Python, C++, CUDA, MATLAB, Git, Linux, modular numerical solvers</dd></div>
-                  <div><dt>Experiments</dt><dd>PIV/PTV, force measurements, towing-tank rigs, instrumentation, model calibration</dd></div>
-                  <div><dt>Mechanical analysis</dt><dd>Abaqus, FEM, structural dynamics, vibration analysis and optimisation</dd></div>
-                </dl>
-              </section>
-              <section class="cv-section">
-                <h3>Education</h3>
-                <div class="compact-entry"><h4>PhD · Aerospace Engineering</h4><p>TU Delft · 2023—Present</p></div>
-                <div class="compact-entry"><h4>MASc · Mechanical &amp; Materials Engineering</h4><p>Queen’s University · 2019—2021 · GPA 4.2/4.3</p></div>
-                <div class="compact-entry"><h4>BSc · Aerospace Engineering</h4><p>UFABC · Honours / Valedictorian · 2016—2018</p></div>
-                <div class="compact-entry"><h4>BSc · Science &amp; Technology</h4><p>UFABC · Honours · 2012—2016</p></div>
-              </section>
-              <section class="cv-section">
-                <h3>Languages</h3>
-                <p>Portuguese · Native</p>
-                <p>English · C2</p>
-                <p>Dutch · B1</p>
-              </section>
-            </aside>
+            <div>
+            <section class="cv-section">
+              <h3>Technical skills</h3>
+              <dl class="cv-skills"><div><dt>Programming</dt><dd>Python · C++ · CUDA · MATLAB · Git · Linux · GPU computing</dd></div><div><dt>CFD and numerical methods</dt><dd>OpenFOAM · RANS · LES · finite-volume and vortex-particle methods · mesh generation · FSI</dd></div><div><dt>Structures</dt><dd>FEM/FEA · Abaqus · ANSYS · structural dynamics · SolidWorks · load estimation · optimisation</dd></div><div><dt>Experiments and data</dt><dd>PIV/PTV · data acquisition · wind tunnels and towing tanks · force and pressure measurements · signal and statistical analysis · model calibration · data assimilation</dd></div></dl>
+            </section>
+            <section class="cv-section">
+              <h3>Leadership and community</h3>
+              <ol class="cv-list"><li><strong>Chair, Aerospace Engineering PhD Council</strong>, TU Delft (2025–2026; member since 2023): redesigned the annual PhD symposium (nearly 200 attendees), cut its budget from EUR 20,000 to 5,000 and secured industry sponsorship.</li><li><strong>Member, University PhD Council</strong>, TU Delft (2026): university-wide events, budgets and stakeholder coordination.</li><li><strong>TU Delft representative, Dutch OpenFOAM user community</strong> (2023–2026): co-organised the national user meetings.</li></ol>
+            </section>
+            <section class="cv-section">
+              <h3>Teaching and outreach</h3>
+              <ol class="cv-list"><li>Teaching assistant, experimental fluid-dynamics labs, Queen’s University (2019–2021); MATLAB and Abaqus workshops (2017–2018).</li><li>OffshoreWind4Kids team leader (2024–2026); developed Wind for Kids teaching materials for primary schools (2024–2025).</li></ol>
+            </section>
+            <section class="cv-section">
+              <h3>Languages</h3>
+              <p class="cv-plain">Portuguese (native) · English (C2) · Dutch (B1)</p>
+            </section>
+            </div>
           </div>
         </article>
-
         <article id="panel-academic" class="cv-panel" role="tabpanel" aria-labelledby="tab-academic" data-cv-panel="academic" hidden>
-          <header class="cv-heading">
-            <div>
-              <p class="eyebrow">Academic profile</p>
-              <h2>Research, teaching &amp; academic service</h2>
-            </div>
-            <p>Research on unsteady flows and fluid–structure interaction using numerical methods and experimental measurements, with emphasis on hybrid CFD, validation and scientific software.</p>
-          </header>
-
-          <div class="cv-layout">
-            <div class="cv-main">
-              <section class="cv-section" aria-labelledby="academic-education">
-                <h3 id="academic-education">Education &amp; research</h3>
-                <div class="timeline">
-                  <article class="timeline-item">
-                    <div class="timeline-date">2023—Present</div>
-                    <div>
-                      <h4>PhD in Aerospace Engineering</h4>
-                      <p class="meta-line">TU Delft · Wind Energy Institute</p>
-                      <p><strong>Thesis:</strong> 3D Unsteady CFD Model for Multi-Rotor Body Fluid–Structure Interaction.</p>
-                      <p>Promotor: Prof. Dr. ir. Carlos Simão Ferreira · Supervisor: Dr. Alexander van Zuijlen.</p>
-                    </div>
-                  </article>
-                  <article class="timeline-item">
-                    <div class="timeline-date">2019—2021</div>
-                    <div>
-                      <h4>MASc in Mechanical &amp; Materials Engineering</h4>
-                      <p class="meta-line">Queen’s University · GPA 4.2/4.3</p>
-                      <p><strong>Thesis:</strong> Detecting Lagrangian Coherent Structures in Realistic Experimental Fluid-Flow Data Sets.</p>
-                    </div>
-                  </article>
-                  <article class="timeline-item">
-                    <div class="timeline-date">2016—2018</div>
-                    <div>
-                      <h4>BSc in Aerospace Engineering · Honours / Valedictorian</h4>
-                      <p class="meta-line">Federal University of ABC · GPA 3.7/4.0</p>
-                      <p><strong>Thesis:</strong> Vibration Analysis and FSI Effects of Two-Dimensional Aeroelastic Aeronautical Structures.</p>
-                    </div>
-                  </article>
-                  <article class="timeline-item">
-                    <div class="timeline-date">2012—2016</div>
-                    <div>
-                      <h4>BSc in Science &amp; Technology · Honours</h4>
-                      <p class="meta-line">Federal University of ABC · GPA 3.6/4.0</p>
-                    </div>
-                  </article>
+          <p class="cv-summary">I study unsteady flows, turbulence and fluid–structure interaction, combining numerical methods with experimental flow measurements. My work spans wind-energy wakes, marine dynamics and coherent structures in particle-tracking data. I develop hybrid Eulerian–Lagrangian methods and scientific software to connect physical models with measurements across scales.</p>
+          <div class="cv-single">
+            <section class="cv-section">
+              <h3>Education</h3>
+              <article class="cv-item">
+                <p class="cv-date">2023 – present</p>
+                <div>
+                  <h4>PhD in Aerospace Engineering (in progress)</h4>
+                  <p class="cv-place">TU Delft, Delft, the Netherlands</p>
+                  <ul><li>Thesis: 3D unsteady CFD model for multi-rotor body fluid–structure interaction.</li><li>Promotor: Prof. Dr. ir. Carlos Simão Ferreira · Supervisor: Dr. Alexander van Zuijlen.</li></ul>
                 </div>
-              </section>
-
-              <section class="cv-section">
-                <h3>Teaching &amp; supervision</h3>
-                <div class="stack-list">
-                  <article><h4>Project Supervisor · Test, Analysis and Simulation</h4><p>TU Delft · 2025—2026</p></article>
-                  <article><h4>MSc Thesis Co-Supervisor</h4><p>TU Delft · 2026 · GPU-accelerated Cartesian Fast Multipole Method for particle-based flow simulation</p></article>
-                  <article><h4>Teaching Assistant · Experimental Fluid Dynamics</h4><p>Queen’s University · 2019—2021</p></article>
-                  <article><h4>Invited workshop instructor</h4><p>Finite-element implementation in MATLAB and structural analysis with Abaqus · UFABC · 2017—2018</p></article>
+              </article>
+              <article class="cv-item">
+                <p class="cv-date">2019 – 2021</p>
+                <div>
+                  <h4>MASc in Mechanical &amp; Materials Engineering · GPA 4.2/4.3</h4>
+                  <p class="cv-place">Queen’s University, Kingston, Canada</p>
+                  <ul><li>Thesis: Detecting Lagrangian coherent structures in realistic experimental fluid-flow data sets (<a href="https://qspace.library.queensu.ca/handle/1974/28695" rel="noreferrer">read online</a>).</li><li>Supervisor: Dr. David E. Rival.</li></ul>
                 </div>
-              </section>
-
-              <section class="cv-section">
-                <h3>Academic leadership &amp; service</h3>
-                <ul class="plain-list">
-                  <li><strong>Chair, Aerospace Engineering PhD Council, TU Delft</strong> · member 2023—2024; Chair 2025—2026. Redesigned the annual symposium for nearly 200 attendees while reducing its budget by about 75%.</li>
-                  <li><strong>Member, TU Delft University PhD Council</strong> · 2026. Designed cross-faculty events and coordinated budgets, schedules and fundraising.</li>
-                  <li><strong>TU Delft representative, Dutch OpenFOAM User Community</strong> · 2023—2026. Co-organised national meetings and recruited speakers.</li>
-                  <li><strong>OffshoreWind4Kids</strong> · instructor 2023; team leader 2024—2026. Led public wind-energy demonstrations for children and families.</li>
-                </ul>
-              </section>
-            </div>
-
-            <aside class="cv-aside">
-              <section class="cv-section">
-                <h3>Research themes</h3>
-                <ul class="tag-list" aria-label="Research themes">
-                  <li>Hybrid CFD</li><li>Vortex-particle methods</li><li>Fluid–structure interaction</li><li>Wind energy</li><li>Coherent structures</li><li>Experimental validation</li><li>Scientific computing</li>
-                </ul>
-              </section>
-              <section class="cv-section">
-                <h3>Honours</h3>
-                <div class="compact-entry"><h4>Institute of Engineering Award</h4><p>2018 · top-three graduating engineering students at UFABC</p></div>
-                <div class="compact-entry"><h4>Second-highest programme GPA</h4><p>UFABC Aerospace Engineering · as of 2018</p></div>
-              </section>
-              <section class="cv-section cv-callout">
-                <h3>Publications</h3>
-                <a href="/publications/">View publications <span aria-hidden="true">→</span></a>
-              </section>
-            </aside>
+              </article>
+              <article class="cv-item">
+                <p class="cv-date">2016 – 2018</p>
+                <div>
+                  <h4>BSc in Aerospace Engineering (honours, valedictorian) · GPA 3.7/4.0</h4>
+                  <p class="cv-place">Federal University of ABC (UFABC), Santo André, Brazil</p>
+                  <ul><li>Thesis: Vibration analysis and FSI effects of two-dimensional aeroelastic aeronautical structures.</li><li>Supervisor: Dr. Marcelo S. Araujo.</li></ul>
+                </div>
+              </article>
+              <article class="cv-item">
+                <p class="cv-date">2012 – 2016</p>
+                <div>
+                  <h4>BSc in Science &amp; Technology (honours) · GPA 3.6/4.0</h4>
+                  <p class="cv-place">Federal University of ABC (UFABC), Santo André, Brazil</p>
+                  
+                </div>
+              </article>
+            </section>
+            <section class="cv-section">
+              <h3>Research experience</h3>
+              <article class="cv-item">
+                <p class="cv-date">2023 – present</p>
+                <div>
+                  <h4>PhD candidate</h4>
+                  <p class="cv-place">TU Delft Wind Energy Institute · supervisors Prof. Dr. ir. C. Simão Ferreira and Dr. A. van Zuijlen</p>
+                  <ul><li>Developed a 3D hybrid CFD model for multi-rotor fluid–structure interaction, resolving wake–structure coupling in multi-rotor wind-energy systems.</li><li>Investigated vortex-generating multirotor configurations for regenerative wind energy and their effect on atmospheric-boundary-layer entrainment in wind farms.</li><li>Wrote a GPU-based particle solver with an integrated LES methodology for meshless turbulent-flow simulation of external flows.</li></ul>
+                </div>
+              </article>
+              <article class="cv-item">
+                <p class="cv-date">2019 – 2022</p>
+                <div>
+                  <h4>MASc student and research engineer</h4>
+                  <p class="cv-place">Queen’s University, Kingston, Canada · supervisor Dr. David E. Rival</p>
+                  <ul><li>Developed a graph-theory-based technique for detecting coherent motion in tracer data.</li><li>Designed and benchmarked a hybrid propulsion and energy-harvesting system for marine applications using CFD.</li><li>Ran towing-tank experiments on unsteady airfoil and delta-wing flows, collecting and analysing PIV, PTV and force data at high Reynolds numbers.</li></ul>
+                </div>
+              </article>
+              <article class="cv-item">
+                <p class="cv-date">2018 – 2019</p>
+                <div>
+                  <h4>Research associate</h4>
+                  <p class="cv-place">UFABC Fluid–Structure Interaction Lab, Santo André, Brazil · supervisor Dr. Juan Avila</p>
+                  <ul><li>Conducted 2D and 3D CFD studies of vortex-induced vibration of elastically mounted cylinders, with relevance to offshore riser dynamics.</li><li>Investigated the influence of mechanical parameters and damping on the cylinder’s vibration response.</li></ul>
+                </div>
+              </article>
+              <article class="cv-item">
+                <p class="cv-date">2016 – 2018</p>
+                <div>
+                  <h4>Undergraduate research fellow (CNPq)</h4>
+                  <p class="cv-place">UFABC, Santo André, Brazil · supervisor Dr. Marcelo S. Araujo</p>
+                  <ul><li>Optimised the internal structure of statically and dynamically loaded wings.</li></ul>
+                </div>
+              </article>
+              <article class="cv-item">
+                <p class="cv-date">2015 – 2017</p>
+                <div>
+                  <h4>Undergraduate research fellow (CNPq)</h4>
+                  <p class="cv-place">UFABC, Santo André, Brazil · supervisor Prof. Dr. Marcelo Zanotello</p>
+                  <ul><li>Studied celestial mechanics through the circular restricted three-body problem.</li><li>Applied dynamical-systems theory to biological and chemical problems.</li></ul>
+                </div>
+              </article>
+            </section>
+            <section class="cv-section">
+              <h3>Professional experience</h3>
+              <article class="cv-item">
+                <p class="cv-date">2021 – 2022</p>
+                <div>
+                  <h4>Research engineer</h4>
+                  <p class="cv-place">RivalLab, partnership with Pratt &amp; Whitney Canada, Kingston, Canada</p>
+                  <ul><li>Calibrated a transitional RANS turbulence model (k–ω–γ) against experimental data to improve aircraft-turbine simulations.</li><li>Designed and built towing-tank set-ups for aerodynamic surface analysis, integrating actuation and measurement systems.</li><li>Acquired and post-processed PIV and PTV data to characterise unsteady surface-flow fields.</li></ul>
+                </div>
+              </article>
+              <article class="cv-item">
+                <p class="cv-date">2017 – 2018</p>
+                <div>
+                  <h4>Mechanical engineering intern</h4>
+                  <p class="cv-place">Civil Structural Engineering Ltd, São Paulo, Brazil · manager Dr. Marcelo Araujo</p>
+                  <ul><li>Contributed to civil-engineering projects from client site visits and load estimation to structural modelling and reporting.</li><li>Developed a real-time data-acquisition and spectral-analysis system for vibration measurements in machine foundations.</li></ul>
+                </div>
+              </article>
+            </section>
+            <section class="cv-section">
+              <h3>Open-source software</h3>
+              <article class="cv-item">
+                <p class="cv-date">2023 – present</p>
+                <div>
+                  <h4>OpenONDA · hybrid CFD framework</h4>
+                  <p class="cv-place"><a href="https://github.com/EngFlavioMartins/OpenONDA" rel="noreferrer">github.com/EngFlavioMartins/OpenONDA</a></p>
+                  <ul><li>Modular Python/C++ framework that unifies a GPU-accelerated vortex-particle method (Lagrangian) with a finite-volume method (Eulerian) and an OpenFOAM interface.</li></ul>
+                </div>
+              </article>
+              <article class="cv-item">
+                <p class="cv-date">2018 – 2026</p>
+                <div>
+                  <h4>Research codes</h4>
+                  <p class="cv-place"><a href="https://github.com/EngFlavioMartins" rel="noreferrer">github.com/EngFlavioMartins</a></p>
+                  <ul><li>Ten open repositories accompanying the papers: wake actuators in OpenFOAM, coherent-structure detection, vortex-induced vibration, truss sizing, three-body dynamics, lifting-line and vortex-panel solvers. See the <a href="/">homepage</a>.</li></ul>
+                </div>
+              </article>
+            </section>
+            <section class="cv-section" id="publications">
+              <h3>Publications</h3>
+              <h4 class="cv-subhead">Journal articles (7)</h4>
+              <ol class="cv-list"><li><strong>Flavio A. C. Martins</strong> (2026). <a href="https://github.com/EngFlavioMartins/OpenONDA" rel="noreferrer">OpenONDA: A Python Interface for In-Line Control of OpenFOAM Solvers</a>. <i>OpenFOAM Journal</i>.</li><li><strong>Flavio A. C. Martins</strong>, A. van Zuijlen, C. S. Ferreira (2025). <a href="https://doi.org/10.5194/wes-10-41-2025" rel="noreferrer">Proof of Concept for Multirotor Systems with Vortex-Generating Modes for Regenerative Wind Energy: A Study Based on Numerical Simulations and Experimental Data</a>. <i>Wind Energy Science, 10, 41–58</i>.</li><li><strong>Flavio A. C. Martins</strong>, A. Sciacchitano, D. E. Rival (2021). <a href="https://doi.org/10.1007/s00348-021-03135-5" rel="noreferrer">Detection of Vortical Structures in Sparse Lagrangian Data Using Coherent-Structure Colouring</a>. <i>Experiments in Fluids, 62(4), 69</i>.</li><li><strong>Flavio A. C. Martins</strong>, J. P. J. Avila, M. A. da Silva (2019). <a href="https://doi.org/10.1007/s13296-018-0194-8" rel="noreferrer">A Linear Approach for Sizing Optimization of Isostatic Trussed Structures Subjected to External and Self-Weight Loads</a>. <i>International Journal of Steel Structures, 19(4), 1146–1157</i>.</li><li><strong>Flavio A. C. Martins</strong>, J. P. J. Avila (2019). <a href="https://doi.org/10.1016/j.ijmecsci.2019.03.024" rel="noreferrer">Effects of the Reynolds Number and Structural Damping on Vortex-Induced Vibrations of an Elastically-Mounted Rigid Cylinder</a>. <i>International Journal of Mechanical Sciences, 156, 235–249</i>.</li><li><strong>Flavio A. C. Martins</strong>, J. P. J. Avila (2019). <a href="https://doi.org/10.1016/j.marstruc.2019.01.005" rel="noreferrer">Three-Dimensional CFD Analysis of Damping Effects on Vortex-Induced Vibrations of 2DOF Elastically-Mounted Circular Cylinders</a>. <i>Marine Structures, 65, 12–31</i>.</li><li><strong>Flavio A. C. Martins</strong>, M. Zanotello (2018). <a href="https://doi.org/10.1590/1806-9126-rbef-2017-0174" rel="noreferrer">Mecânica Celeste e a Teoria dos Sistemas Dinâmicos: Uma Revisão do Problema Circular Restrito de Três Corpos</a>. <i>Revista Brasileira de Ensino de Física, 40(2), e2310</i>.</li></ol>
+              <h4 class="cv-subhead">Preprints (2)</h4>
+              <ol class="cv-list"><li><strong>Flavio A. C. Martins</strong>, A. van Zuijlen, C. S. Ferreira (2026). <a href="https://arxiv.org/abs/2601.06942" rel="noreferrer">Toward Meshless Turbulent Flow Simulation: LES-Integrated Vortex Particle Method</a>. <i>arXiv:2601.06942</i>.</li><li><strong>Flavio A. C. Martins</strong>, D. E. Rival (2021). <a href="https://arxiv.org/abs/2103.09884" rel="noreferrer">A Voronoi-Tessellation-Based Approach for Detection of Coherent Structures in Sparsely-Seeded Flows</a>. <i>arXiv:2103.09884</i>.</li></ol>
+              <h4 class="cv-subhead">Conference papers and talks (9)</h4>
+              <ol class="cv-list"><li><strong>Flavio A. C. Martins</strong>, A. van Zuijlen, D. A. von Terzi (2026). <a href="https://doi.org/10.1088/1742-6596/3224/4/042069" rel="noreferrer">Toward a 3D Hybrid Vortex Particle–Grid Approach for External Flows</a>. <i>Journal of Physics: Conference Series, 3224(4), 042069</i>.</li><li><strong>Flavio A. C. Martins</strong>, C. S. Ferreira, A. van Zuijlen (2024). <a href="https://doi.org/10.1088/1742-6596/2767/7/072006" rel="noreferrer">Numerical Investigation of Atmospheric Boundary Layer Control in Wind Farms with Multirotor Systems</a>. <i>Journal of Physics: Conference Series, 2767(7), 072006</i>.</li><li>C. S. Ferreira, D. Bensason, T. J. Broertjes, A. Sciacchitano, <strong>Flavio A. C. Martins</strong>, A. G. Ajay (2024). <a href="https://doi.org/10.1088/1742-6596/2767/9/092107" rel="noreferrer">Enhancing Wind Farm Efficiency Through Active Control of the Atmospheric Boundary Layer’s Vertical Entrainment of Momentum</a>. <i>Journal of Physics: Conference Series, 2767(9), 092107</i>.</li><li><strong>Flavio A. C. Martins</strong>, A. Alcântara, D. E. Rival (2022). State-Observer-Based Data Assimilation for Real Flow Analysis: Integrating Computation and Measurement. <i>NATO Unclassified technical meeting, Kingston, Canada</i>.</li><li><strong>Flavio A. C. Martins</strong>, J. P. J. Avila (2018). <a href="https://uspdigital.usp.br/siicusp/siicPublicacao.jsp?codmnu=7210" rel="noreferrer">Three-Dimensional CFD Analysis of Damping Effects on Vortex-Induced Vibrations of 2DOF Cylinders</a>. <i>SIIC-USP, São Paulo, Brazil</i>.</li><li><strong>Flavio A. C. Martins</strong>, M. A. da Silva, R. M. L. R. F. Brasil (2018). <a href="https://proceedings.sbmac.org.br/sbmac/article/download/1878/1896" rel="noreferrer">Detection of Damage in Aerospace Structures Using Optimization Techniques on Impact Tests Results</a>. <i>Proceeding Series of the Brazilian Society of Computational and Applied Mathematics (CNMAC)</i>.</li><li><strong>Flavio A. C. Martins</strong>, M. A. da Silva, R. M. L. R. F. Brasil (2017). <a href="https://doi.org/10.20906/cps/cilamce2017-0035" rel="noreferrer">Topology Optimization of 2D Trussed Structures</a>. <i>CILAMCE, São José dos Campos, Brazil</i>.</li><li><strong>Flavio A. C. Martins</strong>, M. A. da Silva (2017). Analysis of the Dynamic Response of the Internal Structure of the ONERA M6 Wing. <i>IX Workshop in Dynamic Systems, São Paulo, Brazil</i>.</li><li><strong>Flavio A. C. Martins</strong>, M. A. da Silva (2017). Identification of Damage in Aerospace Structures Using Optimization Techniques and Impact Tests. <i>ASCE Engineering Mechanics Institute Conference, Rio de Janeiro, Brazil</i>.</li></ol>
+              <h4 class="cv-subhead">Technical and academic reports (4)</h4>
+              <ol class="cv-list"><li><strong>Flavio A. C. Martins</strong> et al. (2022). Calibration of Menter’s RANS γ-Model for Transonic, Transitional Flows. <i>RivalLab / Pratt &amp; Whitney Canada (NDA-protected)</i>.</li><li><strong>Flavio A. C. Martins</strong>, M. A. da Silva (2018). <a href="http://ic.ufabc.edu.br/simposios/index.php?conference=EIC&amp;schedConf=8EIC2018&amp;page=paper&amp;op=view&amp;path%5B%5D=3344" rel="noreferrer">Optimization of the Internal Structure of Statically and Dynamically Loaded Wings</a>. <i>UFABC research report (CNPq-funded)</i>.</li><li><strong>Flavio A. C. Martins</strong>, M. Zanotello (2017). <a href="http://ic.ufabc.edu.br/simposios/index.php?conference=EIC&amp;schedConf=7EIC2017&amp;page=paper&amp;op=view&amp;path%5B%5D=2966" rel="noreferrer">Applications of Dynamical Systems Theory to Biological and Chemical Problems</a>. <i>UFABC research report (CNPq-funded)</i>.</li><li><strong>Flavio A. C. Martins</strong>, M. Zanotello (2016). <a href="http://ic.ufabc.edu.br/simposios/index.php?conference=EIC&amp;schedConf=6EIC2016&amp;page=paper&amp;op=view&amp;path%5B%5D=2502" rel="noreferrer">Celestial Mechanics and the Theory of Dynamic Systems: A Revision of the Circular Restricted Three-Body Problem</a>. <i>UFABC research report (CNPq-funded)</i>.</li></ol>
+            </section>
+            <section class="cv-section">
+              <h3>Teaching and supervision</h3>
+              <article class="cv-item">
+                <p class="cv-date">2025 – 2026</p>
+                <div>
+                  <h4>Project supervisor · Test, Analysis and Simulation</h4>
+                  <p class="cv-place">TU Delft</p>
+                  <ul><li>Used student-led explanations and technical questioning to assess understanding of project methods, assumptions and results.</li></ul>
+                </div>
+              </article>
+              <article class="cv-item">
+                <p class="cv-date">2026</p>
+                <div>
+                  <h4>MSc thesis co-supervisor</h4>
+                  <p class="cv-place">TU Delft · with Dr. Alexander van Zuijlen</p>
+                  <ul><li>GPU-accelerated Cartesian fast multipole method for particle-based flow simulation (<a href="https://repository.tudelft.nl/record/uuid:f9db5fcd-e277-4e11-9b27-a3f2d2b2dc44" rel="noreferrer">read online</a>).</li></ul>
+                </div>
+              </article>
+              <article class="cv-item">
+                <p class="cv-date">2019 – 2021</p>
+                <div>
+                  <h4>Teaching assistant · experimental fluid dynamics</h4>
+                  <p class="cv-place">Queen’s University, Kingston, Canada</p>
+                  <ul><li>Taught undergraduate laboratory sessions and supported courses on experimental fluid dynamics.</li></ul>
+                </div>
+              </article>
+              <article class="cv-item">
+                <p class="cv-date">2017 – 2018</p>
+                <div>
+                  <h4>Lecturer, Workshop in Mechanical Engineering (WEM)</h4>
+                  <p class="cv-place">UFABC, São Paulo, Brazil</p>
+                  <ul><li>Implementation of finite-element codes in MATLAB (2018).</li><li>Introduction to structural analysis with the finite-element software Abaqus (2017 and 2018).</li></ul>
+                </div>
+              </article>
+            </section>
+            <section class="cv-section">
+              <h3>Honours and awards</h3>
+              <ol class="cv-list"><li>Institute of Engineering Award (2018), for ranking among the top three graduates of UFABC’s aerospace engineering programme.</li><li>Second-highest GPA in the history of UFABC’s aerospace engineering programme, as of 2018.</li></ol>
+            </section>
+            <section class="cv-section">
+              <h3>Academic leadership and service</h3>
+              <ol class="cv-list"><li><strong>Chair, Aerospace Engineering PhD Council</strong>, TU Delft (member 2023–2024; chair 2025–2026). Redesigned the annual PhD symposium as a talk-show-format event with expert panels (nearly 200 attendees) while cutting its budget by about 75% (EUR 20k to 5k); secured industry funding for internal events; introduced council-rotation rules and PhD office hours.</li><li><strong>Member, TU Delft University PhD Council</strong> (2026). Designed and delivered university-wide events connecting PhD candidates across faculties: budgets, schedules, stakeholder coordination and fundraising.</li><li><strong>TU Delft representative, Dutch OpenFOAM User Community</strong> (2023–2026). Co-organised the national user meetings, curating tutorial content and recruiting speakers.</li><li><strong>Student journalist, DUWIND</strong>, WindEurope Annual Event 2025 (Copenhagen). Produced a specialist interview series (12 interviews, 4 reports) and joined a panel with a policymaker on engineering education and a unified European engineering CV.</li><li><strong>Q&amp;A volunteer, TU Delft Start-up Module A</strong> (2023). Supported incoming PhD candidates across nine editions of the course.</li></ol>
+            </section>
+            <section class="cv-section">
+              <h3>Outreach and public engagement</h3>
+              <ol class="cv-list"><li>Volunteer instructor (2023) and team leader (2024–2026), <a href="https://www.offshorewind4kids.com/" rel="noreferrer">OffshoreWind4Kids</a>: wind-energy beach demonstrations with model turbines for children and parents.</li><li>Educational materials developer, Wind for Kids (2024–2025): booklets, games and classroom activities for primary-school teachers, refined through trials with schoolchildren.</li><li>Faculty open-day volunteer, TU Delft (2023–2025), for the Wind Energy section.</li><li>Instructor volunteer, 015 Duurzaam programme, Delft public library (2023): water management and wind energy for children.</li><li>Volunteer lecturer, UFABC VII Workshop on Mechanical and Marine Engineering (2018): mini-courses on finite-element structural analysis.</li></ol>
+            </section>
+            <section class="cv-section">
+              <h3>Media and public visibility</h3>
+              <ol class="cv-list"><li>Panellist at three TU Delft events: the <a href="https://www.tudelft.nl/en/events/2024/lr/tu-delft-ae-diversity-inclusion-safety-beyond-boundaries-panel" rel="noreferrer">Safety Beyond Boundaries</a> D&amp;I panel on aerospace and LGBTIQ+ safety (2024), the AE D&amp;I Week panel representing visible minorities (2024), and TU Delft for Life, on the PhD as a career path.</li><li>Interview in TU Delft Aerospace Engineering news on the Triangle Tuning programme (2024).</li><li>Academic profile featured in the Institute of Engineering yearly magazine (2019).</li></ol>
+            </section>
+            <section class="cv-section">
+              <h3>Languages</h3>
+              <p class="cv-plain">Portuguese (native) · English (fluent, C2) · Dutch (intermediate, B1)</p>
+            </section>
           </div>
         </article>
       </section>
     </main>
 
-    <footer class="site-footer"><div class="shell footer-inner"><p>Flavio A. C. Martins</p><a href="mailto:flavio.martins@outlook.com">flavio.martins@outlook.com</a></div></footer>
+    <!-- site:footer -->
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <div class="footer-id">
+          <img src="/assets/logo.svg" width="36" height="36" alt="Vortex-street logo" />
+          <div><p class="footer-name">Flavio A. C. Martins</p><p>PhD candidate · Wind Energy, TU Delft</p></div>
+        </div>
+        <ul class="footer-links" role="list"><li><a href="https://github.com/EngFlavioMartins" rel="noreferrer">GitHub</a></li><li><a href="https://scholar.google.com/citations?user=WZXamCcAAAAJ&amp;hl=en" rel="noreferrer">Google Scholar</a></li><li><a href="https://orcid.org/0000-0002-1374-5760" rel="noreferrer">ORCID</a></li><li><a href="https://www.linkedin.com/in/flavio-martins-8bb89772" rel="noreferrer">LinkedIn</a></li><li><a href="mailto:f.m.martins@tudelft.nl">f.m.martins@tudelft.nl</a></li></ul>
+      </div>
+      <p class="shell footer-credit">Painting: Nicola Facchinetti, <i>Lagoa Rodrigo de Freitas, Rio de Janeiro</i>, c. 1884 · public domain, <a href="https://commons.wikimedia.org/wiki/File:Nicola_Facchinetti_-_Lagoa_Rodrigo_de_Freitas,_Rio_de_Janeiro,_ca._1884.jpg" rel="noreferrer">Wikimedia Commons</a></p>
+    </footer>
+    <!-- /site:footer -->
   </body>
 </html>
