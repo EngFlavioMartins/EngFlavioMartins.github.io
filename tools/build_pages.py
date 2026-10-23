@@ -14,7 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 EMAIL = "f.m.martins@tudelft.nl"
 GH = "https://github.com/EngFlavioMartins/"
-STYLE = "/assets/styles.css?v=20261022-pages"
+STYLE = "/assets/styles.css?v=20261023"
 PROFILES = [("GitHub", "https://github.com/EngFlavioMartins"),
             ("Google Scholar", "https://scholar.google.com/citations?user=WZXamCcAAAAJ&hl=en"),
             ("ORCID", "https://orcid.org/0000-0002-1374-5760"),
@@ -37,7 +37,7 @@ def site_header(current, intro=""):
     return f"""    <!-- site:header -->
     <div class="hero-band">
       <header class="site-header">
-        <a class="wordmark" href="/" aria-label="Flavio Martins, home"><img class="wordmark-mark" src="/assets/logo.svg" width="40" height="40" alt="Vortex logo" /><span>Flavio Martins</span></a>
+        <a class="wordmark" href="/" aria-label="Flavio Martins, home"><img class="wordmark-mark" src="/assets/logo.svg" width="40" height="40" alt="Vortex-street logo" /><span>Flavio Martins</span></a>
         <nav class="site-nav" aria-label="Primary navigation">{nav}</nav>
       </header>
 {intro}    </div>
@@ -65,7 +65,7 @@ def site_footer():
     <footer class="site-footer">
       <div class="shell footer-inner">
         <div class="footer-id">
-          <img src="/assets/logo.svg" width="36" height="36" alt="Vortex logo" />
+          <img src="/assets/logo.svg" width="36" height="36" alt="Vortex-street logo" />
           <div><p class="footer-name">Flavio A. C. Martins</p><p>PhD candidate · Wind Energy, TU Delft</p></div>
         </div>
         <ul class="footer-links" role="list">{links}<li><a href="mailto:{EMAIL}">{EMAIL}</a></li></ul>
@@ -160,7 +160,7 @@ PUBLICATIONS = [
     dict(type="report", year=2016, title="Celestial Mechanics and the Theory of Dynamic Systems: A Revision of the Circular Restricted Three-Body Problem",
          authors="Flavio A. C. Martins, M. Zanotello", venue="UFABC research report (CNPq-funded)",
          url="http://ic.ufabc.edu.br/simposios/index.php?conference=EIC&schedConf=6EIC2016&page=paper&op=view&path%5B%5D=2502",
-         tile="/assets/work/three-body-schematic.svg"),
+         tile=R + "three-body.webp"),
 ]
 
 
@@ -225,7 +225,7 @@ def publications_page():
 {"".join(publication(p) for p in items)}        </ol>
       </section>
 """)
-    intro = page_intro("Publications", f"{len(PUBLICATIONS)} journal articles, preprints, conference papers and reports, newest first in each group.",
+    intro = page_intro("Publications", f"{len(PUBLICATIONS)} publications: journal articles, preprints, conference papers and reports, newest first in each group.",
                        [("Google Scholar ↗", PROFILES[1][1]), ("ORCID ↗", PROFILES[2][1])])
     return (head("Publications · Flavio A. C. Martins",
                  "Journal articles, preprints, conference papers and reports by Flavio A. C. Martins.")
