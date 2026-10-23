@@ -405,7 +405,6 @@ h3 { font-size: clamp(1.55rem, 2.6vw, 2.45rem); }
 .pub-list { margin: 0; padding: 0; list-style: none; }
 .pub { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 1.1rem; padding-block: 1.05rem; border-bottom: 1px solid var(--line); }
 .pub-tile { width: 112px; height: 70px; object-fit: cover; border-radius: 0.4rem; background: #000; box-shadow: 0 0 0 1px rgba(14, 18, 20, 0.08); }
-.pub-tile-empty { display: block; background: var(--surface-tint) url('/assets/logo.svg') center / 26px no-repeat; opacity: 0.55; box-shadow: none; }
 .pub-label { margin: 0 0 0.25rem; color: var(--violet); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
 .pub h3 { max-width: 62ch; font-family: inherit; font-size: 1.02rem; font-weight: 700; line-height: 1.35; letter-spacing: -0.005em; }
 .pub h3 a { text-decoration: none; }
