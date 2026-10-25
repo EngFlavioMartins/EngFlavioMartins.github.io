@@ -14,7 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 EMAIL = "f.m.martins@tudelft.nl"
 GH = "https://github.com/EngFlavioMartins/"
-STYLE = "/assets/styles.css?v=20261023"
+STYLE = "/assets/styles.css?v=20261025"
 PROFILES = [("GitHub", "https://github.com/EngFlavioMartins"),
             ("Google Scholar", "https://scholar.google.com/citations?user=WZXamCcAAAAJ&hl=en"),
             ("ORCID", "https://orcid.org/0000-0002-1374-5760"),
@@ -37,7 +37,7 @@ def site_header(current, intro=""):
     return f"""    <!-- site:header -->
     <div class="hero-band">
       <header class="site-header">
-        <a class="wordmark" href="/" aria-label="Flavio Martins, home"><img class="wordmark-mark" src="/assets/logo.svg" width="40" height="40" alt="Vortex-street logo" /><span>Flavio Martins</span></a>
+        <a class="wordmark" href="/" aria-label="Flavio Martins, home"><img class="wordmark-mark" src="/assets/logo.svg" width="40" height="40" alt="FM logo" /><span>Flavio Martins</span></a>
         <nav class="site-nav" aria-label="Primary navigation">{nav}</nav>
       </header>
 {intro}    </div>
@@ -65,7 +65,7 @@ def site_footer():
     <footer class="site-footer">
       <div class="shell footer-inner">
         <div class="footer-id">
-          <img src="/assets/logo.svg" width="36" height="36" alt="Vortex-street logo" />
+          <img src="/assets/logo.svg" width="36" height="36" alt="FM logo" />
           <div><p class="footer-name">Flavio A. C. Martins</p><p>PhD candidate · Wind Energy, TU Delft</p></div>
         </div>
         <ul class="footer-links" role="list">{links}<li><a href="mailto:{EMAIL}">{EMAIL}</a></li></ul>
@@ -85,6 +85,8 @@ def head(title, description, extra=""):
     <meta name="theme-color" content="#0b0e10" />
     <title>{title}</title>
     <link rel="icon" type="image/svg+xml" href="/assets/logo.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/assets/logo-180.png" />
     <link rel="stylesheet" href="{STYLE}" />
     <script src="/assets/site.js" defer></script>{extra}
   </head>
