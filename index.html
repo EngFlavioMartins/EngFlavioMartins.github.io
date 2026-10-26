@@ -54,7 +54,7 @@
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Scientific software · 2026</p>
-              <h3>How does OpenONDA control OpenFOAM from Python?</h3>
+              <h3>OpenONDA: in-line control of OpenFOAM solvers from Python</h3>
               <ul class="research-tags" aria-label="Research fields" role="list">
                 <li>CFD</li>
                 <li>Numerical methods</li>
@@ -75,13 +75,13 @@
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Wind energy · 2025</p>
-              <h3>Can wings behind a rotor speed up wake recovery?</h3>
+              <h3>Wake recovery behind a multirotor with lifting wings</h3>
               <ul class="research-tags" aria-label="Research fields" role="list">
                 <li>Wind energy</li>
                 <li>Aerodynamics</li>
                 <li>Flow control</li>
               </ul>
-              <p>Wings mounted behind a multirotor shed tip vortices that lift slow wake air and bring faster air down from above. Steady CFD, compared with wind-tunnel measurements, tests one-, two- and four-wing layouts; in the modelled cases the wake recovers faster with the wings. The OpenFOAM case represents rotor thrust and wing lift as momentum sources on selected cells.</p>
+              <p>Wings placed behind a multirotor shed tip vortices that lift low-momentum wake air and draw faster air down from above. Steady CFD, compared with wind-tunnel measurements, covers one-, two- and four-wing layouts; in the modelled cases the wake recovers faster with the wings than without. The OpenFOAM case represents rotor thrust and wing lift as momentum sources on selected cells.</p>
               <div class="study-links"><a href="https://doi.org/10.5194/wes-10-41-2025" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a><a href="https://github.com/EngFlavioMartins/openfoam-actuator-surface">Code <span aria-hidden="true">↗</span></a></div>
             </div>
           </article>
@@ -95,12 +95,12 @@
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Flow diagnostics · 2021</p>
-              <h3>How sparse can particle tracks be before vortices are lost?</h3>
+              <h3>Vortex detection in sparse particle tracks by coherent-structure colouring</h3>
               <ul class="research-tags" aria-label="Research fields" role="list">
                 <li>Fluid mechanics</li>
                 <li>Flow diagnostics</li>
               </ul>
-              <p>Coherent-structure colouring (CSC) groups particle tracks by how their mutual distances change in time. Applied to measured tracks in an Ahmed-body wake and a swirling jet, detection depended mainly on seeding density: a mean particle spacing below about 15 % of the flow’s characteristic length mattered more than track length. The Python code includes the Ahmed-body tracks.</p>
+              <p>Coherent-structure colouring (CSC) groups particle tracks by how their mutual distances change in time. Applied to measured tracks in an Ahmed-body wake and a swirling jet, detection was accurate for mean inter-particle distances below about 15 % of the structure’s characteristic size, deteriorated quickly beyond that, and depended little on track length. The Python code includes the Ahmed-body tracks.</p>
               <div class="study-links"><a href="https://doi.org/10.1007/s00348-021-03135-5" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a><a href="https://github.com/EngFlavioMartins/coherent-structure-colouring">Code <span aria-hidden="true">↗</span></a></div>
             </div>
           </article>
@@ -114,13 +114,13 @@
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Flow diagnostics · 2021</p>
-              <h3>Do tracers that stay neighbours belong to one structure?</h3>
+              <h3>Coherent sets from persistent Voronoi neighbours</h3>
               <ul class="research-tags" aria-label="Research fields" role="list">
                 <li>Fluid mechanics</li>
                 <li>Dynamical systems</li>
                 <li>Flow diagnostics</li>
               </ul>
-              <p>Tracers that remain Voronoi neighbours over time tend to move together. The method counts the edges each pair of tracers shares along their tracks and turns this into one spectral colour per tracer, without fixing a number of clusters. It was tested on the double gyre and on sparse three-dimensional measurements behind a bluff body.</p>
+              <p>The method records how long each pair of tracers remains Voronoi neighbours along their tracks and converts this into one spectral colour per tracer, without fixing the number of clusters in advance. It was tested on the double gyre and on sparse three-dimensional measurements behind a bluff body.</p>
               <div class="study-links"><a href="https://arxiv.org/abs/2103.09884" rel="noreferrer">Preprint <span aria-hidden="true">↗</span></a><a href="https://github.com/EngFlavioMartins/voronoi-coherent-structures">Code <span aria-hidden="true">↗</span></a></div>
             </div>
           </article>
@@ -134,12 +134,12 @@
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Fluid–structure interaction · 2019</p>
-              <h3>How do Reynolds number and damping shape vortex-induced vibration?</h3>
+              <h3>Reynolds-number and damping effects on vortex-induced vibration</h3>
               <ul class="research-tags" aria-label="Research fields" role="list">
                 <li>Fluid mechanics</li>
                 <li>Fluid–structure interaction</li>
               </ul>
-              <p>A cylinder on springs, free to move across the flow, locks onto its own vortex shedding over a range of flow speeds. Two- and three-dimensional CFD maps how Reynolds number and structural damping change the amplitude branches and the wake modes. The repository writes an equivalent OpenFOAM case from one script.</p>
+              <p>An elastically mounted cylinder free to move across the flow synchronises with its own vortex shedding over a range of flow speeds. Two- and three-dimensional CFD maps how Reynolds number and structural damping change the amplitude response branches and the wake modes. The repository generates an equivalent OpenFOAM case from one script.</p>
               <div class="study-links"><a href="https://doi.org/10.1016/j.ijmecsci.2019.03.024" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a><a href="https://doi.org/10.1016/j.marstruc.2019.01.005" rel="noreferrer">3D damping paper <span aria-hidden="true">↗</span></a><a href="https://github.com/EngFlavioMartins/vortex-induced-vibration">Code <span aria-hidden="true">↗</span></a></div>
             </div>
           </article>
@@ -153,7 +153,7 @@
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Structural optimisation · 2019</p>
-              <h3>Can truss sizing with self-weight be solved as a linear problem?</h3>
+              <h3>Linear sizing of statically determinate trusses with self-weight</h3>
               <ul class="research-tags" aria-label="Research fields" role="list">
                 <li>Structural mechanics</li>
                 <li>Optimisation</li>
@@ -172,7 +172,7 @@
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Dynamical systems · 2018</p>
-              <h3>What separates regular from chaotic orbits in the three-body problem?</h3>
+              <h3>Regular and chaotic orbits in the circular restricted three-body problem</h3>
               <ul class="research-tags" aria-label="Research fields" role="list">
                 <li>Dynamical systems</li>
                 <li>Celestial mechanics</li>
@@ -191,7 +191,7 @@
             </figure>
             <div class="research-story-copy">
               <p class="work-meta">Scientific software · Flow analysis</p>
-              <h3>From OpenFOAM fields to Python arrays</h3>
+              <h3>Resampling OpenFOAM fields onto regular Python grids</h3>
               <ul class="research-tags" aria-label="Research fields" role="list">
                 <li>CFD</li>
                 <li>Scientific computing</li>
@@ -236,7 +236,7 @@
                 <li>Aerodynamics</li>
                 <li>Vortex methods</li>
               </ul>
-              <p>Each blade carries bound vortices whose trailing filaments follow a prescribed helical wake; the circulation is iterated against airfoil polars until the loads agree. The solver returns spanwise loads, induction factors, and thrust and power coefficients, for the three-bladed example in under a second.</p>
+              <p>Each blade carries bound vortices whose trailing filaments follow a prescribed helical wake; the circulation is iterated against airfoil polars until the loads agree. The solver returns spanwise loads, induction factors, and thrust and power coefficients; the three-bladed example solves in under a second.</p>
               <div class="study-links"><a href="https://github.com/EngFlavioMartins/lifting-line-solver">Code <span aria-hidden="true">↗</span></a></div>
             </div>
           </article>

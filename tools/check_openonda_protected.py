@@ -17,7 +17,7 @@ def block(text, pattern):
     return match.group(0)
 
 
-# The requested grid migration and question-led titles may change wrappers and
+# The requested grid migration and descriptive titles may change wrappers and
 # headings. Artwork, captions, body copy and links remain protected.
 def strip_field_tags(card):
     return re.sub(r'\n +<ul class="research-tags" aria-label="Research fields" role="list">.*?</ul>', '', card, flags=re.S)
@@ -35,8 +35,8 @@ def card_content(card):
     card = re.sub(r'<article[^>]*>', '<article>', card)
     card = re.sub(r'<figure[^>]*>', '<figure>', card)
     return re.sub(r'<div class="(?:work-copy|research-story-copy)">', '<div>', card)
-assert '<h3>How does OpenONDA control OpenFOAM from Python?</h3>' in after_card
-after_card = after_card.replace('How does OpenONDA control OpenFOAM from Python?', 'OpenONDA')
+assert '<h3>OpenONDA: in-line control of OpenFOAM solvers from Python</h3>' in after_card
+after_card = after_card.replace('OpenONDA: in-line control of OpenFOAM solvers from Python', 'OpenONDA')
 assert card_content(before_card) == card_content(after_card), 'Changed OpenONDA content'
 
 # The hybrid-method and vortex-particle papers no longer have homepage posts (no public code

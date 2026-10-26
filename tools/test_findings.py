@@ -28,10 +28,8 @@ class FindingsTests(unittest.TestCase):
         html = (ROOT / 'index.html').read_text()
         headings = re.findall(r'<h3>(.*?)</h3>', html)
         self.assertEqual(len(headings), 11)
-        statements = {'Lid-driven cavity flow', 'From OpenFOAM fields to Python arrays',  # software cards
-                      'Lifting-line model of a wind-turbine rotor', 'Vortex wakes of pitching and plunging airfoils'}
-        self.assertTrue(all(title.endswith('?') or title in statements for title in headings))
-        self.assertTrue(statements.issubset(headings))
+        # Titles are plain, descriptive statements, not questions.
+        self.assertFalse([t for t in headings if t.rstrip().endswith('?')])
         cards = re.findall(r'<article\b.*?</article>', html, re.S)
         # Every post links its repository; posts without public code are not shown.
         for card in cards:
